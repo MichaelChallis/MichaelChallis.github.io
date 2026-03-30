@@ -7,7 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-I am a third-year PhD candidate in Economics at the University of Warwick. I am a research fellow at the <a href="https://warwick.ac.uk/fac/soc/economics/research/centres/creta/" target="_blank" rel="noopener noreferrer">Center for Research in Economic Theory and its Applications (CRETA)</a>, a <a href="https://warwick.ac.uk/fac/soc/economics/research/centres/cage/about/people/" target="_blank" rel="noopener noreferrer">Junior Fellow at the Centre for Advantage in the Global Economy (CAGE)</a>, and a member of the <a href="https://warwick.ac.uk/fac/soc/economics/research/research-groups/experimental-behavioural-economics/" target="_blank" rel="noopener noreferrer">Experimental and Behavioural Economics Research Group</a>.
+I am a third-year PhD candidate in Economics at the University of Warwick supervised by <a href="https://www.polemarchakis.org/" target="+blank" rel="noopener noreferrer">Herakles Polemarchakis</a>
+and <a href="[https://www.polemarchakis.org/](https://sites.google.com/view/daniel-sgroi/home)" target="+blank" rel="noopener noreferrer">Daniel Sgroi</a>. I am a research fellow at the <a href="https://warwick.ac.uk/fac/soc/economics/research/centres/creta/" target="_blank" rel="noopener noreferrer">Center for Research in Economic Theory and its Applications (CRETA)</a>, a <a href="https://warwick.ac.uk/fac/soc/economics/research/centres/cage/about/people/" target="_blank" rel="noopener noreferrer">Junior Fellow at the Centre for Advantage in the Global Economy (CAGE)</a>, and a member of the <a href="https://warwick.ac.uk/fac/soc/economics/research/research-groups/experimental-behavioural-economics/" target="_blank" rel="noopener noreferrer">Experimental and Behavioural Economics Research Group</a>.
 
 <p>
   <a class="btn btn--primary" href="/files/Michael_Challis_CV.pdf" target="_blank" rel="noopener noreferrer">Download my CV</a>
