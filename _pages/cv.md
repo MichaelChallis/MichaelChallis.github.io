@@ -12,5 +12,3 @@ redirect_from:
     My CV
   </a>
 </p>
-
-<iframe src="/files/EXACT_FILENAME_HERE.pdf" width="100%" height="1000px" style="border: none;"></iframe>
