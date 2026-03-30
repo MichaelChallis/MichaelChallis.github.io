@@ -15,3 +15,8 @@ I co-organized the [CRETA 2026 Economic Theory Conference](https://warwick.ac.uk
 
 - the [14th Warwick Economics PhD Conference](https://sites.google.com/view/warwick-econ-phd-conference/home)
 - Warwick's [Micro Theory Work in Progress seminar series](https://warwick.ac.uk/fac/soc/economics/seminars/workshops/micro-theory-work-in-progress/)
+
+## Refereeing
+
+- <em>Economic Inquiry</em>
+- Warwick Economics PhD Conference
