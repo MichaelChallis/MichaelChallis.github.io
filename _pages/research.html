@@ -54,14 +54,14 @@ author_profile: true
 
 <div class="presentation-grid">
   <div class="presentation-card"><span class="year">2025</span><span class="venue"> King’s College London PPE for Public Policy Graduate Conference</span></div>
-  <div class="presentation-card"><span class="year">2025</span><span class="venue"> Economic Science Association Europe</span></div>
+  <div class="presentation-card"><span class="year">2025</span><span class="venue"> Economic Science Association Europe (Brno, Czech Republic)</span></div>
   <div class="presentation-card"><span class="year">2025</span><span class="venue"> Economic Science Association North America (Tucson, Arizona)</span></div>
   <div class="presentation-card"><span class="year">2025</span><span class="venue"> University of Alabama (seminar)</span></div>
   <div class="presentation-card"><span class="year">2025</span><span class="venue"> University of Texas at Dallas (seminar)</span></div>
 </div>
 
 <h3>Presentation Map</h3>
-<p>Interactive map of locations where this paper has been presented.</p>
+<p>Interactive map of locations where my work has been presented</p>
 <div id="presentations-map"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -70,10 +70,11 @@ author_profile: true
   document.addEventListener('DOMContentLoaded', function () {
     var locations = [
       { name: 'King’s College London PPE for Public Policy Graduate Conference (2025)', lat: 51.5114, lng: -0.1160 },
-      { name: 'Economic Science Association Europe (2025)', lat: 50.1109, lng: 8.6821 },
+      { name: 'Economic Science Association Europe (2025, Brno, Czech Republic)', lat: 49.1951, lng: 16.6068 },
       { name: 'Economic Science Association North America (2025, Tucson, Arizona)', lat: 32.2226, lng: -110.9747 },
       { name: 'University of Alabama seminar (2025)', lat: 33.2110, lng: -87.5390 },
-      { name: 'University of Texas at Dallas seminar (2025)', lat: 32.9860, lng: -96.7501 }
+      { name: 'University of Texas at Dallas seminar (2025)', lat: 32.9860, lng: -96.7501 },
+      { name: 'The p-zombie argument and its implications for the philosophy of mind literature (Swartmore College)', lat: 39.9021, lng: -75.3499 }
     ];
 
     var mapElement = document.getElementById('presentations-map');
