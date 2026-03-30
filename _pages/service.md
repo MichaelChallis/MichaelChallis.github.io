@@ -15,3 +15,8 @@ I co-organized the <a href="https://warwick.ac.uk/fac/soc/economics/events/2026/
 
 - the <a href="https://sites.google.com/view/warwick-econ-phd-conference/home" target="_blank" rel="noopener noreferrer">14th Warwick Economics PhD Conference</a>
 - Warwick's <a href="https://warwick.ac.uk/fac/soc/economics/seminars/workshops/micro-theory-work-in-progress/" target="_blank" rel="noopener noreferrer">Micro Theory Work in Progress seminar series</a>
+
+## Refereeing
+
+- <em>Economic Inquiry</em>
+- Warwick Economics PhD Conference
