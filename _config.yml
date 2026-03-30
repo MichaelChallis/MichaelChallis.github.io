@@ -25,7 +25,7 @@ author:
   # Biographic information
   avatar           : "Michael_Challis_pfp.jpg"
   name             : "Michael J. Challis"
-  pronouns         : "He/Him"  
+  pronouns         : # "He/Him"  
   bio              : "I am a Ph.D. student in economics at the University of Warwick interested in human decision making"
   location         : "Coventry"
   employer         : "University of Warwick"
