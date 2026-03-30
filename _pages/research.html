@@ -16,12 +16,83 @@ author_profile: true
 
 <h2>Presentations</h2>
 
+<style>
+  .presentation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.6rem;
+    margin: 0.6rem 0 1rem;
+  }
+
+  .presentation-card {
+    border: 1px solid #d9dde3;
+    border-radius: 8px;
+    padding: 0.55rem 0.7rem;
+    line-height: 1.25;
+    font-size: 0.92rem;
+  }
+
+  .presentation-card .year {
+    display: inline-block;
+    font-size: 0.84rem;
+    color: #667085;
+  }
+
+  .presentation-card .venue {
+    margin-left: 0.2rem;
+  }
+
+  #presentations-map {
+    height: 430px;
+    border: 1px solid #d9dde3;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+</style>
+
 <p><strong>Fairness and the Chairman’s Paradox</strong> has been presented at:</p>
 
-<ul>
-  <li>King’s College London PPE for Public Policy Graduate Conference (2025)</li>
-  <li>Economic Science Association Europe (2025)</li>
-  <li>Economic Science Association North America (2025)</li>
-  <li>University of Alabama (seminar, 2025)</li>
-  <li>University of Texas at Dallas (seminar, 2025)</li>
-</ul>
+<div class="presentation-grid">
+  <div class="presentation-card"><span class="year">2025</span><span class="venue"> King’s College London PPE for Public Policy Graduate Conference</span></div>
+  <div class="presentation-card"><span class="year">2025</span><span class="venue"> Economic Science Association Europe</span></div>
+  <div class="presentation-card"><span class="year">2025</span><span class="venue"> Economic Science Association North America (Tucson, Arizona)</span></div>
+  <div class="presentation-card"><span class="year">2025</span><span class="venue"> University of Alabama (seminar)</span></div>
+  <div class="presentation-card"><span class="year">2025</span><span class="venue"> University of Texas at Dallas (seminar)</span></div>
+</div>
+
+<h3>Presentation Map</h3>
+<p>Interactive map of locations where this paper has been presented.</p>
+<div id="presentations-map"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var locations = [
+      { name: 'King’s College London PPE for Public Policy Graduate Conference (2025)', lat: 51.5114, lng: -0.1160 },
+      { name: 'Economic Science Association Europe (2025)', lat: 50.1109, lng: 8.6821 },
+      { name: 'Economic Science Association North America (2025, Tucson, Arizona)', lat: 32.2226, lng: -110.9747 },
+      { name: 'University of Alabama seminar (2025)', lat: 33.2110, lng: -87.5390 },
+      { name: 'University of Texas at Dallas seminar (2025)', lat: 32.9860, lng: -96.7501 }
+    ];
+
+    var mapElement = document.getElementById('presentations-map');
+    if (!mapElement || typeof L === 'undefined') {
+      return;
+    }
+
+    var map = L.map('presentations-map');
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    var bounds = L.latLngBounds();
+    locations.forEach(function (location) {
+      L.marker([location.lat, location.lng]).addTo(map).bindPopup(location.name);
+      bounds.extend([location.lat, location.lng]);
+    });
+
+    map.fitBounds(bounds, { padding: [40, 40] });
+  });
+</script>
