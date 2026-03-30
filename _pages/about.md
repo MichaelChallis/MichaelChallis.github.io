@@ -14,5 +14,5 @@ and <a href="https://sites.google.com/view/daniel-sgroi/home" target="+blank" re
 I am a research fellow at the <a href="https://warwick.ac.uk/fac/soc/economics/research/centres/creta/" target="_blank" rel="noopener noreferrer">Center for Research in Economic Theory and its Applications (CRETA)</a>, Junior Fellow at the a <a href="https://warwick.ac.uk/fac/soc/economics/research/centres/cage/about/people/" target="_blank" rel="noopener noreferrer"> Centre for Advantage in the Global Economy (CAGE)</a>, and a member of the <a href="https://warwick.ac.uk/fac/soc/economics/research/research-groups/experimental-behavioural-economics/" target="_blank" rel="noopener noreferrer">Experimental and Behavioural Economics Research Group (EBER)</a>.
 
 <p>
-  <a class="btn btn--primary" href="/files/Michael_Challis_CV.pdf" target="_blank" rel="noopener noreferrer">Download my CV</a>
+  <a class="btn btn--primary" href="/files/cv.pdf" target="_blank" rel="noopener noreferrer">Download my CV</a>
 </p>
