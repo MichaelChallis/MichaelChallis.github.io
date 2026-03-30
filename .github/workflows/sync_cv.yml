@@ -1,0 +1,56 @@
+name: Sync CV PDF
+
+on:
+  repository_dispatch:
+    types: [cv_updated]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */12 * * *'
+
+jobs:
+  sync-cv:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate CV source configuration
+        env:
+          CV_REPO: ${{ vars.CV_REPO }}
+          CV_BRANCH: ${{ vars.CV_BRANCH }}
+          CV_PDF_PATH: ${{ vars.CV_PDF_PATH }}
+        run: |
+          if [ -z "$CV_REPO" ] || [ -z "$CV_BRANCH" ] || [ -z "$CV_PDF_PATH" ]; then
+            echo "Missing one or more repository variables: CV_REPO, CV_BRANCH, CV_PDF_PATH"
+            echo "Configure them in Settings > Secrets and variables > Actions > Variables."
+            exit 1
+          fi
+
+      - name: Download latest CV from CV repo
+        env:
+          CV_REPO: ${{ vars.CV_REPO }}
+          CV_BRANCH: ${{ vars.CV_BRANCH }}
+          CV_PDF_PATH: ${{ vars.CV_PDF_PATH }}
+        run: |
+          SOURCE_URL="https://raw.githubusercontent.com/${CV_REPO}/${CV_BRANCH}/${CV_PDF_PATH}"
+          echo "Downloading CV from ${SOURCE_URL}"
+          curl --fail --location --silent --show-error "$SOURCE_URL" --output files/cv.pdf
+
+      - name: Keep legacy CV filename in sync
+        run: cp files/cv.pdf files/Michael_Challis_CV.pdf
+
+      - name: Commit and push if CV changed
+        run: |
+          if git diff --quiet -- files/cv.pdf files/Michael_Challis_CV.pdf; then
+            echo "No CV changes detected."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add files/cv.pdf files/Michael_Challis_CV.pdf
+          git commit -m "Sync CV PDF from CV repository"
+          git push
