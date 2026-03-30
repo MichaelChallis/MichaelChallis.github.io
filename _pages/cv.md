@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 <p>
-  <a href="/files/CV.pdf" target="_blank" rel="noopener noreferrer">
+  <a href="/files/Michael_Challis_CV.pdf" target="_blank" rel="noopener noreferrer">
     My CV
   </a>
 </p>
