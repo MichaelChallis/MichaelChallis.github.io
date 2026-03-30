@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Research"
-permalink: /research/
+title: "Swimming"
+permalink: /swimming/
 author_profile: true
 ---
