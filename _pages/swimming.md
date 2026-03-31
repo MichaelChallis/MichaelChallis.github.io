@@ -9,47 +9,92 @@ Before starting my PhD at Warwick, I was a Division I swimmer at Penn State Univ
 
 ![Penn State team at the 2021 BIG 10 Championships](/images/Swimming_Pictures/Team_Picture.jpg)
 
-Below are a few snapshots from another life—training blocks, race prep, and the team moments that made it all worth it.
-
 <div class="notice--info" markdown="1">
-### Swimming highlights
-- Sprint fly and breaststroke race photos
-- Training trip team and lift sessions
-- Post-practice long course and short course moments
-- Conditioning work on the assault bike
+### career highlihgts
+- Academic swimming related awards: Robert Krimmel Academic Achievement Award, Big Ten Distinguished Scholar, Nittany All-Academic Team.
+- Athletic swimming related awards:
+  - Pennsylvania State University, Varsity Swimmer
+  - Scholastic All-American
+  - Junior National All-American
+  - NISCA All-American
+  - Junior Nationals Medalist
 </div>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;align-items:start;">
+<style>
+  .swim-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    align-items: start;
+  }
+
+  .swim-gallery figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .swim-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .swim-gallery figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 0.9em;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+  }
+
+  .swim-gallery figure:hover figcaption,
+  .swim-gallery figure:focus-within figcaption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<div class="swim-gallery">
   <figure>
-    <img src="/images/Swimming_Pictures/Butterfly.jpg" alt="Butterfly race photo" style="width:100%;border-radius:10px;" />
-    <figcaption style="font-size:0.9em;">Butterfly race pace.</figcaption>
+    <img src="/images/Swimming_Pictures/Butterfly.jpg" alt="Butterfly race photo" />
+    <figcaption>Butterfly race pace.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Swimming_Pictures/Breastroke.jpg" alt="Breastroke race photo" style="width:100%;border-radius:10px;" />
-    <figcaption style="font-size:0.9em;">Breaststroke under pressure.</figcaption>
+    <img src="/images/Swimming_Pictures/Breastroke.jpg" alt="Breastroke race photo" />
+    <figcaption>Breaststroke under pressure.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Swimming_Pictures/Training_Trip_Breaststroke_Group.JPG" alt="Breaststroke group during training trip" style="width:100%;border-radius:10px;" />
-    <figcaption style="font-size:0.9em;">Training trip breaststroke crew.</figcaption>
+    <img src="/images/Swimming_Pictures/Training_Trip_Breaststroke_Group.JPG" alt="Breaststroke group during training trip" />
+    <figcaption>Training trip breaststroke crew.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Swimming_Pictures/Post_Practice_Picture_SCM.PNG" alt="Post-practice short course meters photo" style="width:100%;border-radius:10px;" />
-    <figcaption style="font-size:0.9em;">Post-practice (SCM).</figcaption>
+    <img src="/images/Swimming_Pictures/Post_Practice_Picture_SCM.PNG" alt="Post-practice short course meters photo" />
+    <figcaption>Post-practice (SCM).</figcaption>
   </figure>
   <figure>
-    <img src="/images/Swimming_Pictures/Post_Practice_Picture_LCM.PNG" alt="Post-practice long course meters photo" style="width:100%;border-radius:10px;" />
-    <figcaption style="font-size:0.9em;">Post-practice (LCM).</figcaption>
+    <img src="/images/Swimming_Pictures/Post_Practice_Picture_LCM.PNG" alt="Post-practice long course meters photo" />
+    <figcaption>Post-practice (LCM).</figcaption>
   </figure>
   <figure>
-    <img src="/images/Swimming_Pictures/Assault_Bike.PNG" alt="Assault bike conditioning workout" style="width:100%;border-radius:10px;" />
-    <figcaption style="font-size:0.9em;">Assault bike conditioning.</figcaption>
+    <img src="/images/Swimming_Pictures/Assault_Bike.PNG" alt="Assault bike conditioning workout" />
+    <figcaption>Assault bike conditioning.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Swimming_Pictures/Training_Trip_Team_Picture.PNG" alt="Team picture from training trip" style="width:100%;border-radius:10px;" />
-    <figcaption style="font-size:0.9em;">Training trip team picture.</figcaption>
+    <img src="/images/Swimming_Pictures/Training_Trip_Team_Picture.PNG" alt="Team picture from training trip" />
+    <figcaption>Training trip team picture.</figcaption>
   </figure>
   <figure>
-    <img src="/images/Swimming_Pictures/Training_Trip_Lift.PNG" alt="Lift session from training trip" style="width:100%;border-radius:10px;" />
-    <figcaption style="font-size:0.9em;">Training trip lift session.</figcaption>
+    <img src="/images/Swimming_Pictures/Training_Trip_Lift.PNG" alt="Lift session from training trip" />
+    <figcaption>Training trip lift session.</figcaption>
   </figure>
 </div>
