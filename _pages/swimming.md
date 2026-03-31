@@ -10,14 +10,14 @@ Before starting my PhD at Warwick, I was a Division I swimmer at Penn State Univ
 ![Penn State team at the 2021 BIG 10 Championships](/images/Swimming_Pictures/Team_Picture.jpg)
 
 <div class="notice--info" markdown="1">
-### career highlihgts
-- Academic swimming related awards: Robert Krimmel Academic Achievement Award, Big Ten Distinguished Scholar, Nittany All-Academic Team.
+### Career Highlihgts
 - Athletic swimming related awards:
   - Pennsylvania State University, Varsity Swimmer
   - Scholastic All-American
   - Junior National All-American
   - NISCA All-American
   - Junior Nationals Medalist
+- Academic swimming related awards: Robert Krimmel Academic Achievement Award, Big Ten Distinguished Scholar, Nittany All-Academic Team.
 </div>
 
 <style>
@@ -67,23 +67,23 @@ Before starting my PhD at Warwick, I was a Division I swimmer at Penn State Univ
 <div class="swim-gallery">
   <figure>
     <img src="/images/Swimming_Pictures/Butterfly.jpg" alt="Butterfly race photo" />
-    <figcaption>Butterfly race pace.</figcaption>
+    <figcaption>Image from 100 yard butterfly at a duel meet.</figcaption>
   </figure>
   <figure>
     <img src="/images/Swimming_Pictures/Breastroke.jpg" alt="Breastroke race photo" />
-    <figcaption>Breaststroke under pressure.</figcaption>
+    <figcaption>Image from 100 yard breaststroke at a duel meet</figcaption>
   </figure>
   <figure>
     <img src="/images/Swimming_Pictures/Training_Trip_Breaststroke_Group.JPG" alt="Breaststroke group during training trip" />
-    <figcaption>Training trip breaststroke crew.</figcaption>
+    <figcaption>Post-practice picture from training trip.</figcaption>
   </figure>
   <figure>
     <img src="/images/Swimming_Pictures/Post_Practice_Picture_SCM.PNG" alt="Post-practice short course meters photo" />
-    <figcaption>Post-practice (SCM).</figcaption>
+    <figcaption>Post-practice.</figcaption>
   </figure>
   <figure>
     <img src="/images/Swimming_Pictures/Post_Practice_Picture_LCM.PNG" alt="Post-practice long course meters photo" />
-    <figcaption>Post-practice (LCM).</figcaption>
+    <figcaption>Post-practice.</figcaption>
   </figure>
   <figure>
     <img src="/images/Swimming_Pictures/Assault_Bike.PNG" alt="Assault bike conditioning workout" />
