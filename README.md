@@ -66,25 +66,6 @@ jobs:
 
 > `WEBSITE_REPO_TOKEN` should be a PAT with `repo` access (or fine-grained equivalent) that can dispatch events to your website repo.
 
-## Website analytics (where and when visitors are coming from)
-
-This site is configured for **Google Analytics 4 (GA4)** so you can view standard traffic insights (for example visitor location by country/region and visit times).
-
-### Enable GA4
-
-1. Create or open a GA4 property at https://analytics.google.com/.
-2. Add a **Web data stream** for your site.
-3. Copy the stream's **Measurement ID** (format: `G-XXXXXXXXXX`).
-4. In `_config.yml`, set:
-   - `analytics.provider: "google-analytics-4"`
-   - `analytics.google.tracking_id: "YOUR_MEASUREMENT_ID"`
-5. Rebuild/deploy the site.
-
-### Where to find location and time reports in GA4
-
-- **Reports → User attributes → Demographic details** for visitor geography.
-- **Reports → Acquisition / Engagement** for visit timing and traffic patterns.
-
 ## Content structure
 
 - `_pages/` for standalone pages.
