@@ -153,12 +153,9 @@ social:
   links: # An array of links to social media profiles
 
 
-# Analytics
+# Analytics disabled (tracking removed)
 analytics:
-  provider               :  "google-analytics-4" # false (default), "google", "google-universal", "google-analytics-4", "custom"
-  google:
-    tracking_id          : "G-6QW37MHGY3"
-    tracking_id          : "G-XXXXXXXXXX" # Replace with your GA4 Measurement ID (e.g., G-ABC123DEF4)
+  provider               : false
 
 
 # Reading Files
