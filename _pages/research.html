@@ -59,6 +59,10 @@ author_profile: true
     color: #344054;
   }
 
+  html[data-theme="dark"] .map-legend {
+    color: #e2e8f0;
+  }
+
   .map-legend-item {
     display: inline-flex;
     align-items: center;
@@ -70,6 +74,27 @@ author_profile: true
     height: 0.75rem;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .presentation-pin {
+    width: 18px;
+    height: 18px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 1px solid rgba(17, 24, 39, 0.7);
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.3);
+    position: relative;
+  }
+
+  .presentation-pin::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    position: absolute;
+    top: 5px;
+    left: 5px;
   }
 </style>
 
@@ -125,14 +150,18 @@ author_profile: true
 
     var bounds = L.latLngBounds();
     locations.forEach(function (location) {
-      L.circleMarker([location.lat, location.lng], {
-        radius: 7,
-        fillColor: categoryColors[location.category] || '#2563eb',
-        color: '#1f2937',
-        weight: 1,
-        opacity: 1,
-        fillOpacity: 0.95
-      }).addTo(map).bindPopup(location.name);
+      var pinColor = categoryColors[location.category] || '#2563eb';
+      var pinIcon = L.divIcon({
+        className: '',
+        html: '<div class="presentation-pin" style="background:' + pinColor + ';"></div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 18],
+        popupAnchor: [0, -18]
+      });
+
+      L.marker([location.lat, location.lng], { icon: pinIcon })
+        .addTo(map)
+        .bindPopup(location.name);
       bounds.extend([location.lat, location.lng]);
     });
 
