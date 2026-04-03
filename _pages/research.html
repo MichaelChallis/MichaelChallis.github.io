@@ -48,6 +48,29 @@ author_profile: true
     border-radius: 8px;
     margin-top: 0.5rem;
   }
+
+  .map-legend {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #344054;
+  }
+
+  .map-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .map-legend-swatch {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
 </style>
 
 <p><strong>Fairness and the Chairman’s Paradox</strong> has been presented at:</p>
@@ -58,23 +81,36 @@ author_profile: true
   <div class="presentation-card"><span class="year">2025</span><span class="venue"> Economic Science Association North America (Tucson, Arizona)</span></div>
   <div class="presentation-card"><span class="year">2025</span><span class="venue"> University of Alabama (seminar)</span></div>
   <div class="presentation-card"><span class="year">2025</span><span class="venue"> University of Texas at Dallas (seminar)</span></div>
+  <div class="presentation-card"><span class="year">2026</span><span class="venue"> 3rd Verona Early Career Workshop in Economics and Financial Mathematics (May 12–13, upcoming)</span></div>
 </div>
 
 <h3>Presentation Map</h3>
 <p>Interactive map of locations where my work has been presented</p>
 <div id="presentations-map"></div>
+<div class="map-legend">
+  <span class="map-legend-item"><span class="map-legend-swatch" style="background:#2563eb;"></span>Presented by me</span>
+  <span class="map-legend-item"><span class="map-legend-swatch" style="background:#dc2626;"></span>Presented by coauthor</span>
+  <span class="map-legend-item"><span class="map-legend-swatch" style="background:#eab308;"></span>Upcoming</span>
+</div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    var categoryColors = {
+      mine: '#2563eb',
+      coauthor: '#dc2626',
+      upcoming: '#eab308'
+    };
+
     var locations = [
-      { name: 'King’s College London PPE for Public Policy Graduate Conference (2025)', lat: 51.5114, lng: -0.1160 },
-      { name: 'Economic Science Association Europe (2025, Brno, Czech Republic)', lat: 49.1951, lng: 16.6068 },
-      { name: 'Economic Science Association North America (2025, Tucson, Arizona)', lat: 32.2226, lng: -110.9747 },
-      { name: 'University of Alabama seminar (2025)', lat: 33.2110, lng: -87.5390 },
-      { name: 'University of Texas at Dallas seminar (2025)', lat: 32.9860, lng: -96.7501 },
-      { name: 'Greater Philadelphia Philosophy Consortium (2023, Swartmore College)', lat: 39.9021, lng: -75.3499 }
+      { name: 'King’s College London PPE for Public Policy Graduate Conference (2025)', lat: 51.5114, lng: -0.1160, category: 'mine' },
+      { name: 'Economic Science Association Europe (2025, Brno, Czech Republic)', lat: 49.1951, lng: 16.6068, category: 'mine' },
+      { name: 'Economic Science Association North America (2025, Tucson, Arizona)', lat: 32.2226, lng: -110.9747, category: 'mine' },
+      { name: 'University of Alabama seminar (2025)', lat: 33.2110, lng: -87.5390, category: 'mine' },
+      { name: 'University of Texas at Dallas seminar (2025)', lat: 32.9860, lng: -96.7501, category: 'mine' },
+      { name: 'Greater Philadelphia Philosophy Consortium (2023, Swarthmore College)', lat: 39.9021, lng: -75.3499, category: 'coauthor' },
+      { name: '3rd Verona Early Career Workshop in Economics and Financial Mathematics (May 12–13, 2026)', lat: 45.4384, lng: 10.9916, category: 'upcoming' }
     ];
 
     var mapElement = document.getElementById('presentations-map');
@@ -90,7 +126,14 @@ author_profile: true
 
     var bounds = L.latLngBounds();
     locations.forEach(function (location) {
-      L.marker([location.lat, location.lng]).addTo(map).bindPopup(location.name);
+      L.circleMarker([location.lat, location.lng], {
+        radius: 7,
+        fillColor: categoryColors[location.category] || '#2563eb',
+        color: '#1f2937',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.95
+      }).addTo(map).bindPopup(location.name);
       bounds.extend([location.lat, location.lng]);
     });
 
