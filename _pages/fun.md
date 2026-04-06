@@ -5,7 +5,7 @@ permalink: /fun/
 author_profile: true
 ---
 
-Welcome to the fun corner of my site. You can browse **Cool_Stuff.pdf** directly below, or open it in a new tab.
+Here are a few miscellaneous things that I find fun/cool.
 
 <div class="fun-pdf-card">
   <div class="fun-pdf-header">
