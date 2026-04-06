@@ -7,6 +7,22 @@ author_profile: true
 
 Here are a few miscellaneous things that I find fun/cool.
 
+## Academic Genealogy
+
+According to [Math Genealogy](https://www.mathgenealogy.org/id.php?id=236370), my supervisor is **Herakles M. Polemarchakis**.
+
+I am also part of the same academic genealogy line as:
+
+- Simeon Denis Poisson
+- Pierre-Simon Laplace
+- Joseph Louis Lagrange
+- Leonhard Euler
+- Johann Bernoulli
+- Jacob Bernoulli
+- Gottfried Wilhelm Leibniz
+- Georgios Plethon Gemistos
+- Ibn Sīnā
+
 <div class="fun-pdf-card">
   <div class="fun-pdf-header">
     <h2>Cool Stuff</h2>
