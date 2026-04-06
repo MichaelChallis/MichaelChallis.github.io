@@ -7,6 +7,46 @@ author_profile: true
 
 Here are a few miscellaneous things that I find fun/cool.
 
+## Academic Genealogy
+
+According to <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Math Genealogy</a>, my supervisor is <strong><a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a></strong>.
+
+<div style="font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre; line-height: 1.55;">
+Me
+↓
+<a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a>
+↓
+…
+↓
+<a href="https://www.mathgenealogy.org/search.php?searchTerms=Harold+Hotelling" target="_blank" rel="noopener">Harold Hotelling</a>
+↓
+<a href="https://www.mathgenealogy.org/search.php?searchTerms=Oswald+Veblen" target="_blank" rel="noopener">Oswald Veblen</a>
+↓
+…
+↓
+<a href="https://www.mathgenealogy.org/id.php?id=38586" target="_blank" rel="noopener">Simeon Denis Poisson</a>
+↓
+<a href="https://www.mathgenealogy.org/id.php?id=17865" target="_blank" rel="noopener">Pierre-Simon Laplace</a>
+↓
+<a href="https://www.mathgenealogy.org/id.php?id=14937" target="_blank" rel="noopener">Joseph Louis Lagrange</a>
+↓
+<a href="https://www.mathgenealogy.org/id.php?id=53410" target="_blank" rel="noopener">Leonhard Euler</a>
+↓
+<a href="https://www.mathgenealogy.org/id.php?id=53420" target="_blank" rel="noopener">Johann Bernoulli</a>
+↓
+<a href="https://www.mathgenealogy.org/id.php?id=53408" target="_blank" rel="noopener">Jacob Bernoulli</a>
+↓
+<a href="https://www.mathgenealogy.org/id.php?id=14839" target="_blank" rel="noopener">Gottfried Wilhelm Leibniz</a>
+↓
+…
+↓
+<a href="https://www.mathgenealogy.org/id.php?id=60572" target="_blank" rel="noopener">Georgios Plethon Gemistos</a>
+↓
+…
+↓
+<a href="https://www.mathgenealogy.org/id.php?id=55871" target="_blank" rel="noopener">Ibn Sīnā</a>
+</div>
+
 <div class="fun-pdf-card">
   <div class="fun-pdf-header">
     <h2>Cool Stuff</h2>
