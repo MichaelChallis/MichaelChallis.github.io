@@ -46,6 +46,51 @@ Me
 ↓
 <a href="https://www.mathgenealogy.org/id.php?id=55871" target="_blank" rel="noopener">Ibn Sīnā</a>
 </div>
+### How I am connected (advisor lineage)
+
+<ul>
+  <li>Me → <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> → … → <a href="https://www.mathgenealogy.org/id.php?id=38586" target="_blank" rel="noopener">Simeon Denis Poisson</a>.</li>
+  <li>Me → <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> → … → <a href="https://www.mathgenealogy.org/id.php?id=17865" target="_blank" rel="noopener">Pierre-Simon Laplace</a> → <a href="https://www.mathgenealogy.org/id.php?id=38586" target="_blank" rel="noopener">Simeon Denis Poisson</a>.</li>
+  <li>Me → <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> → … → <a href="https://www.mathgenealogy.org/id.php?id=14937" target="_blank" rel="noopener">Joseph Louis Lagrange</a> → <a href="https://www.mathgenealogy.org/id.php?id=17865" target="_blank" rel="noopener">Pierre-Simon Laplace</a> → <a href="https://www.mathgenealogy.org/id.php?id=38586" target="_blank" rel="noopener">Simeon Denis Poisson</a>.</li>
+  <li>Me → <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> → … → <a href="https://www.mathgenealogy.org/id.php?id=53410" target="_blank" rel="noopener">Leonhard Euler</a> → <a href="https://www.mathgenealogy.org/id.php?id=14937" target="_blank" rel="noopener">Joseph Louis Lagrange</a> → <a href="https://www.mathgenealogy.org/id.php?id=17865" target="_blank" rel="noopener">Pierre-Simon Laplace</a> → <a href="https://www.mathgenealogy.org/id.php?id=38586" target="_blank" rel="noopener">Simeon Denis Poisson</a>.</li>
+  <li>Me → <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> → … → <a href="https://www.mathgenealogy.org/id.php?id=53420" target="_blank" rel="noopener">Johann Bernoulli</a> → <a href="https://www.mathgenealogy.org/id.php?id=53410" target="_blank" rel="noopener">Leonhard Euler</a>.</li>
+  <li>Me → <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> → … → <a href="https://www.mathgenealogy.org/id.php?id=53408" target="_blank" rel="noopener">Jacob Bernoulli</a> → <a href="https://www.mathgenealogy.org/id.php?id=53420" target="_blank" rel="noopener">Johann Bernoulli</a> → <a href="https://www.mathgenealogy.org/id.php?id=53410" target="_blank" rel="noopener">Leonhard Euler</a>.</li>
+  <li>Me → <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> → … → <a href="https://www.mathgenealogy.org/id.php?id=14839" target="_blank" rel="noopener">Gottfried Wilhelm Leibniz</a> → <a href="https://www.mathgenealogy.org/id.php?id=53408" target="_blank" rel="noopener">Jacob Bernoulli</a>.</li>
+  <li>Me → <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> → … → <a href="https://www.mathgenealogy.org/id.php?id=14839" target="_blank" rel="noopener">Gottfried Wilhelm Leibniz</a> → … → <a href="https://www.mathgenealogy.org/id.php?id=60572" target="_blank" rel="noopener">Georgios Plethon Gemistos</a>.</li>
+  <li>Me → <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> → … → <a href="https://www.mathgenealogy.org/id.php?id=60572" target="_blank" rel="noopener">Georgios Plethon Gemistos</a> → … → <a href="https://www.mathgenealogy.org/id.php?id=55871" target="_blank" rel="noopener">Ibn Sīnā</a>.</li>
+</ul>
+
+### Condensed tree (with gaps for less-interesting intermediate links)
+
+<div style="font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre;">
+Me
+└── <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a>
+    └── …
+        └── <a href="https://www.mathgenealogy.org/id.php?id=38586" target="_blank" rel="noopener">Simeon Denis Poisson</a>
+            └── <a href="https://www.mathgenealogy.org/id.php?id=17865" target="_blank" rel="noopener">Pierre-Simon Laplace</a>
+                └── <a href="https://www.mathgenealogy.org/id.php?id=14937" target="_blank" rel="noopener">Joseph Louis Lagrange</a>
+                    └── <a href="https://www.mathgenealogy.org/id.php?id=53410" target="_blank" rel="noopener">Leonhard Euler</a>
+                        └── <a href="https://www.mathgenealogy.org/id.php?id=53420" target="_blank" rel="noopener">Johann Bernoulli</a>
+                            └── <a href="https://www.mathgenealogy.org/id.php?id=53408" target="_blank" rel="noopener">Jacob Bernoulli</a>
+                                └── <a href="https://www.mathgenealogy.org/id.php?id=14839" target="_blank" rel="noopener">Gottfried Wilhelm Leibniz</a>
+                                    └── …
+                                        └── <a href="https://www.mathgenealogy.org/id.php?id=60572" target="_blank" rel="noopener">Georgios Plethon Gemistos</a>
+                                            └── …
+                                                └── <a href="https://www.mathgenealogy.org/id.php?id=55871" target="_blank" rel="noopener">Ibn Sīnā</a>
+</div>
+According to [Math Genealogy](https://www.mathgenealogy.org/id.php?id=236370), my supervisor is **Herakles M. Polemarchakis**.
+
+I am also part of the same academic genealogy line as:
+
+- Simeon Denis Poisson
+- Pierre-Simon Laplace
+- Joseph Louis Lagrange
+- Leonhard Euler
+- Johann Bernoulli
+- Jacob Bernoulli
+- Gottfried Wilhelm Leibniz
+- Georgios Plethon Gemistos
+- Ibn Sīnā
 
 <div class="fun-pdf-card">
   <div class="fun-pdf-header">
