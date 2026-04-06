@@ -43,6 +43,19 @@ Me
                                             └── …
                                                 └── <a href="https://www.mathgenealogy.org/id.php?id=55871" target="_blank" rel="noopener">Ibn Sīnā</a>
 </div>
+According to [Math Genealogy](https://www.mathgenealogy.org/id.php?id=236370), my supervisor is **Herakles M. Polemarchakis**.
+
+I am also part of the same academic genealogy line as:
+
+- Simeon Denis Poisson
+- Pierre-Simon Laplace
+- Joseph Louis Lagrange
+- Leonhard Euler
+- Johann Bernoulli
+- Jacob Bernoulli
+- Gottfried Wilhelm Leibniz
+- Georgios Plethon Gemistos
+- Ibn Sīnā
 
 <div class="fun-pdf-card">
   <div class="fun-pdf-header">
