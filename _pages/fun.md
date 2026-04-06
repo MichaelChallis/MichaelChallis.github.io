@@ -66,8 +66,15 @@ Here are a few miscellaneous things that I find fun/cool.
         name: "Harold Hotelling",
         genealogy: "https://www.mathgenealogy.org/search.php?searchTerms=Harold+Hotelling",
         wiki: "https://en.wikipedia.org/wiki/Harold_Hotelling",
-        image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Harold_Hotelling.jpg",
+        image: "/images/Harold Hotelling.jpg",
         bio: "American mathematical statistician and economist associated with principal components analysis and Hotelling's law."
+      },
+      {
+        name: "Kenneth Arrow",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=14085",
+        wiki: "https://en.wikipedia.org/wiki/Kenneth_Arrow",
+        image: "/images/Kenneth Arrow.jpg",
+        bio: "American economist and mathematician, Nobel laureate, known for Arrow's impossibility theorem and foundational work in social choice and general equilibrium."
       },
       {
         name: "Oswald Veblen",
