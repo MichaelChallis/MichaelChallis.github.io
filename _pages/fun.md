@@ -7,21 +7,33 @@ author_profile: true
 
 Here are a few miscellaneous things that I find fun/cool.
 
-<div style="padding: 0.75rem 0.9rem; border-left: 3px solid #6366f1; background: rgba(99, 102, 241, 0.06); border-radius: 8px;">
-  <ul style="margin: 0; padding-left: 1.2rem;">
-    <li><a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a></li>
-    <li><a href="https://www.mathgenealogy.org/search.php?searchTerms=Harold+Hotelling" target="_blank" rel="noopener">Harold Hotelling</a></li>
-    <li><a href="https://www.mathgenealogy.org/search.php?searchTerms=Oswald+Veblen" target="_blank" rel="noopener">Oswald Veblen</a></li>
-    <li><a href="https://www.mathgenealogy.org/id.php?id=38586" target="_blank" rel="noopener">Simeon Denis Poisson</a></li>
-    <li><a href="https://www.mathgenealogy.org/id.php?id=17865" target="_blank" rel="noopener">Pierre-Simon Laplace</a></li>
-    <li><a href="https://www.mathgenealogy.org/id.php?id=14937" target="_blank" rel="noopener">Joseph Louis Lagrange</a></li>
-    <li><a href="https://www.mathgenealogy.org/id.php?id=53410" target="_blank" rel="noopener">Leonhard Euler</a></li>
-    <li><a href="https://www.mathgenealogy.org/id.php?id=53420" target="_blank" rel="noopener">Johann Bernoulli</a></li>
-    <li><a href="https://www.mathgenealogy.org/id.php?id=53408" target="_blank" rel="noopener">Jacob Bernoulli</a></li>
-    <li><a href="https://www.mathgenealogy.org/id.php?id=14839" target="_blank" rel="noopener">Gottfried Wilhelm Leibniz</a></li>
-    <li><a href="https://www.mathgenealogy.org/id.php?id=60572" target="_blank" rel="noopener">Georgios Plethon Gemistos</a></li>
-    <li><a href="https://www.mathgenealogy.org/id.php?id=55871" target="_blank" rel="noopener">Ibn Sīnā</a></li>
-  </ul>
+<div class="genealogy-card">
+  <p>
+    The <a href="https://www.mathgenealogy.org/" target="_blank" rel="noopener">Mathematics Genealogy Project</a>
+    tracks advisor-student relationships in mathematics and related fields, making it possible to trace academic lineages across generations.
+    In my lineage, <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> is my supervisor.
+  </p>
+  <p>
+    The rotating panel below highlights people connected to my mathematical genealogy, with quick links to both their Math Genealogy entries and Wikipedia pages.
+  </p>
+
+  <div class="genealogy-rotator" id="genealogy-rotator" aria-live="polite">
+    <img id="genealogy-photo" alt="Portrait" loading="lazy" decoding="async" />
+    <div class="genealogy-rotator-content">
+      <h3 id="genealogy-name"></h3>
+      <p id="genealogy-bio"></p>
+      <div class="genealogy-links">
+        <a id="genealogy-link" class="btn btn--info btn--small" target="_blank" rel="noopener">Math Genealogy</a>
+        <a id="wiki-link" class="btn btn--primary btn--small" target="_blank" rel="noopener">Wikipedia</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="genealogy-controls" aria-label="Genealogy navigation controls">
+    <button type="button" id="genealogy-prev">← Previous</button>
+    <span id="genealogy-index"></span>
+    <button type="button" id="genealogy-next">Next →</button>
+  </div>
 </div>
 
 
@@ -40,7 +52,218 @@ Here are a few miscellaneous things that I find fun/cool.
   </iframe>
 </div>
 
+<script>
+  (function () {
+    const relatives = [
+      {
+        name: "Herakles M. Polemarchakis",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=236370",
+        wiki: "https://en.wikipedia.org/wiki/Herakles_Polemarchakis",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Herakles_Polemarchakis.jpg/440px-Herakles_Polemarchakis.jpg",
+        bio: "Greek economist and game theorist known for work in general equilibrium and strategic behavior under incomplete information."
+      },
+      {
+        name: "Harold Hotelling",
+        genealogy: "https://www.mathgenealogy.org/search.php?searchTerms=Harold+Hotelling",
+        wiki: "https://en.wikipedia.org/wiki/Harold_Hotelling",
+        image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Harold_Hotelling.jpg",
+        bio: "American mathematical statistician and economist associated with principal components analysis and Hotelling's law."
+      },
+      {
+        name: "Oswald Veblen",
+        genealogy: "https://www.mathgenealogy.org/search.php?searchTerms=Oswald+Veblen",
+        wiki: "https://en.wikipedia.org/wiki/Oswald_Veblen",
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Oswald_Veblen.jpg",
+        bio: "American mathematician who contributed to topology and geometry and helped shape mathematics at Princeton's Institute for Advanced Study."
+      },
+      {
+        name: "Siméon Denis Poisson",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=38586",
+        wiki: "https://en.wikipedia.org/wiki/Sim%C3%A9on_Denis_Poisson",
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Sim%C3%A9on_Denis_Poisson.jpg",
+        bio: "French mathematician and physicist remembered for Poisson distribution, Poisson brackets, and major work in mechanics."
+      },
+      {
+        name: "Pierre-Simon Laplace",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=17865",
+        wiki: "https://en.wikipedia.org/wiki/Pierre-Simon_Laplace",
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Laplace.jpg",
+        bio: "French scholar whose work in celestial mechanics and probability theory profoundly influenced modern mathematical science."
+      },
+      {
+        name: "Joseph-Louis Lagrange",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=14937",
+        wiki: "https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange",
+        image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Joseph_Louis_Lagrange.jpg",
+        bio: "Italian-French mathematician known for variational calculus, analytical mechanics, and Lagrangian methods used throughout physics and economics."
+      },
+      {
+        name: "Leonhard Euler",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=53410",
+        wiki: "https://en.wikipedia.org/wiki/Leonhard_Euler",
+        image: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Leonhard_Euler.jpg",
+        bio: "Prolific Swiss mathematician whose foundational contributions span analysis, number theory, mechanics, and modern notation."
+      },
+      {
+        name: "Johann Bernoulli",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=53420",
+        wiki: "https://en.wikipedia.org/wiki/Johann_Bernoulli",
+        image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Johann_Bernoulli.jpg",
+        bio: "Swiss mathematician from the Bernoulli family, recognized for developments in calculus and differential equations."
+      },
+      {
+        name: "Jacob Bernoulli",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=53408",
+        wiki: "https://en.wikipedia.org/wiki/Jacob_Bernoulli",
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/80/Jacob_Bernoulli.jpg",
+        bio: "Swiss mathematician best known for Bernoulli numbers, early probability theory, and the law of large numbers."
+      },
+      {
+        name: "Gottfried Wilhelm Leibniz",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=14839",
+        wiki: "https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz",
+        image: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Gottfried_Wilhelm_von_Leibniz.jpg",
+        bio: "German polymath and co-inventor of calculus whose ideas shaped logic, philosophy, and mathematical analysis."
+      },
+      {
+        name: "Georgios Plethon Gemistos",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=60572",
+        wiki: "https://en.wikipedia.org/wiki/Gemistos_Plethon",
+        image: "https://upload.wikimedia.org/wikipedia/commons/9/98/Gemistos_Plethon.jpg",
+        bio: "Byzantine philosopher of the late medieval period whose revival of Platonism influenced Renaissance scholarship."
+      },
+      {
+        name: "Ibn Sīnā (Avicenna)",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=55871",
+        wiki: "https://en.wikipedia.org/wiki/Avicenna",
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/27/Avicenna_Portrait.jpg",
+        bio: "Persian polymath and physician whose encyclopedic works influenced philosophy, medicine, and scientific thought for centuries."
+      }
+    ];
+
+    const nameEl = document.getElementById("genealogy-name");
+    const bioEl = document.getElementById("genealogy-bio");
+    const photoEl = document.getElementById("genealogy-photo");
+    const genealogyLinkEl = document.getElementById("genealogy-link");
+    const wikiLinkEl = document.getElementById("wiki-link");
+    const indexEl = document.getElementById("genealogy-index");
+    const prevBtn = document.getElementById("genealogy-prev");
+    const nextBtn = document.getElementById("genealogy-next");
+
+    let currentIndex = 0;
+    let rotateTimer;
+
+    function renderCard(index) {
+      const person = relatives[index];
+      nameEl.textContent = person.name;
+      bioEl.textContent = person.bio;
+      photoEl.src = person.image;
+      photoEl.alt = `${person.name} portrait`;
+      genealogyLinkEl.href = person.genealogy;
+      wikiLinkEl.href = person.wiki;
+      indexEl.textContent = `${index + 1} / ${relatives.length}`;
+    }
+
+    function showNext(step) {
+      currentIndex = (currentIndex + step + relatives.length) % relatives.length;
+      renderCard(currentIndex);
+    }
+
+    function restartRotation() {
+      clearInterval(rotateTimer);
+      rotateTimer = setInterval(() => showNext(1), 5000);
+    }
+
+    prevBtn.addEventListener("click", function () {
+      showNext(-1);
+      restartRotation();
+    });
+
+    nextBtn.addEventListener("click", function () {
+      showNext(1);
+      restartRotation();
+    });
+
+    renderCard(currentIndex);
+    restartRotation();
+  })();
+</script>
+
 <style>
+  .genealogy-card {
+    margin-top: 0.75rem;
+    margin-bottom: 1.2rem;
+    padding: 0.9rem 1rem;
+    border-left: 3px solid #6366f1;
+    border-radius: 10px;
+    background: rgba(99, 102, 241, 0.06);
+  }
+
+  .genealogy-card p {
+    margin: 0 0 0.8rem;
+  }
+
+  .genealogy-rotator {
+    display: grid;
+    grid-template-columns: minmax(110px, 150px) 1fr;
+    gap: 0.9rem;
+    align-items: center;
+    padding: 0.9rem;
+    border-radius: 12px;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  #genealogy-photo {
+    width: 100%;
+    max-width: 150px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(30, 41, 59, 0.15);
+    background: #f8fafc;
+  }
+
+  .genealogy-rotator-content h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  #genealogy-bio {
+    margin: 0.55rem 0 0.7rem;
+    line-height: 1.4;
+  }
+
+  .genealogy-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .genealogy-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 0.65rem;
+  }
+
+  .genealogy-controls button {
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    background: #ffffff;
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+    cursor: pointer;
+    font-size: 0.88rem;
+  }
+
+  #genealogy-index {
+    min-width: 4rem;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    color: #334155;
+  }
+
   .fun-pdf-card {
     margin-top: 1rem;
     border-radius: 14px;
@@ -74,6 +297,14 @@ Here are a few miscellaneous things that I find fun/cool.
   }
 
   @media (max-width: 767px) {
+    .genealogy-rotator {
+      grid-template-columns: 1fr;
+    }
+
+    #genealogy-photo {
+      max-width: 120px;
+    }
+
     .fun-pdf-frame {
       min-height: 65vh;
     }
