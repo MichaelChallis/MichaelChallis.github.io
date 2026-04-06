@@ -7,6 +7,23 @@ author_profile: true
 
 Here are a few miscellaneous things that I find fun/cool.
 
+<div style="padding: 0.75rem 0.9rem; border-left: 3px solid #6366f1; background: rgba(99, 102, 241, 0.06); border-radius: 8px;">
+  <ul style="margin: 0; padding-left: 1.2rem;">
+    <li><a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a></li>
+    <li><a href="https://www.mathgenealogy.org/search.php?searchTerms=Harold+Hotelling" target="_blank" rel="noopener">Harold Hotelling</a></li>
+    <li><a href="https://www.mathgenealogy.org/search.php?searchTerms=Oswald+Veblen" target="_blank" rel="noopener">Oswald Veblen</a></li>
+    <li><a href="https://www.mathgenealogy.org/id.php?id=38586" target="_blank" rel="noopener">Simeon Denis Poisson</a></li>
+    <li><a href="https://www.mathgenealogy.org/id.php?id=17865" target="_blank" rel="noopener">Pierre-Simon Laplace</a></li>
+    <li><a href="https://www.mathgenealogy.org/id.php?id=14937" target="_blank" rel="noopener">Joseph Louis Lagrange</a></li>
+    <li><a href="https://www.mathgenealogy.org/id.php?id=53410" target="_blank" rel="noopener">Leonhard Euler</a></li>
+    <li><a href="https://www.mathgenealogy.org/id.php?id=53420" target="_blank" rel="noopener">Johann Bernoulli</a></li>
+    <li><a href="https://www.mathgenealogy.org/id.php?id=53408" target="_blank" rel="noopener">Jacob Bernoulli</a></li>
+    <li><a href="https://www.mathgenealogy.org/id.php?id=14839" target="_blank" rel="noopener">Gottfried Wilhelm Leibniz</a></li>
+    <li><a href="https://www.mathgenealogy.org/id.php?id=60572" target="_blank" rel="noopener">Georgios Plethon Gemistos</a></li>
+    <li><a href="https://www.mathgenealogy.org/id.php?id=55871" target="_blank" rel="noopener">Ibn Sīnā</a></li>
+  </ul>
+</div>
+
 <div class="fun-pdf-card">
   <div class="fun-pdf-header">
     <h2>Cool Stuff</h2>
