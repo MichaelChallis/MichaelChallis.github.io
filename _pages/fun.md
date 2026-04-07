@@ -56,11 +56,11 @@ Here are a few miscellaneous things that I find fun/cool.
   (function () {
     const relatives = [
       {
-        name: "Herakles M. Polemarchakis",
-        genealogy: "https://www.mathgenealogy.org/id.php?id=236370",
-        wiki: "https://en.wikipedia.org/wiki/Herakles_Polemarchakis",
-        image: "/images/Herakles.webp",
-        bio: "Greek economist and game theorist known for work in general equilibrium and strategic behavior under incomplete information."
+        name: "Kenneth Arrow",
+        genealogy: "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=51175",
+        wiki: "https://en.wikipedia.org/wiki/Kenneth_Arrow",
+        image: "/images/Kenneth Arrow.jpg",
+        bio: "American economist and mathematician, Nobel laureate, known for Arrow's impossibility theorem and foundational work in social choice and general equilibrium."
       },
       {
         name: "Harold Hotelling",
@@ -68,13 +68,6 @@ Here are a few miscellaneous things that I find fun/cool.
         wiki: "https://en.wikipedia.org/wiki/Harold_Hotelling",
         image: "/images/Harold Hotelling.jpg",
         bio: "American mathematical statistician and economist associated with principal components analysis and Hotelling's law."
-      },
-      {
-        name: "Kenneth Arrow",
-        genealogy: "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=51175",
-        wiki: "https://en.wikipedia.org/wiki/Kenneth_Arrow",
-        image: "/images/Kenneth Arrow.jpg",
-        bio: "American economist and mathematician, Nobel laureate, known for Arrow's impossibility theorem and foundational work in social choice and general equilibrium."
       },
       {
         name: "Oswald Veblen",
