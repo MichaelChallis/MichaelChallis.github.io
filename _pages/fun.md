@@ -64,84 +64,84 @@ Here are a few miscellaneous things that I find fun/cool.
       },
       {
         name: "Harold Hotelling",
-        genealogy: "https://www.mathgenealogy.org/search.php?searchTerms=Harold+Hotelling",
+        genealogy: "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=35422",
         wiki: "https://en.wikipedia.org/wiki/Harold_Hotelling",
         image: "/images/Harold Hotelling.jpg",
         bio: "American mathematical statistician and economist associated with principal components analysis and Hotelling's law."
       },
       {
         name: "Kenneth Arrow",
-        genealogy: "https://www.mathgenealogy.org/id.php?id=14085",
+        genealogy: "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=51175",
         wiki: "https://en.wikipedia.org/wiki/Kenneth_Arrow",
         image: "/images/Kenneth Arrow.jpg",
         bio: "American economist and mathematician, Nobel laureate, known for Arrow's impossibility theorem and foundational work in social choice and general equilibrium."
       },
       {
         name: "Oswald Veblen",
-        genealogy: "https://www.mathgenealogy.org/search.php?searchTerms=Oswald+Veblen",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=805",
         wiki: "https://en.wikipedia.org/wiki/Oswald_Veblen",
         image: "/images/Oswald Veblen.jpg",
         bio: "American mathematician who contributed to topology and geometry and helped shape mathematics at Princeton's Institute for Advanced Study."
       },
       {
         name: "Siméon Denis Poisson",
-        genealogy: "https://www.mathgenealogy.org/id.php?id=38586",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=17865",
         wiki: "https://en.wikipedia.org/wiki/Sim%C3%A9on_Denis_Poisson",
         image: "/images/Siméon Denis Poisson.jpg",
         bio: "French mathematician and physicist remembered for Poisson distribution, Poisson brackets, and major work in mechanics."
       },
       {
         name: "Pierre-Simon Laplace",
-        genealogy: "https://www.mathgenealogy.org/id.php?id=17865",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=108295",
         wiki: "https://en.wikipedia.org/wiki/Pierre-Simon_Laplace",
         image: "/images/Pierre-Simon Laplace.jpg",
         bio: "French scholar whose work in celestial mechanics and probability theory profoundly influenced modern mathematical science."
       },
       {
         name: "Joseph-Louis Lagrange",
-        genealogy: "https://www.mathgenealogy.org/id.php?id=14937",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=17864",
         wiki: "https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange",
         image: "/images/Joseph-Louis Lagrange.jpg",
         bio: "Italian-French mathematician known for variational calculus, analytical mechanics, and Lagrangian methods used throughout physics and economics."
       },
       {
         name: "Leonhard Euler",
-        genealogy: "https://www.mathgenealogy.org/id.php?id=53410",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=38586",
         wiki: "https://en.wikipedia.org/wiki/Leonhard_Euler",
         image: "/images/Leonhard Euler.jpg",
         bio: "Prolific Swiss mathematician whose foundational contributions span analysis, number theory, mechanics, and modern notation."
       },
       {
         name: "Johann Bernoulli",
-        genealogy: "https://www.mathgenealogy.org/id.php?id=53420",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=53410",
         wiki: "https://en.wikipedia.org/wiki/Johann_Bernoulli",
         image: "/images/Johann Bernoulli.jpg",
         bio: "Swiss mathematician from the Bernoulli family, recognized for developments in calculus and differential equations."
       },
       {
         name: "Jacob Bernoulli",
-        genealogy: "https://www.mathgenealogy.org/id.php?id=53408",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=54440",
         wiki: "https://en.wikipedia.org/wiki/Jacob_Bernoulli",
         image: "/images/Jacob Bernoulli.jpg",
         bio: "Swiss mathematician best known for Bernoulli numbers, early probability theory, and the law of large numbers."
       },
       {
         name: "Gottfried Wilhelm Leibniz",
-        genealogy: "https://www.mathgenealogy.org/id.php?id=14839",
+        genealogy: "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=60985",
         wiki: "https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz",
         image: "/images/Gottfried Wilhelm Leibniz.jpg",
         bio: "German polymath and co-inventor of calculus whose ideas shaped logic, philosophy, and mathematical analysis."
       },
       {
         name: "Georgios Plethon Gemistos",
-        genealogy: "https://www.mathgenealogy.org/id.php?id=60572",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=131575",
         wiki: "https://en.wikipedia.org/wiki/Gemistos_Plethon",
         image: "/images/Georgios Plethon Gemistos.jpg",
         bio: "Byzantine philosopher of the late medieval period whose revival of Platonism influenced Renaissance scholarship."
       },
       {
         name: "Ibn Sīnā (Avicenna)",
-        genealogy: "https://www.mathgenealogy.org/id.php?id=55871",
+        genealogy: "https://www.mathgenealogy.org/id.php?id=298616",
         wiki: "https://en.wikipedia.org/wiki/Avicenna",
         image: "/images/Ibn Sīnā (Avicenna).jpg",
         bio: "Persian polymath and physician whose encyclopedic works influenced philosophy, medicine, and scientific thought for centuries."
