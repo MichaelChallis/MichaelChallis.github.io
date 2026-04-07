@@ -152,6 +152,7 @@ Here are a few miscellaneous things that I find fun/cool.
 
     let currentIndex = 0;
     let rotateTimer;
+    const ROTATION_INTERVAL_MS = 8500;
 
     function renderCard(index) {
       const person = relatives[index];
@@ -166,12 +167,21 @@ Here are a few miscellaneous things that I find fun/cool.
 
     function showNext(step) {
       currentIndex = (currentIndex + step + relatives.length) % relatives.length;
-      renderCard(currentIndex);
+      const rotatorEl = document.getElementById("genealogy-rotator");
+      rotatorEl.classList.add("is-transitioning");
+
+      setTimeout(() => {
+        renderCard(currentIndex);
+      }, 170);
+
+      setTimeout(() => {
+        rotatorEl.classList.remove("is-transitioning");
+      }, 370);
     }
 
     function restartRotation() {
       clearInterval(rotateTimer);
-      rotateTimer = setInterval(() => showNext(1), 5000);
+      rotateTimer = setInterval(() => showNext(1), ROTATION_INTERVAL_MS);
     }
 
     prevBtn.addEventListener("click", function () {
@@ -193,10 +203,12 @@ Here are a few miscellaneous things that I find fun/cool.
   .genealogy-card {
     margin-top: 0.75rem;
     margin-bottom: 1.2rem;
-    padding: 0.9rem 1rem;
-    border-left: 3px solid #6366f1;
-    border-radius: 10px;
-    background: rgba(99, 102, 241, 0.06);
+    padding: 1rem 1.1rem 1.05rem;
+    border: 1px solid rgba(99, 102, 241, 0.28);
+    border-left: 4px solid #6366f1;
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(99, 102, 241, 0.08));
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
   }
 
   .genealogy-card p {
@@ -206,12 +218,19 @@ Here are a few miscellaneous things that I find fun/cool.
   .genealogy-rotator {
     display: grid;
     grid-template-columns: minmax(110px, 150px) 1fr;
-    gap: 0.9rem;
+    gap: 1rem;
     align-items: center;
-    padding: 0.9rem;
-    border-radius: 12px;
-    border: 1px solid rgba(99, 102, 241, 0.3);
-    background: rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+    border-radius: 14px;
+    border: 1px solid rgba(99, 102, 241, 0.22);
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.95), rgba(238, 242, 255, 0.92));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 10px 24px rgba(15, 23, 42, 0.08);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+
+  .genealogy-rotator.is-transitioning {
+    opacity: 0.82;
+    transform: translateY(1px);
   }
 
   #genealogy-photo {
@@ -222,6 +241,13 @@ Here are a few miscellaneous things that I find fun/cool.
     border-radius: 10px;
     border: 1px solid rgba(30, 41, 59, 0.15);
     background: #f8fafc;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .genealogy-rotator.is-transitioning #genealogy-photo {
+    transform: scale(0.985);
+    filter: saturate(0.9);
   }
 
   .genealogy-rotator-content h3 {
@@ -231,7 +257,8 @@ Here are a few miscellaneous things that I find fun/cool.
 
   #genealogy-bio {
     margin: 0.55rem 0 0.7rem;
-    line-height: 1.4;
+    line-height: 1.45;
+    color: #1f2937;
   }
 
   .genealogy-links {
@@ -250,11 +277,26 @@ Here are a few miscellaneous things that I find fun/cool.
 
   .genealogy-controls button {
     border: 1px solid rgba(99, 102, 241, 0.4);
-    background: #ffffff;
+    background: linear-gradient(145deg, #ffffff, #f8faff);
     border-radius: 999px;
-    padding: 0.35rem 0.7rem;
+    padding: 0.38rem 0.78rem;
     cursor: pointer;
     font-size: 0.88rem;
+    font-weight: 600;
+    color: #1e293b;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.16);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+
+  .genealogy-controls button:hover {
+    transform: translateY(-1px);
+    border-color: rgba(79, 70, 229, 0.55);
+    box-shadow: 0 8px 16px rgba(99, 102, 241, 0.24);
+  }
+
+  .genealogy-controls button:focus-visible {
+    outline: 2px solid rgba(79, 70, 229, 0.55);
+    outline-offset: 2px;
   }
 
   #genealogy-index {
@@ -262,6 +304,7 @@ Here are a few miscellaneous things that I find fun/cool.
     text-align: center;
     font-variant-numeric: tabular-nums;
     color: #334155;
+    font-weight: 600;
   }
 
   .fun-pdf-card {
@@ -308,5 +351,29 @@ Here are a few miscellaneous things that I find fun/cool.
     .fun-pdf-frame {
       min-height: 65vh;
     }
+  }
+
+  html[data-theme="dark"] .genealogy-card {
+    border-color: rgba(129, 140, 248, 0.35);
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(55, 48, 163, 0.35));
+    box-shadow: 0 14px 28px rgba(2, 6, 23, 0.5);
+  }
+
+  html[data-theme="dark"] .genealogy-rotator {
+    border-color: rgba(129, 140, 248, 0.3);
+    background: linear-gradient(155deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.95));
+    box-shadow: inset 0 1px 0 rgba(148, 163, 184, 0.18), 0 10px 24px rgba(2, 6, 23, 0.42);
+  }
+
+  html[data-theme="dark"] #genealogy-bio,
+  html[data-theme="dark"] #genealogy-index {
+    color: #dbeafe;
+  }
+
+  html[data-theme="dark"] .genealogy-controls button {
+    color: #e2e8f0;
+    border-color: rgba(129, 140, 248, 0.45);
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.96), rgba(51, 65, 85, 0.94));
+    box-shadow: 0 8px 18px rgba(2, 6, 23, 0.42);
   }
 </style>
