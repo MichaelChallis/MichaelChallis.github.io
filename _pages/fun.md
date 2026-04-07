@@ -14,7 +14,7 @@ Here are a few miscellaneous things that I find fun/cool.
     <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> is my supervisor and through him I have many famous academic ancestors.
   </p>
   <p>
-    The rotating panel below highlights people connected to my mathematical genealogy.
+    The rotating panel below highlights some of the people connected to my mathematical genealogy.
   </p>
 
   <div class="genealogy-rotator" id="genealogy-rotator" aria-live="polite">
