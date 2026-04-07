@@ -152,6 +152,8 @@ Here are a few miscellaneous things that I find fun/cool.
     let currentIndex = 0;
     let rotateTimer;
     const ROTATION_INTERVAL_MS = 8500;
+    const EXIT_TRANSITION_MS = 450;
+    const ENTER_TRANSITION_MS = 900;
 
     function renderCard(index) {
       const person = relatives[index];
@@ -175,11 +177,11 @@ Here are a few miscellaneous things that I find fun/cool.
         renderCard(currentIndex);
         rotatorEl.classList.remove("is-exiting");
         rotatorEl.classList.add("is-entering");
-      }, 300);
+      }, EXIT_TRANSITION_MS);
 
       setTimeout(() => {
         rotatorEl.classList.remove("is-entering");
-      }, 600);
+      }, ENTER_TRANSITION_MS);
     }
 
     function restartRotation() {
@@ -212,10 +214,12 @@ Here are a few miscellaneous things that I find fun/cool.
     border-radius: 14px;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(99, 102, 241, 0.08));
     box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+    color: var(--global-text-color);
   }
 
   .genealogy-card p {
     margin: 0 0 0.8rem;
+    color: var(--global-text-color);
   }
 
   .genealogy-rotator {
@@ -231,7 +235,7 @@ Here are a few miscellaneous things that I find fun/cool.
     transform-style: preserve-3d;
     backface-visibility: hidden;
     transform-origin: center;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
   }
 
   .genealogy-rotator.is-exiting[data-direction="next"] {
@@ -275,12 +279,13 @@ Here are a few miscellaneous things that I find fun/cool.
   .genealogy-rotator-content h3 {
     margin: 0;
     font-size: 1.1rem;
+    color: var(--global-text-color);
   }
 
   #genealogy-bio {
     margin: 0.55rem 0 0.7rem;
     line-height: 1.45;
-    color: #1f2937;
+    color: var(--global-text-color);
   }
 
   .genealogy-links {
@@ -305,7 +310,7 @@ Here are a few miscellaneous things that I find fun/cool.
     cursor: pointer;
     font-size: 0.88rem;
     font-weight: 600;
-    color: #1e293b;
+    color: var(--global-text-color);
     box-shadow: 0 4px 10px rgba(99, 102, 241, 0.16);
     transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
   }
@@ -325,7 +330,7 @@ Here are a few miscellaneous things that I find fun/cool.
     min-width: 4rem;
     text-align: center;
     font-variant-numeric: tabular-nums;
-    color: #334155;
+    color: var(--global-text-color);
     font-weight: 600;
   }
 
@@ -379,13 +384,7 @@ Here are a few miscellaneous things that I find fun/cool.
     box-shadow: inset 0 1px 0 rgba(148, 163, 184, 0.18), 0 10px 24px rgba(2, 6, 23, 0.42);
   }
 
-  html[data-theme="dark"] #genealogy-bio,
-  html[data-theme="dark"] #genealogy-index {
-    color: #dbeafe;
-  }
-
   html[data-theme="dark"] .genealogy-controls button {
-    color: #e2e8f0;
     border-color: rgba(129, 140, 248, 0.45);
     background: linear-gradient(145deg, rgba(30, 41, 59, 0.96), rgba(51, 65, 85, 0.94));
     box-shadow: 0 8px 18px rgba(2, 6, 23, 0.42);
