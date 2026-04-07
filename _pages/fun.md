@@ -7,7 +7,7 @@ author_profile: true
 
 Here are a few miscellaneous things that I find fun/cool.
 
-<div class="genealogy-card">
+<div class="fun-panel genealogy-card">
   <p>
     The <a href="https://www.mathgenealogy.org/" target="_blank" rel="noopener">Mathematics Genealogy Project</a>
     tracks advisor-student relationships in mathematics and related fields, making it possible to trace academic lineages across generations.
@@ -38,9 +38,8 @@ Here are a few miscellaneous things that I find fun/cool.
 
 
 
-<div class="fun-pdf-card">
+<div class="fun-panel fun-pdf-card">
   <div class="fun-pdf-header">
-    <h2>Cool Stuff</h2>
     <a class="btn btn--primary" href="/files/Cool_Stuff.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
   </div>
 
@@ -168,15 +167,19 @@ Here are a few miscellaneous things that I find fun/cool.
     function showNext(step) {
       currentIndex = (currentIndex + step + relatives.length) % relatives.length;
       const rotatorEl = document.getElementById("genealogy-rotator");
-      rotatorEl.classList.add("is-transitioning");
+      const direction = step >= 0 ? "next" : "prev";
+      rotatorEl.dataset.direction = direction;
+      rotatorEl.classList.add("is-exiting");
 
       setTimeout(() => {
         renderCard(currentIndex);
-      }, 170);
+        rotatorEl.classList.remove("is-exiting");
+        rotatorEl.classList.add("is-entering");
+      }, 300);
 
       setTimeout(() => {
-        rotatorEl.classList.remove("is-transitioning");
-      }, 370);
+        rotatorEl.classList.remove("is-entering");
+      }, 600);
     }
 
     function restartRotation() {
@@ -200,7 +203,7 @@ Here are a few miscellaneous things that I find fun/cool.
 </script>
 
 <style>
-  .genealogy-card {
+  .fun-panel {
     margin-top: 0.75rem;
     margin-bottom: 1.2rem;
     padding: 1rem 1.1rem 1.05rem;
@@ -225,12 +228,30 @@ Here are a few miscellaneous things that I find fun/cool.
     border: 1px solid rgba(99, 102, 241, 0.22);
     background: linear-gradient(150deg, rgba(255, 255, 255, 0.95), rgba(238, 242, 255, 0.92));
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 10px 24px rgba(15, 23, 42, 0.08);
-    transition: opacity 0.35s ease, transform 0.35s ease;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
 
-  .genealogy-rotator.is-transitioning {
+  .genealogy-rotator.is-exiting[data-direction="next"] {
     opacity: 0.82;
-    transform: translateY(1px);
+    transform: perspective(1200px) rotateY(-88deg);
+  }
+
+  .genealogy-rotator.is-exiting[data-direction="prev"] {
+    opacity: 0.82;
+    transform: perspective(1200px) rotateY(88deg);
+  }
+
+  .genealogy-rotator.is-entering[data-direction="next"] {
+    opacity: 0.82;
+    transform: perspective(1200px) rotateY(88deg);
+  }
+
+  .genealogy-rotator.is-entering[data-direction="prev"] {
+    opacity: 0.82;
+    transform: perspective(1200px) rotateY(-88deg);
   }
 
   #genealogy-photo {
@@ -245,7 +266,8 @@ Here are a few miscellaneous things that I find fun/cool.
     transition: transform 0.35s ease, filter 0.35s ease;
   }
 
-  .genealogy-rotator.is-transitioning #genealogy-photo {
+  .genealogy-rotator.is-exiting #genealogy-photo,
+  .genealogy-rotator.is-entering #genealogy-photo {
     transform: scale(0.985);
     filter: saturate(0.9);
   }
@@ -308,12 +330,9 @@ Here are a few miscellaneous things that I find fun/cool.
   }
 
   .fun-pdf-card {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     border-radius: 14px;
-    padding: 1rem;
-    background: linear-gradient(145deg, rgba(62, 106, 255, 0.1), rgba(138, 52, 255, 0.12));
-    border: 1px solid rgba(99, 102, 241, 0.25);
-    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+    padding: 1rem 1.1rem 1.05rem;
   }
 
   .fun-pdf-header {
@@ -323,11 +342,6 @@ Here are a few miscellaneous things that I find fun/cool.
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0.85rem;
-  }
-
-  .fun-pdf-header h2 {
-    margin: 0;
-    font-size: 1.35rem;
   }
 
   .fun-pdf-frame {
@@ -353,7 +367,7 @@ Here are a few miscellaneous things that I find fun/cool.
     }
   }
 
-  html[data-theme="dark"] .genealogy-card {
+  html[data-theme="dark"] .fun-panel {
     border-color: rgba(129, 140, 248, 0.35);
     background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(55, 48, 163, 0.35));
     box-shadow: 0 14px 28px rgba(2, 6, 23, 0.5);
