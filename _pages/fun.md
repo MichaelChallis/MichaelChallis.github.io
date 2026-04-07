@@ -11,10 +11,10 @@ Here are a few miscellaneous things that I find fun/cool.
   <p>
     The <a href="https://www.mathgenealogy.org/" target="_blank" rel="noopener">Mathematics Genealogy Project</a>
     tracks advisor-student relationships in mathematics and related fields, making it possible to trace academic lineages across generations.
-    In my lineage, <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> is my supervisor.
+    <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> is my supervisor and through him I have many famous academic ancestors.
   </p>
   <p>
-    The rotating panel below highlights people connected to my mathematical genealogy, with quick links to both their Math Genealogy entries and Wikipedia pages.
+    The rotating panel below highlights people connected to my mathematical genealogy.
   </p>
 
   <div class="genealogy-rotator" id="genealogy-rotator" aria-live="polite">
