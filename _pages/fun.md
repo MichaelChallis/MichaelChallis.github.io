@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Fun"
+title: "Miscellaneous"
 permalink: /fun/
 author_profile: true
 ---
