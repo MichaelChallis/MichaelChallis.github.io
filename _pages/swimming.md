@@ -10,7 +10,7 @@ Before starting my PhD at Warwick, I was a Division I swimmer at Penn State Univ
 ![Penn State team at the 2021 BIG 10 Championships](/images/Swimming_Pictures/Team_Picture.jpg)
 
 <div class="notice--info" markdown="1">
-### Career Highlihgts
+### Career Highlights
 - Athletic swimming related awards:
   - Pennsylvania State University, Varsity Swimmer
   - Scholastic All-American
