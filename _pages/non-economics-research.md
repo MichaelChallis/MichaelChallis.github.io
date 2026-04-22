@@ -11,4 +11,4 @@ As an undergraduate, I presented my paper, ‘Defending the Zombie Argument: Res
 
 I worked as a research assistant under <a href="https://africanstudies.la.psu.edu/directory/mxs1600/" target="_blank" rel="noopener noreferrer">Michelle Sikes</a> on research for <a href="https://www.amazon.co.uk/Kenyas-Running-Women-History-African/dp/161186481X" target="_blank" rel="noopener noreferrer">Kenya's Running Women: A History</a>.
 
-I am also currently working with <a href="https://hhd.psu.edu/contact/john-challis" target="_blank" rel="noopener noreferrer">John H. Challis</a> on <a href="https://www.dropbox.com/scl/fi/3rr2c9hqy659qheugevpd/Accurate-determination-of-the-principal-moments-of-inertia.pdf?rlkey=nxcqg340qfzrzke33jynrdoxe&e=1&st=cs43onl3&dl=0" target="_blank" rel="noopener noreferrer">Accurate Determination of the Principal Moments of Inertia</a>.
+I am also currently working with <a href="https://hhd.psu.edu/contact/john-challis" target="_blank" rel="noopener noreferrer">John H. Challis</a> on Accurate Determination of the Principal Moments of Inertia.
