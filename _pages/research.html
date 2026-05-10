@@ -6,18 +6,155 @@ author_profile: true
 ---
 
 <style>
-  .wip-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.95rem; }
-  .wip-item { border: 1px solid #d9dde3; border-radius: 8px; padding: 0.8rem 0.9rem; }
-  .wip-title { font-size: 1.25rem; line-height: 1.35; }
-  .wip-subtitle { margin-left: 0.35rem; font-style: italic; color: #3b5bb6; }
-  .wip-coauthors { margin-top: 0.2rem; font-size: 1.02rem; font-style: italic; color: #475467; }
-  .wip-links { margin-top: 0.55rem; display: flex; gap: 1.25rem; flex-wrap: wrap; font-weight: 600; }
-  .wip-links a, .wip-links span { color: #1849a9; text-decoration: none; }
-  .wip-links a:hover { text-decoration: underline; }
-  .wip-details { margin-top: 0.7rem; background: #efefef; border-left: 4px solid #2454c7; border-radius: 4px; padding: 0.75rem 0.9rem; line-height: 1.5; }
-  html[data-theme="dark"] .wip-item { border-color: #344054; }
-  html[data-theme="dark"] .wip-coauthors { color: #e2e8f0; }
-  html[data-theme="dark"] .wip-details { background: #1f2937; border-left-color: #4b7bec; }
+  .wip-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .wip-item {
+    border: 1px solid #d9dde3;
+    border-radius: 8px;
+    padding: 0.65rem 0.8rem;
+  }
+
+  .wip-title {
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .wip-coauthors {
+    margin-top: 0.2rem;
+    font-size: 0.94rem;
+    color: #475467;
+  }
+
+  .wip-presentations {
+    margin-top: 0.45rem;
+  }
+
+  .wip-presentations summary {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.84rem;
+    border: 1px solid #d0d5dd;
+    border-radius: 999px;
+    padding: 0.18rem 0.6rem;
+    user-select: none;
+    color: #344054;
+    background: #f8fafc;
+  }
+
+  .wip-presentations[open] summary {
+    margin-bottom: 0.35rem;
+  }
+
+  .compact-presentations {
+    margin: 0;
+    padding-left: 1rem;
+    font-size: 0.86rem;
+    line-height: 1.35;
+  }
+
+  .compact-presentations li {
+    margin: 0.08rem 0;
+  }
+
+  html[data-theme="dark"] .wip-coauthors,
+  html[data-theme="dark"] .wip-presentations summary {
+    color: #e2e8f0;
+  }
+
+  html[data-theme="dark"] .wip-item {
+    border-color: #344054;
+  }
+
+  html[data-theme="dark"] .wip-presentations summary {
+    border-color: #475467;
+    background: #1f2937;
+  }
+
+  .presentation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.6rem;
+    margin: 0.6rem 0 1rem;
+  }
+
+  .presentation-card {
+    border: 1px solid #d9dde3;
+    border-radius: 8px;
+    padding: 0.55rem 0.7rem;
+    line-height: 1.25;
+    font-size: 0.92rem;
+  }
+
+  .presentation-card .year {
+    display: inline-block;
+    font-size: 0.84rem;
+    color: #667085;
+  }
+
+  .presentation-card .venue {
+    margin-left: 0.2rem;
+  }
+
+  #presentations-map {
+    height: 430px;
+    border: 1px solid #d9dde3;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+
+  .map-legend {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #344054;
+  }
+
+  html[data-theme="dark"] .map-legend {
+    color: #e2e8f0;
+  }
+
+  .map-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .map-legend-swatch {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .presentation-pin {
+    width: 18px;
+    height: 18px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 1px solid rgba(17, 24, 39, 0.7);
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.3);
+    position: relative;
+  }
+
+  .presentation-pin::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
 </style>
 
 <h2>Work in Progress</h2>
@@ -26,29 +163,115 @@ author_profile: true
   <li class="wip-item">
     <div class="wip-title">Wading Through Sludge: Evidence from Title IX Reporting Systems</div>
     <div class="wip-coauthors">with <a href="https://sites.google.com/view/malavikamani/home" target="_blank" rel="noopener noreferrer">Malavika Mani</a></div>
-    <div class="wip-links"><span>▸ Abstract</span><span>[Paper]</span><span>▾ Presentations</span></div>
-    <div class="wip-details"><strong>Presentations:</strong> University of Warwick — multiple presentations; Greater Philadelphia Philosophy Consortium (2023, Swarthmore College); 3rd Verona Early Career Workshop in Economics and Financial Mathematics (May 12–13, 2026); 4th International Workshop on Game Theory and Economic Applications (July 26-August 2, 2026)</div>
+    <details class="wip-presentations">
+      <summary>Presentations</summary>
+      <ul class="compact-presentations">
+        <li>University of Warwick — multiple presentations</li>
+        <li>Greater Philadelphia Philosophy Consortium (2023, Swarthmore College)</li>
+        <li>3rd Verona Early Career Workshop in Economics and Financial Mathematics (May 12–13, 2026)</li>
+        <li>4th International Workshop on Game Theory and Economic Applications (July 26-August 2, 2026)</li>
+      </ul>
+    </details>
   </li>
-
   <li class="wip-item">
     <div class="wip-title">Fairness and the Chairman’s Paradox</div>
     <div class="wip-coauthors">with <a href="https://sites.google.com/view/tony-kwasnica/home?fbclid=IwRlRTSAPFE-pleHRuA2FlbQIxMABzcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEe71kr3O5UYy67crrfI0bt22AaFkdV-5lRG27OmRnDn7cphtGPS5d7wQwRgCE_aem_ESCQVq1lbD5BSzRRqDspeQ" target="_blank" rel="noopener noreferrer">Anthony M. Kwasnica</a>, and <a href="https://cosspp.fsu.edu/polisci/faculty/kai-ou/" target="_blank" rel="noopener noreferrer">Kai Ou</a></div>
-    <div class="wip-links"><span>▸ Abstract</span><span>[Paper]</span><span>▾ Presentations</span></div>
-    <div class="wip-details"><strong>Presentations:</strong> King’s College London PPE for Public Policy Graduate Conference (2025); Economic Science Association Europe (2025, Brno, Czech Republic); Economic Science Association North America (2025, Tucson, Arizona); University of Alabama seminar (2025); University of Texas at Dallas seminar (2025)</div>
+    <details class="wip-presentations">
+      <summary>Presentations</summary>
+      <ul class="compact-presentations">
+        <li>King’s College London PPE for Public Policy Graduate Conference (2025)</li>
+        <li>Economic Science Association Europe (2025, Brno, Czech Republic)</li>
+        <li>Economic Science Association North America (2025, Tucson, Arizona)</li>
+        <li>University of Alabama seminar (2025)</li>
+        <li>University of Texas at Dallas seminar (2025)</li>
+      </ul>
+    </details>
   </li>
-
   <li class="wip-item">
     <div class="wip-title">Indirect Reciprocity in Everyday Life</div>
     <div class="wip-coauthors">with <a href="https://www.redzomujcic.com/" target="_blank" rel="noopener noreferrer">Redzo Mujcic</a></div>
   </li>
-
   <li class="wip-item">
     <div class="wip-title">GenAI and Social Media</div>
     <div class="wip-coauthors">with <a href="https://sites.google.com/view/raphaelraux/home" target="_blank" rel="noopener noreferrer">Raphaël Raux</a>, <a href="https://www.upf.edu/web/adrian-segura-moreiras" target="_blank" rel="noopener noreferrer">Adrián Segura-Moreiras Moreiras</a>, and <a href="https://www.mstalinski.net/" target="_blank" rel="noopener noreferrer">Mateusz Stalinski</a></div>
   </li>
-
   <li class="wip-item">
     <div class="wip-title">Sludge and Sexual Violence Reporting: Evidence from New York and Texas</div>
     <div class="wip-coauthors">with <a href="https://www.georgeferridge.com/" target="_blank" rel="noopener noreferrer">George Ferridge</a>, and <a href="https://sites.google.com/view/malavikamani/home" target="_blank" rel="noopener noreferrer">Malavika Mani</a></div>
   </li>
 </ul>
+
+<h2>Presentations</h2>
+
+<p><strong>Fairness and the Chairman’s Paradox</strong> has been presented at:</p>
+
+<div class="presentation-grid">
+  <div class="presentation-card"><span class="year">2025</span><span class="venue"> King’s College London PPE for Public Policy Graduate Conference</span></div>
+  <div class="presentation-card"><span class="year">2025</span><span class="venue"> Economic Science Association Europe (Brno, Czech Republic)</span></div>
+  <div class="presentation-card"><span class="year">2025</span><span class="venue"> Economic Science Association North America (Tucson, Arizona)</span></div>
+  <div class="presentation-card"><span class="year">2025</span><span class="venue"> University of Alabama (seminar)</span></div>
+  <div class="presentation-card"><span class="year">2025</span><span class="venue"> University of Texas at Dallas (seminar)</span></div>
+</div>
+
+<h3>Presentation Map</h3>
+<p>Interactive map of locations where my work has been presented</p>
+<div id="presentations-map"></div>
+<div class="map-legend">
+  <span class="map-legend-item"><span class="map-legend-swatch" style="background:#2563eb;"></span>Presented by me</span>
+  <span class="map-legend-item"><span class="map-legend-swatch" style="background:#dc2626;"></span>Presented by coauthor</span>
+  <span class="map-legend-item"><span class="map-legend-swatch" style="background:#eab308;"></span>Upcoming</span>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var categoryColors = {
+      mine: '#2563eb',
+      coauthor: '#dc2626',
+      upcoming: '#eab308'
+    };
+
+    var locations = [
+      { name: 'King’s College London PPE for Public Policy Graduate Conference (2025)', lat: 51.5114, lng: -0.1160, category: 'mine' },
+      { name: 'Economic Science Association Europe (2025, Brno, Czech Republic)', lat: 49.1951, lng: 16.6068, category: 'mine' },
+      { name: 'Economic Science Association North America (2025, Tucson, Arizona)', lat: 32.2226, lng: -110.9747, category: 'coauthor' },
+      { name: 'University of Alabama seminar (2025)', lat: 33.2110, lng: -87.5390, category: 'coauthor' },
+      { name: 'University of Texas at Dallas seminar (2025)', lat: 32.9860, lng: -96.7501, category: 'coauthor' },
+      { name: 'Warwick Workshop in Experimental Economics and Political Economy', lat: 52.3839, lng: -1.5615, category: 'mine' },
+      { name: 'Greater Philadelphia Philosophy Consortium (2023, Swarthmore College)', lat: 39.9021, lng: -75.3499, category: 'mine' },
+      { name: '3rd Verona Early Career Workshop in Economics and Financial Mathematics (May 12–13, 2026)', lat: 45.4384, lng: 10.9916, category: 'mine' },
+      { name: '4th International Workshop on Game Theory and Economic Applications (July 26-August 2, 2026)', lat: -23.561399, lng: -46.730789, category: 'upcoming' }
+    ];
+
+    var mapElement = document.getElementById('presentations-map');
+    if (!mapElement || typeof L === 'undefined') {
+      return;
+    }
+
+    var map = L.map('presentations-map');
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    var bounds = L.latLngBounds();
+    locations.forEach(function (location) {
+      var pinColor = categoryColors[location.category] || '#2563eb';
+      var pinIcon = L.divIcon({
+        className: '',
+        html: '<div class="presentation-pin" style="background:' + pinColor + ';"></div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 18],
+        popupAnchor: [0, -18]
+      });
+
+      L.marker([location.lat, location.lng], { icon: pinIcon })
+        .addTo(map)
+        .bindPopup(location.name);
+      bounds.extend([location.lat, location.lng]);
+    });
+
+    map.fitBounds(bounds, { padding: [40, 40] });
+  });
+</script>
