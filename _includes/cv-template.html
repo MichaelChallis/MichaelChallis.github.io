@@ -178,20 +178,18 @@
   <div class="cv-section">
     <h2>Presentations</h2>
     <ul class="cv-list">
-      {% for talk in cv.presentations %}
+      {% assign presentations_by_year = cv.presentations | group_by_exp: "talk", "talk.date | slice: 0, 4" %}
+      {% for year_group in presentations_by_year %}
       <li class="cv-item">
-        <div class="cv-item-header">
-          <div class="cv-item-title">{{ talk.name }}</div>
-          <div class="cv-item-date">{{ talk.date | slice: 0, 4 }}</div>
-        </div>
+        <div class="cv-item-title"><strong>{{ year_group.name }}</strong></div>
         <div class="cv-item-content">
-          <div class="cv-item-subtitle">{{ talk.event }}</div>
-          {% if talk.location %}
-          <div class="cv-item-detail">{{ talk.location }}</div>
-          {% endif %}
-          {% if talk.description %}
-          <div class="cv-item-detail">{{ talk.description }}</div>
-          {% endif %}
+          <ul>
+            {% for talk in year_group.items %}
+            <li>
+              {{ talk.name }}{% if talk.event %}, {{ talk.event }}{% endif %}{% if talk.location %}, {{ talk.location }}{% endif %}{% if talk.description %} — {{ talk.description }}{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
         </div>
       </li>
       {% endfor %}
