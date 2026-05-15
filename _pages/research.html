@@ -71,10 +71,30 @@ author_profile: true
     margin: 0;
     padding: 0.85rem 1rem;
     font-size: 0.92rem;
-    line-height: 1.55;
+    line-height: 1.35;
     background: #f2f4f7;
     border-left: 4px solid #1849a9;
     border-radius: 4px;
+  }
+
+
+  .compact-presentations ul {
+    list-style: none;
+    margin: 0.15rem 0 0;
+    padding-left: 0;
+  }
+
+  .compact-presentations > ul > li {
+    margin: 0.08rem 0;
+  }
+
+  .compact-presentations > ul > li > ul {
+    margin-top: 0.08rem;
+    padding-left: 0.65rem;
+  }
+
+  .compact-presentations li {
+    margin: 0.04rem 0;
   }
 
   html[data-theme="dark"] .wip-coauthors,
@@ -203,12 +223,20 @@ author_profile: true
       <summary>Presentations</summary>
       <div class="compact-presentations">
         <ul>
-          <li><strong>2025:</strong> King’s College London PPE for Public Policy Graduate Conference (London, UK)</li>
-          <li><strong>2025:</strong> Economic Science Association Europe (Brno, Czech Republic)</li>
-          <li><strong>2025:</strong> Economic Science Association North America (Tucson, Arizona)</li>
-          <li><strong>2025:</strong> University of Alabama seminar</li>
-          <li><strong>2025:</strong> University of Texas at Dallas seminar</li>
-          <li><strong>2026:</strong> Warwick Workshop in Experimental Economics and Political Economy (Coventry, UK)</li>
+          <li><strong>2025</strong>
+            <ul>
+              <li>King’s College London PPE for Public Policy Graduate Conference (London, UK)</li>
+              <li>Economic Science Association Europe (Brno, Czech Republic)</li>
+              <li>Economic Science Association North America (Tucson, Arizona)</li>
+              <li>University of Alabama seminar</li>
+              <li>University of Texas at Dallas seminar</li>
+            </ul>
+          </li>
+          <li><strong>2026</strong>
+            <ul>
+              <li>Warwick Workshop in Experimental Economics and Political Economy (Coventry, UK)</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </details>
