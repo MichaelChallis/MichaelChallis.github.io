@@ -15,11 +15,13 @@ If you or someone you know is intrested in the program [sign-up here](https://fo
 
 ## 🏛️ Organizing
 
-I co-organized the [CRETA 2026 Economic Theory Conference](https://warwick.ac.uk/fac/soc/economics/events/2026/3/creta_2026_economic_theory_conference/).
+### Co-organized (2026)
 
-I am currently organizing:
+- [CRETA 2026 Economic Theory Conference](https://warwick.ac.uk/fac/soc/economics/events/2026/3/creta_2026_economic_theory_conference/)
+- [14th Warwick Economics PhD Conference](https://sites.google.com/view/warwick-econ-phd-conference/home)
 
-- the [14th Warwick Economics PhD Conference](https://sites.google.com/view/warwick-econ-phd-conference/home)
+### Currently organizing
+
 - Warwick's [Micro Theory Work in Progress seminar series](https://warwick.ac.uk/fac/soc/economics/seminars/workshops/micro-theory-work-in-progress/)
 
 ---
