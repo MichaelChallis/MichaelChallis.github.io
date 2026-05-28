@@ -5,7 +5,7 @@ permalink: /fun/
 author_profile: true
 ---
 
-Here are a few miscellaneous things that I like/find interesting/etc. The order the blocks apear in is randomized so when you refresh the page something different may apear first!
+Here are a few miscellaneous things that I like/find interesting/etc. The order the blocks appear in is randomized so when you refresh the page something different may appear first!
 
 <div id="genealogy-panel" class="fun-panel genealogy-card">
   <p>
