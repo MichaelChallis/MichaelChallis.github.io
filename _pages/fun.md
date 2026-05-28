@@ -7,6 +7,8 @@ author_profile: true
 
 Here are a few miscellaneous things that I like/find interesting/etc. The order the blocks appear in is randomized so when you refresh the page something different may appear first!
 
+<button type="button" id="fun-randomize" class="btn btn--primary fun-randomize-button">randomize</button>
+
 <div id="fun-panels">
   <div id="genealogy-panel" class="fun-panel genealogy-card">
     <p>
@@ -55,23 +57,33 @@ Here are a few miscellaneous things that I like/find interesting/etc. The order 
   (function () {
     function randomizeFunPanelOrder() {
       const container = document.getElementById("fun-panels");
-      const genealogyPanel = document.getElementById("genealogy-panel");
-      const coolStuffPanel = document.getElementById("cool-stuff-panel");
 
-      if (!container || !genealogyPanel || !coolStuffPanel) return;
+      if (!container) return;
 
-      const panels =
-        Math.random() < 0.5
-          ? [genealogyPanel, coolStuffPanel]
-          : [coolStuffPanel, genealogyPanel];
+      const panels = Array.from(container.querySelectorAll(".fun-panel"));
+
+      for (let i = panels.length - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [panels[i], panels[randomIndex]] = [panels[randomIndex], panels[i]];
+      }
 
       panels.forEach((panel) => container.appendChild(panel));
     }
 
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", randomizeFunPanelOrder, { once: true });
-    } else {
+    function initializeFunPanelRandomizer() {
+      const randomizeButton = document.getElementById("fun-randomize");
+
       randomizeFunPanelOrder();
+
+      if (randomizeButton) {
+        randomizeButton.addEventListener("click", randomizeFunPanelOrder);
+      }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initializeFunPanelRandomizer, { once: true });
+    } else {
+      initializeFunPanelRandomizer();
     }
   })();
 </script>
@@ -232,6 +244,10 @@ Here are a few miscellaneous things that I like/find interesting/etc. The order 
 </script>
 
 <style>
+  .fun-randomize-button {
+    margin: 0.5rem 0 0.9rem;
+  }
+
   .fun-panel {
     margin-top: 0.75rem;
     margin-bottom: 1.2rem;
