@@ -57,6 +57,15 @@ Here are a few miscellaneous things that I find fun/cool.
       document.addEventListener("DOMContentLoaded", randomizeFunPanelOrder, { once: true });
     } else {
       randomizeFunPanelOrder();
+    const genealogyPanel = document.getElementById("genealogy-panel");
+    const miscThingsPanel = document.getElementById("misc-things-panel");
+
+    if (!genealogyPanel || !miscThingsPanel) {
+      return;
+    }
+
+    if (Math.random() < 0.5) {
+      genealogyPanel.parentNode.insertBefore(miscThingsPanel, genealogyPanel);
     }
   })();
 </script>
