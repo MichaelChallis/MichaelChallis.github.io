@@ -55,7 +55,7 @@ Here are a few miscellaneous things that I like/find interesting/etc. The order 
 
 <script>
   (function () {
-    function randomizeFunPanelOrder() {
+    function randomizeFunPanelOrder(forceChange) {
       const container = document.getElementById("fun-panels");
 
       if (!container) return;
