@@ -61,18 +61,11 @@ Here are a few miscellaneous things that I like/find interesting/etc. The order 
       if (!container) return;
 
       const panels = Array.from(container.querySelectorAll(".fun-panel"));
-      const currentOrder = panels.map((panel) => panel.id).join("|");
 
-      do {
-        for (let i = panels.length - 1; i > 0; i--) {
-          const randomIndex = Math.floor(Math.random() * (i + 1));
-          [panels[i], panels[randomIndex]] = [panels[randomIndex], panels[i]];
-        }
-      } while (
-        forceChange &&
-        panels.length > 1 &&
-        panels.map((panel) => panel.id).join("|") === currentOrder
-      );
+      for (let i = panels.length - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [panels[i], panels[randomIndex]] = [panels[randomIndex], panels[i]];
+      }
 
       panels.forEach((panel) => container.appendChild(panel));
     }
@@ -83,9 +76,7 @@ Here are a few miscellaneous things that I like/find interesting/etc. The order 
       randomizeFunPanelOrder();
 
       if (randomizeButton) {
-        randomizeButton.addEventListener("click", function () {
-          randomizeFunPanelOrder(true);
-        });
+        randomizeButton.addEventListener("click", randomizeFunPanelOrder);
       }
     }
 
