@@ -38,37 +38,7 @@ Here are a few miscellaneous things that I find fun/cool.
 
 
 
-<script>
-  (function () {
-    function randomizeFunPanelOrder() {
-      const genealogyPanel = document.getElementById("genealogy-panel");
-      const miscThingsPanel = document.getElementById("misc-things-panel");
 
-      if (!genealogyPanel || !miscThingsPanel) {
-        return;
-      }
-
-      if (Math.random() < 0.5) {
-        genealogyPanel.parentNode.insertBefore(miscThingsPanel, genealogyPanel);
-      }
-    }
-
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", randomizeFunPanelOrder, { once: true });
-    } else {
-      randomizeFunPanelOrder();
-    const genealogyPanel = document.getElementById("genealogy-panel");
-    const miscThingsPanel = document.getElementById("misc-things-panel");
-
-    if (!genealogyPanel || !miscThingsPanel) {
-      return;
-    }
-
-    if (Math.random() < 0.5) {
-      genealogyPanel.parentNode.insertBefore(miscThingsPanel, genealogyPanel);
-    }
-  })();
-</script>
 
 <div id="misc-things-panel" class="fun-panel fun-pdf-card">
   <div class="fun-pdf-header">
@@ -81,7 +51,25 @@ Here are a few miscellaneous things that I find fun/cool.
     title="Cool Stuff PDF"
     loading="lazy">
   </iframe>
+
 </div>
+
+<script>
+  (function () {
+    function randomizeFunPanelOrder() {
+      const genealogyPanel = document.getElementById("genealogy-panel");
+      const miscThingsPanel = document.getElementById("misc-things-panel");
+
+      if (!genealogyPanel || !miscThingsPanel) return;
+
+      if (Math.random() < 0.5) {
+        genealogyPanel.parentNode.insertBefore(miscThingsPanel, genealogyPanel);
+      }
+    }
+
+    randomizeFunPanelOrder();
+  })();
+</script>
 
 <script>
   (function () {
