@@ -38,6 +38,7 @@ Here are a few miscellaneous things that I like/find interesting/etc. The order 
   </div>
 
   <div id="cool-stuff-panel" class="fun-panel fun-pdf-card">
+    <h2>Cool Stuff</h2>
     <div class="fun-pdf-header">
       <a class="btn btn--primary" href="/files/Cool_Stuff.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
     </div>
