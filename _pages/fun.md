@@ -7,7 +7,7 @@ author_profile: true
 
 Here are a few miscellaneous things that I find fun/cool.
 
-<div class="fun-panel genealogy-card">
+<div id="genealogy-panel" class="fun-panel genealogy-card">
   <p>
     The <a href="https://www.mathgenealogy.org/" target="_blank" rel="noopener">Mathematics Genealogy Project</a>
     tracks advisor-student relationships in mathematics and related fields, making it possible to trace academic lineages across generations.
@@ -38,7 +38,30 @@ Here are a few miscellaneous things that I find fun/cool.
 
 
 
-<div class="fun-panel fun-pdf-card">
+<script>
+  (function () {
+    function randomizeFunPanelOrder() {
+      const genealogyPanel = document.getElementById("genealogy-panel");
+      const miscThingsPanel = document.getElementById("misc-things-panel");
+
+      if (!genealogyPanel || !miscThingsPanel) {
+        return;
+      }
+
+      if (Math.random() < 0.5) {
+        genealogyPanel.parentNode.insertBefore(miscThingsPanel, genealogyPanel);
+      }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", randomizeFunPanelOrder, { once: true });
+    } else {
+      randomizeFunPanelOrder();
+    }
+  })();
+</script>
+
+<div id="misc-things-panel" class="fun-panel fun-pdf-card">
   <div class="fun-pdf-header">
     <a class="btn btn--primary" href="/files/Cool_Stuff.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
   </div>
