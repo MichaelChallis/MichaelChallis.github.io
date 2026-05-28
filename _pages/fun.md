@@ -7,80 +7,65 @@ author_profile: true
 
 Here are a few miscellaneous things that I like/find interesting/etc. The order the blocks appear in is randomized so when you refresh the page something different may appear first!
 
-<div id="genealogy-panel" class="fun-panel genealogy-card">
-  <p>
-    The <a href="https://www.mathgenealogy.org/" target="_blank" rel="noopener">Mathematics Genealogy Project</a>
-    tracks advisor-student relationships in mathematics and related fields, making it possible to trace academic lineages across generations.
-    <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> is my supervisor and through him I have many famous academic ancestors.
-  </p>
-  <p>
-    The rotating panel below highlights some of the people connected to my mathematical genealogy.
-  </p>
+<div id="fun-panels">
+  <div id="genealogy-panel" class="fun-panel genealogy-card">
+    <p>
+      The <a href="https://www.mathgenealogy.org/" target="_blank" rel="noopener">Mathematics Genealogy Project</a>
+      tracks advisor-student relationships in mathematics and related fields, making it possible to trace academic lineages across generations.
+      <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> is my supervisor and through him I have many famous academic ancestors.
+    </p>
+    <p>
+      The rotating panel below highlights some of the people connected to my mathematical genealogy.
+    </p>
 
-  <div class="genealogy-rotator" id="genealogy-rotator" aria-live="polite">
-    <img id="genealogy-photo" alt="Portrait" loading="lazy" decoding="async" />
-    <div class="genealogy-rotator-content">
-      <h3 id="genealogy-name"></h3>
-      <p id="genealogy-bio"></p>
-      <div class="genealogy-links">
-        <a id="genealogy-link" class="btn btn--info btn--small" target="_blank" rel="noopener">Math Genealogy</a>
-        <a id="wiki-link" class="btn btn--primary btn--small" target="_blank" rel="noopener">Wikipedia</a>
+    <div class="genealogy-rotator" id="genealogy-rotator" aria-live="polite">
+      <img id="genealogy-photo" alt="Portrait" loading="lazy" decoding="async" />
+      <div class="genealogy-rotator-content">
+        <h3 id="genealogy-name"></h3>
+        <p id="genealogy-bio"></p>
+        <div class="genealogy-links">
+          <a id="genealogy-link" class="btn btn--info btn--small" target="_blank" rel="noopener">Math Genealogy</a>
+          <a id="wiki-link" class="btn btn--primary btn--small" target="_blank" rel="noopener">Wikipedia</a>
+        </div>
       </div>
+    </div>
+
+    <div class="genealogy-controls" aria-label="Genealogy navigation controls">
+      <button type="button" id="genealogy-prev">← Previous</button>
+      <span id="genealogy-index"></span>
+      <button type="button" id="genealogy-next">Next →</button>
     </div>
   </div>
 
-  <div class="genealogy-controls" aria-label="Genealogy navigation controls">
-    <button type="button" id="genealogy-prev">← Previous</button>
-    <span id="genealogy-index"></span>
-    <button type="button" id="genealogy-next">Next →</button>
+  <div id="cool-stuff-panel" class="fun-panel fun-pdf-card">
+    <div class="fun-pdf-header">
+      <a class="btn btn--primary" href="/files/Cool_Stuff.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
+    </div>
+
+    <iframe
+      class="fun-pdf-frame"
+      src="/files/Cool_Stuff.pdf#view=FitH"
+      title="Cool Stuff PDF"
+      loading="lazy">
+    </iframe>
   </div>
-</div>
-
-
-
-
-
-<div id="misc-things-panel" class="fun-panel fun-pdf-card">
-  <div class="fun-pdf-header">
-    <a class="btn btn--primary" href="/files/Cool_Stuff.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
-  </div>
-
-  <iframe
-    class="fun-pdf-frame"
-    src="/files/Cool_Stuff.pdf#view=FitH"
-    title="Cool Stuff PDF"
-    loading="lazy">
-  </iframe>
-
-</div>
-
-
-
-<div id="misc-things-panel" class="fun-panel fun-pdf-card">
-  <div class="fun-pdf-header">
-    <a class="btn btn--primary" href="/files/Cool_Stuff.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
-  </div>
-
-  <iframe
-    class="fun-pdf-frame"
-    src="/files/Cool_Stuff.pdf#view=FitH"
-    title="Cool Stuff PDF"
-    loading="lazy">
-  </iframe>
-
 </div>
 
 <script>
   (function () {
     function randomizeFunPanelOrder() {
+      const container = document.getElementById("fun-panels");
       const genealogyPanel = document.getElementById("genealogy-panel");
-      const miscThingsPanel = document.getElementById("misc-things-panel");
+      const coolStuffPanel = document.getElementById("cool-stuff-panel");
 
-      if (!genealogyPanel || !miscThingsPanel) return;
+      if (!container || !genealogyPanel || !coolStuffPanel) return;
 
-      if (Math.random() < 0.5) {
-        genealogyPanel.parentNode.insertBefore(miscThingsPanel, genealogyPanel);
-      }
+      const panels =
+        Math.random() < 0.5
+          ? [genealogyPanel, coolStuffPanel]
+          : [coolStuffPanel, genealogyPanel];
+
+      panels.forEach((panel) => container.appendChild(panel));
     }
 
     if (document.readyState === "loading") {
@@ -91,22 +76,7 @@ Here are a few miscellaneous things that I like/find interesting/etc. The order 
   })();
 </script>
 
-<script>
-  (function () {
-    function randomizeFunPanelOrder() {
-      const genealogyPanel = document.getElementById("genealogy-panel");
-      const miscThingsPanel = document.getElementById("misc-things-panel");
 
-      if (!genealogyPanel || !miscThingsPanel) return;
-
-      if (Math.random() < 0.5) {
-        genealogyPanel.parentNode.insertBefore(miscThingsPanel, genealogyPanel);
-      }
-    }
-
-    randomizeFunPanelOrder();
-  })();
-</script>
 
 <script>
   (function () {
