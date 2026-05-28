@@ -54,6 +54,22 @@ Here are a few miscellaneous things that I find fun/cool.
 
 </div>
 
+
+
+<div id="misc-things-panel" class="fun-panel fun-pdf-card">
+  <div class="fun-pdf-header">
+    <a class="btn btn--primary" href="/files/Cool_Stuff.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
+  </div>
+
+  <iframe
+    class="fun-pdf-frame"
+    src="/files/Cool_Stuff.pdf#view=FitH"
+    title="Cool Stuff PDF"
+    loading="lazy">
+  </iframe>
+
+</div>
+
 <script>
   (function () {
     function randomizeFunPanelOrder() {
@@ -72,6 +88,23 @@ Here are a few miscellaneous things that I find fun/cool.
     } else {
       randomizeFunPanelOrder();
     }
+  })();
+</script>
+
+<script>
+  (function () {
+    function randomizeFunPanelOrder() {
+      const genealogyPanel = document.getElementById("genealogy-panel");
+      const miscThingsPanel = document.getElementById("misc-things-panel");
+
+      if (!genealogyPanel || !miscThingsPanel) return;
+
+      if (Math.random() < 0.5) {
+        genealogyPanel.parentNode.insertBefore(miscThingsPanel, genealogyPanel);
+      }
+    }
+
+    randomizeFunPanelOrder();
   })();
 </script>
 
