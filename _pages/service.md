@@ -25,7 +25,7 @@ If you or someone you know is intrested in the program [sign-up here](https://fo
 - Warwick's [Micro Theory Work in Progress seminar series](https://warwick.ac.uk/fac/soc/economics/seminars/workshops/micro-theory-work-in-progress/)
 
 ### Upcoming
-- [15th Warwick Economics PhD Conference]([https://sites.google.com/view/warwick-econ-phd-conference/home](https://warwick.ac.uk/fac/soc/economics/research/phd-conference-2027/)) 
+- [15th Warwick Economics PhD Conference](https://warwick.ac.uk/fac/soc/economics/research/phd-conference-2027/)) 
 
 ---
 
