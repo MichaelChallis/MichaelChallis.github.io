@@ -2,14 +2,17 @@ main:
   - title: "Research"
     url: /research/
 
-  - title: "Non-Economics Research"
-    url: /non-economics-research/
+  # Temporarily hidden from the website. Uncomment this block to restore the page.
+  # - title: "Non-Economics Research"
+  #   url: /non-economics-research/
 
   - title: "Service"
     url: /service/
 
-  - title: "Swimming"
-    url: /swimming/
+  # Temporarily hidden from the website. Uncomment this block to restore the page.
+  # - title: "Swimming"
+  #   url: /swimming/
 
-  - title: "Miscellaneous"
-    url: /fun/
+  # Temporarily hidden from the website. Uncomment this block to restore the page.
+  # - title: "Miscellaneous"
+  #   url: /fun/
