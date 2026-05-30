@@ -8,6 +8,15 @@ author_profile: true
 Here are a few miscellaneous things that I like/find interesting/etc. The order the blocks appear in is randomized so when you refresh the page something different may appear first! If you would like to randomize it yourself without having to refresh the page just press this button: <button type="button" id="fun-randomize" class="btn btn--primary fun-randomize-button">Randomize</button>
 
 <div id="fun-panels">
+  <div id="economist-quiz-panel" class="fun-panel economist-quiz-card">
+    <h3>What Type of Economist Should I Be?</h3>
+    <p>
+      Take a short BuzzFeed-style quiz to discover whether your seminar instincts are more theorist,
+      applied micro, economic historian, or something else entirely.
+    </p>
+    <a class="btn btn--primary" href="/economist-quiz/">Take the quiz</a>
+  </div>
+
   <div id="genealogy-panel" class="fun-panel genealogy-card">
     <p>
       The <a href="https://www.mathgenealogy.org/" target="_blank" rel="noopener">Mathematics Genealogy Project</a>
