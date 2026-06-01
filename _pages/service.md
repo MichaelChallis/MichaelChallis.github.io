@@ -18,7 +18,7 @@ If you or someone you know is intrested in the program [sign-up here](https://fo
 ### Organized
 
 - [CRETA 2026 Economic Theory Conference](https://warwick.ac.uk/fac/soc/economics/events/2026/3/creta_2026_economic_theory_conference/)
-- [14th Warwick Economics PhD Conference](https://sites.google.com/view/warwick-econ-phd-conference/home)
+- [14th Warwick Economics PhD Conference](https://sites.google.com/view/warwick-econ-phd-conference/home) [[Media](https://warwick.ac.uk/fac/soc/economics/news/2026/5/warwick_economics_phd_conference_brings_together_early_career_researchers_from_across_the_world/)]
 
 ### Currently organizing
 
