@@ -3,8 +3,6 @@ layout: archive
 title: "Non-Economics Research"
 permalink: /non-economics-research/
 author_profile: true
-# Temporarily hidden from the website. Remove or set to true to restore.
-published: false
 ---
 
 I hold a degree in Philosophy and an enhanced minor in Mathematics (both from Pennsylvania State University). I have done — and to a lesser degree continue to do — research outside of economics.
