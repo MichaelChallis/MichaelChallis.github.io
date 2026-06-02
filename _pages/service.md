@@ -3,7 +3,7 @@ layout: archive
 title: "Service"
 permalink: /service/
 author_profile: true
-published: false # Temporarily hidden; remove this line to restore the page.
+published: true
 ---
 
 ## 🎓 Mentoring
