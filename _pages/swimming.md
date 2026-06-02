@@ -3,6 +3,7 @@ layout: archive
 title: "Swimming"
 permalink: /swimming/
 author_profile: true
+published: false # Temporarily hidden; remove this line to restore the page.
 ---
 
 Before starting my PhD at Warwick, I was a Division I swimmer at Penn State University. Pictured below are my teammates and me at the **2021 BIG 10 Swimming & Diving Championships**.

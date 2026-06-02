@@ -3,6 +3,7 @@ layout: archive
 title: "Miscellaneous"
 permalink: /fun/
 author_profile: true
+published: false # Temporarily hidden; remove this line to restore the page.
 ---
 
 Here are a few miscellaneous things that I like/find interesting/etc. The order the blocks appear in is randomized so when you refresh the page something different may appear first! If you would like to randomize it yourself without having to refresh the page just press this button: <button type="button" id="fun-randomize" class="btn btn--primary fun-randomize-button">Randomize</button>
