@@ -11,8 +11,7 @@ Here are a few miscellaneous things that I made/find interesting/etc. The order 
   <div id="economist-quiz-panel" class="fun-panel economist-quiz-card">
     <h3>What Type of Economist Should I Be?</h3>
     <p>
-      Take a short BuzzFeed-style quiz to discover whether your seminar instincts are more theorist,
-      applied micro, economic historian, or something else entirely.
+      Many of my non-economist freinds have heard me talk about "applied-micro economists" or "development economists" and asked me: "What type of economist would I be? This (very silly) BuzzFeed-style quiz is the culmination of these conversations.
     </p>
     <a class="btn btn--primary" href="/economist-quiz/">Take the quiz</a>
   </div>
