@@ -9,8 +9,8 @@ main:
   - title: "Service"
     url: /service/
 
-  # - title: "Swimming"
-  #   url: /swimming/
+  - title: "Swimming"
+    url: /swimming/
 
   # - title: "Miscellaneous"
   #   url: /fun/
