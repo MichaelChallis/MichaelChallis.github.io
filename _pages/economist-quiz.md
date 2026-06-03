@@ -11,7 +11,7 @@ author_profile: true
     <h2 id="quiz-title">What Type of Economist Should I Be?</h2>
     <p>
       Choose the answer that sounds most like you. When you are done, the quiz will match you with an economist type,
-      a famous economist fit, and the inner monologue you were probably already having during seminar.
+      a famous economist fit, and a short result blurb about your seminar instincts.
     </p>
   </section>
 
@@ -29,20 +29,77 @@ author_profile: true
 
 <script>
   (function () {
-    const economistTypes = [
-      "Development Economist",
-      "Applied Micro / Causal Inference Economist",
-      "Economic Theorist",
-      "Behavioral Economist",
-      "Political Economy Economist",
-      "Public Economist",
-      "Health Economist",
-      "Labor Economist",
-      "Economic Historian",
-      "Urban / Spatial Economist",
-      "IO / Innovation Economist",
-      "Econometrician / Methods Person"
+    const outcomeOrder = [
+      "development",
+      "appliedMicro",
+      "theory",
+      "behavioral",
+      "politicalEconomy",
+      "labor",
+      "history",
+      "io",
+      "econometrics",
+      "macro",
+      "finance"
     ];
+
+    const quizResults = {
+      development: {
+        label: "Development",
+        famousEconomist: "Esther Duflo",
+        blurb: "You want economics to answer big, important questions, but you still care whether the design can survive a hostile seminar. You are drawn to mechanisms, real-world institutions, and conversations outside academia. Your instinct is: “This question matters — now how do we identify it?”"
+      },
+      appliedMicro: {
+        label: "Applied Micro",
+        famousEconomist: "Joshua Angrist",
+        blurb: "You like narrow questions that can be answered cleanly. You trust research when the empirical design is sharp, the data are credible, and someone can explain exactly what variation is doing the work. Your seminar question is probably: “Is this identified?”"
+      },
+      theory: {
+        label: "Theory",
+        famousEconomist: "Kenneth Arrow",
+        blurb: "You like clean logic, precise assumptions, and arguments that hold together from first principles. You are drawn to puzzles, models, strategic interaction, and the beauty of a result that feels inevitable once it is written down. Your instinct is to ask: “What is the structure underneath this?”"
+      },
+      behavioral: {
+        label: "Behavioral",
+        famousEconomist: "Richard Thaler",
+        blurb: "You think the most interesting economics starts when people stop behaving like perfectly rational agents. You like mechanisms, psychology, interpretation, and settings where human quirks actually matter. You are open to ideas from outside the standard economics toolkit."
+      },
+      politicalEconomy: {
+        label: "Political Economy",
+        famousEconomist: "Daron Acemoglu",
+        blurb: "You are interested in power, institutions, incentives, and why societies choose the policies they do. You like big questions, mechanisms, and long conversations about politics, history, or institutions. Your instinct is to ask how economic outcomes are shaped by rules, conflict, and authority."
+      },
+      labor: {
+        label: "Labor",
+        famousEconomist: "David Card",
+        blurb: "You are empirical, practical, and slightly ruthless about whether something counts as economics. You like data, identification, human behavior in markets, and seminar arguments where someone is quietly — or loudly — disagreeing with the speaker."
+      },
+      history: {
+        label: "History",
+        famousEconomist: "Douglass North",
+        blurb: "You think economics makes more sense when it is put in historical context. You are drawn to institutions, long-run change, political order, and the question of why economies develop along different paths. You do not want history as decoration; you want history as evidence about how institutions shape economic life."
+      },
+      io: {
+        label: "Industrial Organization",
+        famousEconomist: "Jean Tirole",
+        blurb: "You like strategic behavior, firms, markets, and welfare. You are the person asking whether the incentives have been modeled properly and whether the benchmark makes sense. Your brain is happiest when market structure and strategic interaction are both on the table."
+      },
+      econometrics: {
+        label: "Econometrics",
+        famousEconomist: "Guido Imbens",
+        blurb: "You want precision, structure, and clean answers. You trust airtight logic, careful measurement, and designs that make the identifying variation explicit. You are not necessarily impressed by a big question unless the method can actually answer it."
+      },
+      macro: {
+        label: "Macro",
+        famousEconomist: "Olivier Blanchard",
+        blurb: "You are comfortable with big questions: growth, crises, inflation, policy, welfare, and the whole economy at once. You accept that answers may be incomplete, but you still want a model that clarifies the tradeoffs. Central banker energy."
+      },
+      finance: {
+        label: "Finance",
+        famousEconomist: "Eugene Fama",
+        blurb: "You are interested in risk, incentives, markets, and how information gets priced. You like questions where theory, data, and real-world stakes meet directly. You probably enjoy settings where small assumptions can have large consequences for valuation, behavior, and welfare."
+      }
+    };
 
     const quizQuestions = [
       {
@@ -52,12 +109,12 @@ author_profile: true
           {
             label: "A",
             text: "Ask a big, important question, even if the answer is necessarily incomplete.",
-            scores: ["Development Economist", "Political Economy Economist", "Economic Historian", "Public Economist", "Urban / Spatial Economist"]
+            scores: { development: 3, behavioral: 1, politicalEconomy: 2, labor: 1, history: 2, macro: 3, finance: 1 }
           },
           {
             label: "B",
             text: "Ask a narrower question and answer it precisely.",
-            scores: ["Applied Micro / Causal Inference Economist", "Econometrician / Methods Person", "Economic Theorist", "IO / Innovation Economist", "Health Economist"]
+            scores: { appliedMicro: 3, theory: 2, behavioral: 1, labor: 1, io: 2, econometrics: 3, finance: 1 }
           }
         ]
       },
@@ -65,154 +122,99 @@ author_profile: true
         id: "question-2",
         prompt: "What makes you trust a result?",
         answers: [
-          { label: "A", text: "The logic is airtight.", scores: ["Economic Theorist", "Public Economist", "IO / Innovation Economist"] },
-          { label: "B", text: "The assignment is randomized.", scores: ["Development Economist", "Health Economist", "Labor Economist", "Behavioral Economist"] },
-          { label: "C", text: "The identification strategy survives a hostile seminar.", scores: ["Applied Micro / Causal Inference Economist", "Econometrician / Methods Person", "Political Economy Economist"] }
+          {
+            label: "A",
+            text: "The logic is airtight.",
+            scores: { theory: 3, politicalEconomy: 2, io: 2, econometrics: 3, macro: 1, finance: 3 }
+          },
+          {
+            label: "B",
+            text: "The identification strategy survives a hostile seminar.",
+            scores: { development: 3, appliedMicro: 3, behavioral: 3, labor: 3, history: 2, macro: 1 }
+          }
         ]
       },
       {
         id: "question-3",
         prompt: "If economics disappeared tomorrow, what would you become?",
         answers: [
-          { label: "A", text: "A doctor", scores: ["Health Economist"] },
-          { label: "B", text: "A journalist", scores: ["Political Economy Economist", "Economic Historian"] },
-          { label: "C", text: "A social worker", scores: ["Development Economist", "Public Economist", "Labor Economist"] },
-          { label: "D", text: "An investment banker", scores: ["IO / Innovation Economist", "Public Economist"] },
-          { label: "E", text: "A diplomat", scores: ["Political Economy Economist", "Development Economist"] },
-          { label: "F", text: "A startup founder", scores: ["IO / Innovation Economist", "Behavioral Economist"] },
-          { label: "G", text: "An urban planner", scores: ["Urban / Spatial Economist"] },
-          { label: "H", text: "A teacher", scores: ["Labor Economist", "Development Economist"] }
+          { label: "A", text: "A consultant", scores: { appliedMicro: 3 } },
+          { label: "B", text: "A journalist", scores: { history: 3 } },
+          { label: "C", text: "Recruiter", scores: { labor: 3 } },
+          { label: "D", text: "An investment banker", scores: { finance: 3 } },
+          { label: "E", text: "A diplomat", scores: { politicalEconomy: 3 } },
+          { label: "F", text: "Another job?!? Who else will pay me to solve puzzles?", scores: { theory: 3 } },
+          { label: "G", text: "Merger and acquisition's lawyer", scores: { io: 3 } },
+          { label: "H", text: "Central banker", scores: { macro: 3 } },
+          { label: "I", text: "Psychological counsler", scores: { behavioral: 3 } },
+          { label: "J", text: "Quantitative researcher", scores: { econometrics: 3 } }
         ]
       },
       {
-        id: "seminar-question",
+        id: "question-4",
         prompt: "What is your favorite type of seminar question?",
         answers: [
-          { label: "A", text: "“Is this identified?”", scores: ["Applied Micro / Causal Inference Economist", "Econometrician / Methods Person"] },
-          { label: "B", text: "“What is the mechanism?”", scores: ["Behavioral Economist", "Development Economist", "Political Economy Economist", "Labor Economist"] },
-          { label: "C", text: "“Can you microfound that?”", scores: ["Economic Theorist", "IO / Innovation Economist"] },
-          { label: "D", text: "“What is the welfare implication?”", scores: ["Public Economist"] },
-          { label: "E", text: "“Where is the theory?”", scores: ["Economic Theorist", "Econometrician / Methods Person", "IO / Innovation Economist"] },
-          { label: "F", text: "“How is this economics?”", scores: ["Economic Historian", "Political Economy Economist", "Behavioral Economist"] }
+          { label: "A", text: "“Is this identified?”", scores: { appliedMicro: 3, labor: 2, econometrics: 3 } },
+          { label: "B", text: "“What is the mechanism?”", scores: { development: 3, theory: 3, behavioral: 3, politicalEconomy: 3 } },
+          { label: "C", text: "“Can you microfound that?”", scores: { io: 3 } },
+          { label: "D", text: "“What is the welfare implication?”", scores: { macro: 3, finance: 3 } },
+          { label: "E", text: "“How is this economics?”", scores: { development: 1, appliedMicro: 1, labor: 2, io: 1, macro: 1, finance: 1 } },
+          { label: "F", text: "\"Do you have a qualitative evidence?\"", scores: { history: 3 } }
         ]
       },
       {
         id: "question-5",
         prompt: "What is your ideal desk setup for getting work done?",
         answers: [
-          { label: "A", text: "A clean desk, one notebook, one pen, no distractions.", scores: ["Economic Theorist", "Econometrician / Methods Person", "Public Economist"] },
-          { label: "B", text: "Two monitors, 47 tabs, Stata/R/Python open, and a half-finished coffee.", scores: ["Applied Micro / Causal Inference Economist", "Development Economist", "Health Economist", "Labor Economist"] },
-          { label: "C", text: "A whiteboard covered in equations that no one is allowed to erase.", scores: ["Economic Theorist", "IO / Innovation Economist", "Econometrician / Methods Person"] },
-          { label: "D", text: "A messy pile of books, papers, historical documents, and handwritten notes.", scores: ["Economic Historian", "Political Economy Economist"] },
-          { label: "E", text: "A café table, laptop, headphones, and the illusion that this counts as work-life balance.", scores: ["Behavioral Economist", "Labor Economist", "Development Economist"] },
-          { label: "F", text: "A spreadsheet, a calendar, and a terrifyingly organized to-do list.", scores: ["Public Economist", "IO / Innovation Economist", "Urban / Spatial Economist", "Applied Micro / Causal Inference Economist"] }
+          { label: "A", text: "A clean desk, one notebook, one pen, no distractions.", scores: { theory: 1, econometrics: 3 } },
+          { label: "B", text: "Two monitors, 47 tabs, Stata/R/Python open, and a half-finished coffee.", scores: { development: 1, appliedMicro: 2, politicalEconomy: 1, labor: 3, macro: 2, finance: 3 } },
+          { label: "C", text: "A whiteboard covered in equations that no one is allowed to erase.", scores: { theory: 2, io: 1, macro: 1 } },
+          { label: "D", text: "A messy pile of books, papers, historical documents, and handwritten notes.", scores: { politicalEconomy: 2, history: 3 } },
+          { label: "E", text: "A café table, laptop, headphones, and the illusion that this counts as work-life balance.", scores: { behavioral: 3 } },
+          { label: "F", text: "A spreadsheet, a calendar, and a terrifyingly organized to-do list.", scores: { development: 2, appliedMicro: 1, io: 2 } }
         ]
       },
       {
         id: "question-6",
         prompt: "Where do you do your best thinking?",
         answers: [
-          { label: "A", text: "At the desk, after three uninterrupted hours.", scores: ["Econometrician / Methods Person", "Economic Theorist"] },
-          { label: "B", text: "On a walk, when you are supposed to be doing something else.", scores: ["Behavioral Economist", "Economic Historian"] },
-          { label: "C", text: "In the shower, where the perfect identification strategy briefly appears and then disappears forever.", scores: ["Applied Micro / Causal Inference Economist", "Econometrician / Methods Person", "Development Economist"] },
-          { label: "D", text: "During seminars, but only because you are quietly disagreeing with the speaker.", scores: ["Economic Theorist", "IO / Innovation Economist", "Public Economist"] },
-          { label: "E", text: "While talking to people outside academia.", scores: ["Development Economist", "Health Economist", "Labor Economist", "Political Economy Economist"] },
-          { label: "F", text: "At 1 a.m., when the deadline has become real.", scores: ["Applied Micro / Causal Inference Economist", "IO / Innovation Economist", "Public Economist"] },
-          { label: "G", text: "In front of a whiteboard with someone who also thinks this is fun.", scores: ["Economic Theorist", "IO / Innovation Economist", "Econometrician / Methods Person"] }
+          { label: "A", text: "At the desk, after three uninterrupted hours.", scores: { io: 3, econometrics: 2, macro: 2, finance: 3 } },
+          { label: "B", text: "On a walk, when you are supposed to be doing something else.", scores: { politicalEconomy: 1, history: 3, macro: 1 } },
+          { label: "C", text: "In the shower, where the perfect idea briefly appears and then disappears forever.", scores: { behavioral: 1 } },
+          { label: "D", text: "During seminars, but only because you are quietly (or loudly) disagreeing with the speaker.", scores: { appliedMicro: 2, politicalEconomy: 2, labor: 3 } },
+          { label: "E", text: "While talking to people outside academia.", scores: { development: 3, behavioral: 2 } },
+          { label: "F", text: "In front of a whiteboard with someone who also thinks this is fun.", scores: { theory: 3, econometrics: 1 } }
         ]
       },
       {
         id: "question-7",
         prompt: "What kind of referee are you?",
         answers: [
-          { label: "A", text: "“The question is important, but the design does not answer it.”", scores: ["Applied Micro / Causal Inference Economist", "Econometrician / Methods Person"] },
-          { label: "B", text: "“I enjoyed the paper, but I have concerns about interpretation.”", scores: ["Behavioral Economist", "Labor Economist", "Health Economist"] },
-          { label: "C", text: "“The model is elegant, but the economics is unclear.”", scores: ["Economic Theorist", "IO / Innovation Economist"] },
-          { label: "D", text: "“The paper would benefit from a clearer welfare benchmark.”", scores: ["Public Economist"] },
-          { label: "E", text: "“The setting is fascinating, but the contribution needs sharpening.”", scores: ["Economic Historian", "Political Economy Economist", "Urban / Spatial Economist"] },
-          { label: "F", text: "“I have 19 comments, most of which are minor.”", scores: ["Econometrician / Methods Person", "Applied Micro / Causal Inference Economist"] },
-          { label: "G", text: "“This is not economics.”", scores: ["Economic Theorist", "Public Economist"] },
-          { label: "H", text: "“I am trying very hard to be nice.”", scores: ["Development Economist", "Behavioral Economist", "Labor Economist"] }
+          { label: "A", text: "“The question is important, but the design does not answer it.”", scores: { appliedMicro: 3, theory: 3 } },
+          { label: "B", text: "“I enjoyed the paper, but I have concerns about interpretation.”", scores: { development: 3 } },
+          { label: "C", text: "“The model is elegant, but the economics is unclear.”", scores: { macro: 3 } },
+          { label: "D", text: "“The paper would benefit from a clearer welfare benchmark.”", scores: { io: 3 } },
+          { label: "E", text: "“The setting is fascinating, but the contribution needs sharpening.”", scores: { behavioral: 3, history: 3, finance: 3 } },
+          { label: "F", text: "“I have 19 comments, most of which are minor.”", scores: {} },
+          { label: "G", text: "“This is not economics.”", scores: { labor: 3 } },
+          { label: "H", text: "“I am trying very hard to be nice.”", scores: { politicalEconomy: 3, econometrics: 3 } }
         ]
       },
       {
         id: "question-8",
         prompt: "At a conference dinner, what are you most likely doing?",
         answers: [
-          { label: "A", text: "Asking someone about their data.", scores: ["Applied Micro / Causal Inference Economist", "Econometrician / Methods Person", "Health Economist"] },
-          { label: "B", text: "Debating whether the mechanism is plausible.", scores: ["Behavioral Economist", "Development Economist", "Political Economy Economist", "Labor Economist"] },
-          { label: "C", text: "Explaining a model on a napkin.", scores: ["Economic Theorist", "IO / Innovation Economist"] },
-          { label: "D", text: "Quietly networking with terrifying efficiency.", scores: ["IO / Innovation Economist", "Public Economist"] },
-          { label: "E", text: "Asking people what they are working on outside their main field.", scores: ["Behavioral Economist", "Development Economist", "Urban / Spatial Economist"] },
-          { label: "F", text: "Having a long conversation about politics, history, or institutions.", scores: ["Political Economy Economist", "Economic Historian"] },
-          { label: "G", text: "Escaping early because tomorrow’s session starts at 9.", scores: ["Econometrician / Methods Person", "Applied Micro / Causal Inference Economist"] },
-          { label: "H", text: "Accidentally starting a new coauthored project.", scores: ["IO / Innovation Economist", "Development Economist", "Labor Economist", "Urban / Spatial Economist"] }
+          { label: "A", text: "Asking someone about their data.", scores: { appliedMicro: 3 } },
+          { label: "B", text: "Debating whether the mechanism is plausible.", scores: { development: 3 } },
+          { label: "C", text: "Explaining a model on a napkin.", scores: { theory: 3 } },
+          { label: "D", text: "Quietly networking with terrifying efficiency.", scores: { finance: 3 } },
+          { label: "E", text: "Asking people what they are working on outside their main field.", scores: { behavioral: 3 } },
+          { label: "F", text: "Having a long conversation about politics, history, or institutions.", scores: { politicalEconomy: 3, history: 3 } },
+          { label: "G", text: "Escaping early because tomorrow’s session starts at 9.", scores: { labor: 3, io: 3, econometrics: 3 } },
+          { label: "H", text: "Accidentally starting a new coauthored project.", scores: { macro: 3 } }
         ]
       }
     ];
-
-    const quizResults = {
-      "Development Economist": {
-        famousFit: "Esther Duflo",
-        explanation: "You want economics to answer questions that matter in the real world: poverty, education, health, governance, and policy design. You are comfortable with messy settings, imperfect implementation, and the fact that the best question is not always the cleanest one.",
-        innerMonologue: "But what would this actually change for people?"
-      },
-      "Applied Micro / Causal Inference Economist": {
-        famousFit: "Joshua Angrist",
-        explanation: "You believe a good paper begins with a sharp question and survives only if the design can defend itself. You care about clean variation, credible counterfactuals, and whether the coefficient means what the author says it means.",
-        innerMonologue: "Interesting. But what is the identifying variation?"
-      },
-      "Economic Theorist": {
-        famousFit: "Kenneth Arrow",
-        explanation: "You like precision, abstraction, and arguments that are true because they have to be true. You are happiest when a complicated social problem becomes a clean model with assumptions, propositions, and implications.",
-        innerMonologue: "This is intuitive, but can we prove it?"
-      },
-      "Behavioral Economist": {
-        famousFit: "Richard Thaler",
-        explanation: "You are interested in the gap between how people are supposed to behave and how they actually behave. You like mechanisms, mistakes, biases, norms, defaults, and all the ways real humans ruin elegant models.",
-        innerMonologue: "But would people actually do that?"
-      },
-      "Political Economy Economist": {
-        famousFit: "Daron Acemoglu",
-        explanation: "You think economics is inseparable from power. You care about institutions, democracy, conflict, state capacity, elites, and the political constraints that shape economic outcomes.",
-        innerMonologue: "Who has power here, and what do they want?"
-      },
-      "Public Economist": {
-        famousFit: "James Mirrlees",
-        explanation: "You care about welfare, redistribution, taxation, incentives, and how governments should design policy when people and firms respond strategically. You are the person asking whether the result changes the optimal policy rule.",
-        innerMonologue: "What is the welfare benchmark?"
-      },
-      "Health Economist": {
-        famousFit: "Amy Finkelstein",
-        explanation: "You are drawn to questions where policy, insurance, public finance, and human vulnerability meet. You want to know how institutions shape health care access, medical spending, risk, and inequality.",
-        innerMonologue: "What does this do to care, costs, and outcomes?"
-      },
-      "Labor Economist": {
-        famousFit: "Claudia Goldin",
-        explanation: "You care about work, wages, families, education, gender, inequality, and long-run changes in labor markets. You are interested in both institutions and people’s actual life choices.",
-        innerMonologue: "How does this change people’s work and lives?"
-      },
-      "Economic Historian": {
-        famousFit: "Douglass North",
-        explanation: "You believe the present is impossible to understand without the past. You like archives, institutions, long-run change, historical shocks, and settings where the context is not noise but the point.",
-        innerMonologue: "This makes more sense if we go back 150 years."
-      },
-      "Urban / Spatial Economist": {
-        famousFit: "Edward Glaeser",
-        explanation: "You think place matters. You care about cities, housing, migration, commuting, agglomeration, segregation, and how geography shapes opportunity.",
-        innerMonologue: "Where is this happening, and why there?"
-      },
-      "IO / Innovation Economist": {
-        famousFit: "Jean Tirole",
-        explanation: "You are interested in firms, platforms, market power, competition, innovation, regulation, and strategic behavior. You like economics where everyone is optimizing and everyone is slightly terrifying.",
-        innerMonologue: "What is the firm’s strategy, and what can the regulator actually do?"
-      },
-      "Econometrician / Methods Person": {
-        famousFit: "James Heckman",
-        explanation: "You care about what can be learned, what cannot be learned, and what assumptions are secretly doing all the work. You are interested in methods, selection, interpretation, and the structure behind estimates.",
-        innerMonologue: "This estimate is only meaningful under which assumptions?"
-      }
-    };
 
     const form = document.getElementById("economist-quiz");
     const questionsContainer = document.getElementById("economist-quiz-questions");
@@ -223,13 +225,6 @@ author_profile: true
       return value.replace(/[&<>"]/g, function (character) {
         return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[character];
       });
-    }
-
-    function getAnswerPoints(scores) {
-      return scores.reduce(function (points, type, index) {
-        points[type] = index === 0 ? 2 : 1;
-        return points;
-      }, {});
     }
 
     function renderQuestions() {
@@ -266,57 +261,43 @@ author_profile: true
     }
 
     function scoreAnswers(selectedAnswers) {
-      const totals = economistTypes.reduce(function (scores, type) {
-        scores[type] = 0;
+      const totals = outcomeOrder.reduce(function (scores, outcome) {
+        scores[outcome] = 0;
         return scores;
       }, {});
 
       selectedAnswers.forEach(function (answer) {
-        const points = getAnswerPoints(answer.scores);
-        Object.keys(points).forEach(function (type) {
-          totals[type] += points[type];
+        Object.keys(answer.scores).forEach(function (outcome) {
+          if (Object.prototype.hasOwnProperty.call(totals, outcome)) {
+            totals[outcome] += answer.scores[outcome] || 0;
+          }
         });
       });
 
       return totals;
     }
 
-    function chooseWinner(totals, seminarAnswer) {
-      const highestScore = Math.max.apply(null, economistTypes.map(function (type) { return totals[type]; }));
-      let tiedTypes = economistTypes.filter(function (type) { return totals[type] === highestScore; });
-
-      if (tiedTypes.length > 1 && seminarAnswer) {
-        const tieBreakPoints = getAnswerPoints(seminarAnswer.scores);
-        const highestTieBreakScore = Math.max.apply(null, tiedTypes.map(function (type) { return tieBreakPoints[type] || 0; }));
-        const seminarWinners = tiedTypes.filter(function (type) { return (tieBreakPoints[type] || 0) === highestTieBreakScore; });
-
-        if (highestTieBreakScore > 0) {
-          tiedTypes = seminarWinners;
-        }
-      }
-
-      return tiedTypes[0];
+    function chooseWinner(totals) {
+      return outcomeOrder.reduce(function (winner, outcome) {
+        return totals[outcome] > totals[winner] ? outcome : winner;
+      }, outcomeOrder[0]);
     }
 
-    function showResult(type) {
-      const result = quizResults[type];
+    function showResult(outcome) {
+      const result = quizResults[outcome];
 
       resultContainer.innerHTML = `
         <div class="economist-result-card">
           <p class="economist-result-label">Your economist type is</p>
-          <h2>${escapeHtml(type)}</h2>
+          <h2>${escapeHtml(result.label)}</h2>
           <dl class="economist-result-details">
             <div>
               <dt>Famous economist fit</dt>
-              <dd>${escapeHtml(result.famousFit)}</dd>
+              <dd>${escapeHtml(result.famousEconomist)}</dd>
             </div>
             <div>
               <dt>Why it fits</dt>
-              <dd>${escapeHtml(result.explanation)}</dd>
-            </div>
-            <div>
-              <dt>Inner monologue</dt>
-              <dd>“${escapeHtml(result.innerMonologue)}”</dd>
+              <dd>${escapeHtml(result.blurb)}</dd>
             </div>
           </dl>
           <button type="button" class="btn btn--primary economist-retake">Retake quiz</button>
@@ -345,8 +326,7 @@ author_profile: true
       }
 
       const totals = scoreAnswers(selectedAnswers);
-      const seminarQuestionIndex = quizQuestions.findIndex(function (question) { return question.id === "seminar-question"; });
-      const winner = chooseWinner(totals, selectedAnswers[seminarQuestionIndex]);
+      const winner = chooseWinner(totals);
 
       message.textContent = "";
       showResult(winner);
