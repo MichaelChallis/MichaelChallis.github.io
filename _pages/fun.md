@@ -5,7 +5,7 @@ permalink: /fun/
 author_profile: true
 ---
 
-Here are a few miscellaneous things that I made/find interesting/etc. The order the blocks appear in is randomized so when you refresh the page something different may appear first! If you would like to randomize it yourself without having to refresh the page just press this button: <button type="button" id="fun-randomize" class="btn btn--primary fun-randomize-button">Randomize</button>
+Here are a few miscellaneous things that I made/find interesting/etc. The order the blocks appear in is randomized so when you refresh the page something different may appear first! If you would like to randomize it yourself without having to refresh the page just press this button: <button type="button" id="fun-randomize" class="btn btn--primary fun-page-button fun-page-button--randomize fun-randomize-button">Randomize</button>
 
 <div id="fun-panels">
   <div id="economist-quiz-panel" class="fun-panel economist-quiz-card">
@@ -13,7 +13,7 @@ Here are a few miscellaneous things that I made/find interesting/etc. The order 
     <p>
       Many of my non-economist freinds have heard me talk about "applied-micro economists" or "development economists" and asked me: "What type of economist would I be? This (very silly) BuzzFeed-style quiz is the culmination of these conversations.
     </p>
-    <a class="btn btn--primary" href="/economist-quiz/">Take the quiz</a>
+    <a class="btn btn--primary fun-page-button" href="/economist-quiz/">Take the quiz</a>
   </div>
 
   <div id="genealogy-panel" class="fun-panel genealogy-card">
@@ -32,8 +32,8 @@ Here are a few miscellaneous things that I made/find interesting/etc. The order 
         <h3 id="genealogy-name"></h3>
         <p id="genealogy-bio"></p>
         <div class="genealogy-links">
-          <a id="genealogy-link" class="btn btn--info btn--small" target="_blank" rel="noopener">Math Genealogy</a>
-          <a id="wiki-link" class="btn btn--primary btn--small" target="_blank" rel="noopener">Wikipedia</a>
+          <a id="genealogy-link" class="btn btn--info btn--small fun-page-button fun-page-button--secondary" target="_blank" rel="noopener">Math Genealogy</a>
+          <a id="wiki-link" class="btn btn--primary btn--small fun-page-button fun-page-button--secondary" target="_blank" rel="noopener">Wikipedia</a>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@ Here are a few miscellaneous things that I made/find interesting/etc. The order 
 
   <div id="cool-stuff-panel" class="fun-panel fun-pdf-card">
     <div class="fun-pdf-header">
-      <a class="btn btn--primary" href="/files/Cool_Stuff.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
+      <a class="btn btn--primary fun-page-button" href="/files/Cool_Stuff.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
     </div>
 
     <iframe
@@ -250,20 +250,84 @@ Here are a few miscellaneous things that I made/find interesting/etc. The order 
 </script>
 
 <style>
+  .fun-page-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    border: 1px solid rgba(99, 102, 241, 0.32) !important;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #4f46e5, #2b8aa0);
+    background-color: #4f46e5;
+    color: #ffffff !important;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    box-shadow: 0 10px 22px rgba(79, 70, 229, 0.2);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  }
+
+  .fun-page-button:hover,
+  .fun-page-button:focus {
+    border-color: rgba(245, 158, 11, 0.65) !important;
+    background: linear-gradient(135deg, #4338ca, #24778a);
+    background-color: #4338ca;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(79, 70, 229, 0.26);
+  }
+
+  .fun-page-button:focus-visible,
+  .genealogy-controls button:focus-visible {
+    outline: 3px solid rgba(245, 158, 11, 0.65);
+    outline-offset: 3px;
+  }
+
+  .fun-page-button--secondary {
+    border-color: rgba(79, 70, 229, 0.24) !important;
+    background: linear-gradient(135deg, #ffffff, #eef2ff);
+    background-color: #ffffff;
+    color: #4338ca !important;
+    box-shadow: 0 8px 18px rgba(99, 102, 241, 0.14);
+  }
+
+  .fun-page-button--secondary:hover,
+  .fun-page-button--secondary:focus {
+    background: linear-gradient(135deg, #eef2ff, #fff7ed);
+    background-color: #eef2ff;
+    color: #312e81 !important;
+  }
+
   .fun-randomize-button {
-    margin: 0.5rem 0 0.9rem;
+    margin: 0.35rem 0 0.85rem;
+    padding-inline: 1.05rem;
+  }
+
+  .fun-randomize-button::before {
+    content: "↻";
+    font-size: 1.05em;
+    line-height: 1;
   }
 
   .fun-panel {
     margin-top: 0.75rem;
     margin-bottom: 1.2rem;
-    padding: 1rem 1.1rem 1.05rem;
+    padding: 0.85rem 1.1rem 1.05rem;
     border: 1px solid rgba(99, 102, 241, 0.28);
     border-left: 4px solid #6366f1;
     border-radius: 14px;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(99, 102, 241, 0.08));
     box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
     color: var(--global-text-color);
+  }
+
+  .fun-panel h3 {
+    margin-top: 0;
+    margin-bottom: 0.65rem;
+  }
+
+  .economist-quiz-card h3 {
+    margin-top: 0;
   }
 
   .genealogy-card p {
@@ -352,27 +416,24 @@ Here are a few miscellaneous things that I made/find interesting/etc. The order 
   }
 
   .genealogy-controls button {
-    border: 1px solid rgba(99, 102, 241, 0.4);
-    background: linear-gradient(145deg, #ffffff, #f8faff);
+    border: 1px solid rgba(79, 70, 229, 0.28);
+    background: linear-gradient(135deg, #ffffff, #eef2ff);
     border-radius: 999px;
-    padding: 0.38rem 0.78rem;
+    padding: 0.42rem 0.85rem;
     cursor: pointer;
     font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--global-text-color);
-    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.16);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    font-weight: 800;
+    color: #4338ca;
+    box-shadow: 0 8px 18px rgba(99, 102, 241, 0.14);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
   }
 
-  .genealogy-controls button:hover {
+  .genealogy-controls button:hover,
+  .genealogy-controls button:focus {
     transform: translateY(-1px);
-    border-color: rgba(79, 70, 229, 0.55);
-    box-shadow: 0 8px 16px rgba(99, 102, 241, 0.24);
-  }
-
-  .genealogy-controls button:focus-visible {
-    outline: 2px solid rgba(79, 70, 229, 0.55);
-    outline-offset: 2px;
+    border-color: rgba(245, 158, 11, 0.65);
+    background: linear-gradient(135deg, #eef2ff, #fff7ed);
+    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.2);
   }
 
   #genealogy-index {
@@ -421,6 +482,24 @@ Here are a few miscellaneous things that I made/find interesting/etc. The order 
     }
   }
 
+  html[data-theme="dark"] .fun-page-button--secondary,
+  html[data-theme="dark"] .genealogy-controls button {
+    border-color: rgba(129, 140, 248, 0.4) !important;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.96), rgba(49, 46, 129, 0.78));
+    background-color: #1e293b;
+    color: #e0e7ff !important;
+    box-shadow: 0 10px 22px rgba(2, 6, 23, 0.36);
+  }
+
+  html[data-theme="dark"] .fun-page-button--secondary:hover,
+  html[data-theme="dark"] .fun-page-button--secondary:focus,
+  html[data-theme="dark"] .genealogy-controls button:hover,
+  html[data-theme="dark"] .genealogy-controls button:focus {
+    border-color: rgba(245, 158, 11, 0.62) !important;
+    background: linear-gradient(135deg, rgba(49, 46, 129, 0.95), rgba(15, 118, 110, 0.78));
+    color: #ffffff !important;
+  }
+
   html[data-theme="dark"] .fun-panel {
     border-color: rgba(129, 140, 248, 0.35);
     background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(55, 48, 163, 0.35));
@@ -433,9 +512,4 @@ Here are a few miscellaneous things that I made/find interesting/etc. The order 
     box-shadow: inset 0 1px 0 rgba(148, 163, 184, 0.18), 0 10px 24px rgba(2, 6, 23, 0.42);
   }
 
-  html[data-theme="dark"] .genealogy-controls button {
-    border-color: rgba(129, 140, 248, 0.45);
-    background: linear-gradient(145deg, rgba(30, 41, 59, 0.96), rgba(51, 65, 85, 0.94));
-    box-shadow: 0 8px 18px rgba(2, 6, 23, 0.42);
-  }
 </style>
