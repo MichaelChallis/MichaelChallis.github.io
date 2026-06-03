@@ -235,7 +235,6 @@ author_profile: true
           return `
             <label class="economist-answer-card" for="${inputId}">
               <input type="radio" id="${inputId}" name="${question.id}" value="${answerIndex}" />
-              <span class="economist-answer-letter">${answer.label}</span>
               <span class="economist-answer-text">${escapeHtml(answer.text)}</span>
             </label>
           `;
@@ -340,29 +339,69 @@ author_profile: true
   .economist-quiz-page {
     --quiz-accent: #6366f1;
     --quiz-accent-dark: #4f46e5;
+    --quiz-accent-soft: #eef2ff;
     --quiz-warm: #f59e0b;
+    --quiz-warm-soft: #fff7ed;
+    --quiz-rose: #ec4899;
     --quiz-text: var(--global-text-color);
     --quiz-muted: var(--global-text-color-light, #64748b);
+    position: relative;
+    isolation: isolate;
+  }
+
+  .economist-quiz-page::before {
+    content: "";
+    position: absolute;
+    inset: -1rem -0.75rem auto;
+    height: 18rem;
+    border-radius: 999px;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.22), transparent 34%),
+      radial-gradient(circle at 74% 20%, rgba(99, 102, 241, 0.22), transparent 36%),
+      radial-gradient(circle at 52% 78%, rgba(236, 72, 153, 0.12), transparent 42%);
+    filter: blur(8px);
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: -1;
   }
 
   .economist-quiz-hero,
   .economist-question-card,
   .economist-result-card {
-    border: 1px solid rgba(99, 102, 241, 0.24);
-    border-radius: 18px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(238, 242, 255, 0.84));
-    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.11);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 22px;
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(238, 242, 255, 0.82)),
+      radial-gradient(circle at top right, rgba(245, 158, 11, 0.16), transparent 35%);
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.12);
     color: var(--quiz-text);
   }
 
   .economist-quiz-hero {
-    padding: 1.25rem 1.35rem;
-    margin-bottom: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    padding: 1.6rem 1.7rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .economist-quiz-hero::after {
+    content: "";
+    position: absolute;
+    right: -3rem;
+    top: -3rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(245, 158, 11, 0.16));
+    pointer-events: none;
   }
 
   .economist-quiz-hero h2 {
-    margin: 0.15rem 0 0.55rem;
+    position: relative;
+    margin: 0.15rem 0 0.65rem;
     color: var(--quiz-text);
+    font-size: clamp(1.65rem, 3.6vw, 2.45rem);
+    line-height: 1.08;
   }
 
   .economist-quiz-hero p:last-child {
@@ -382,8 +421,18 @@ author_profile: true
   }
 
   .economist-question-card {
-    margin: 0 0 1rem;
-    padding: 1rem;
+    position: relative;
+    margin: 0 0 1.15rem;
+    padding: 1.15rem;
+    overflow: hidden;
+  }
+
+  .economist-question-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 0.28rem;
+    background: linear-gradient(180deg, var(--quiz-accent), var(--quiz-warm));
   }
 
   .economist-question-card legend {
@@ -396,37 +445,57 @@ author_profile: true
   }
 
   .economist-question-number {
-    display: block;
-    margin-bottom: 0.25rem;
-    color: var(--quiz-warm);
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 0.45rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(245, 158, 11, 0.13);
+    color: #b45309;
   }
 
   .economist-answer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 0.7rem;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    gap: 0.8rem;
   }
 
   .economist-answer-card {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.65rem;
-    align-items: start;
+    position: relative;
+    display: flex;
+    align-items: center;
     min-height: 100%;
     margin: 0;
-    padding: 0.85rem;
-    border: 1px solid rgba(99, 102, 241, 0.22);
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.78);
+    padding: 1rem 3.1rem 1rem 1rem;
+    border: 1px solid rgba(99, 102, 241, 0.18);
+    border-radius: 16px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.76));
     cursor: pointer;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
     transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+  }
+
+  .economist-answer-card::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    width: 1.15rem;
+    height: 1.15rem;
+    border: 2px solid rgba(99, 102, 241, 0.35);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: inset 0 0 0 0.22rem rgba(255, 255, 255, 0.92);
+    transform: translateY(-50%);
+    transition: background 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
   }
 
   .economist-answer-card:hover,
   .economist-answer-card:focus-within {
-    transform: translateY(-1px);
-    border-color: rgba(79, 70, 229, 0.58);
-    box-shadow: 0 9px 20px rgba(99, 102, 241, 0.16);
+    transform: translateY(-2px);
+    border-color: rgba(79, 70, 229, 0.5);
+    box-shadow: 0 14px 28px rgba(99, 102, 241, 0.15);
   }
 
   .economist-answer-card input {
@@ -439,34 +508,23 @@ author_profile: true
     white-space: nowrap;
   }
 
-  .economist-answer-letter {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 999px;
-    background: rgba(99, 102, 241, 0.12);
-    color: var(--quiz-accent-dark);
-    font-weight: 800;
-    transition: background 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
-  }
 
   .economist-answer-text {
     color: var(--quiz-text);
-    line-height: 1.45;
+    line-height: 1.5;
   }
 
   .economist-answer-card:has(input:checked) {
-    border-color: var(--quiz-accent);
-    background: linear-gradient(145deg, rgba(238, 242, 255, 0.95), rgba(255, 251, 235, 0.72));
-    box-shadow: 0 10px 24px rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.7);
+    background:
+      linear-gradient(145deg, rgba(238, 242, 255, 0.98), rgba(255, 251, 235, 0.82));
+    box-shadow: 0 14px 30px rgba(99, 102, 241, 0.2);
   }
 
-  .economist-answer-card:has(input:checked) .economist-answer-letter {
+  .economist-answer-card:has(input:checked)::after {
+    border-color: var(--quiz-accent);
     background: var(--quiz-accent);
-    color: #ffffff;
-    box-shadow: 0 6px 14px rgba(99, 102, 241, 0.32);
+    box-shadow: inset 0 0 0 0.25rem #ffffff, 0 0 0 0.18rem rgba(99, 102, 241, 0.13);
   }
 
   .economist-quiz-actions {
@@ -480,7 +538,8 @@ author_profile: true
   .economist-quiz-submit,
   .economist-retake {
     border-radius: 999px;
-    font-weight: 700;
+    font-weight: 800;
+    box-shadow: 0 10px 22px rgba(99, 102, 241, 0.2);
   }
 
   .economist-quiz-message {
@@ -495,8 +554,8 @@ author_profile: true
   }
 
   .economist-result-card {
-    padding: 1.25rem 1.35rem;
-    border-left: 5px solid var(--quiz-accent);
+    padding: 1.45rem 1.55rem;
+    border-left: 6px solid var(--quiz-accent);
   }
 
   .economist-result-card h2 {
@@ -511,9 +570,10 @@ author_profile: true
   }
 
   .economist-result-details div {
-    padding: 0.8rem 0.9rem;
-    border-radius: 13px;
-    background: rgba(255, 255, 255, 0.72);
+    padding: 0.95rem 1rem;
+    border: 1px solid rgba(99, 102, 241, 0.12);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.76);
   }
 
   .economist-result-details dt {
@@ -576,9 +636,21 @@ author_profile: true
     background: rgba(15, 23, 42, 0.58);
   }
 
+  html[data-theme="dark"] .economist-answer-card::after {
+    border-color: rgba(129, 140, 248, 0.52);
+    background: rgba(15, 23, 42, 0.88);
+    box-shadow: inset 0 0 0 0.22rem rgba(15, 23, 42, 0.92);
+  }
+
   html[data-theme="dark"] .economist-answer-card:has(input:checked) {
     border-color: rgba(129, 140, 248, 0.78);
     background: linear-gradient(145deg, rgba(49, 46, 129, 0.72), rgba(120, 53, 15, 0.34));
+  }
+
+  html[data-theme="dark"] .economist-answer-card:has(input:checked)::after {
+    background: #a5b4fc;
+    border-color: #c7d2fe;
+    box-shadow: inset 0 0 0 0.25rem rgba(15, 23, 42, 0.96), 0 0 0 0.18rem rgba(129, 140, 248, 0.16);
   }
 
   html[data-theme="dark"] .economist-quiz-message {
