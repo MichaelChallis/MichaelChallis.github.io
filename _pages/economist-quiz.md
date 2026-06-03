@@ -284,6 +284,10 @@ author_profile: true
 
     function showResult(outcome) {
       const result = quizResults[outcome];
+      const shareUrl = window.location.href.split("#")[0];
+      const shareText = `I got ${result.label} on the What Type of Economist Should I Be? quiz.`;
+      const encodedShareText = encodeURIComponent(shareText);
+      const encodedShareUrl = encodeURIComponent(shareUrl);
 
       resultContainer.innerHTML = `
         <div class="economist-result-card">
