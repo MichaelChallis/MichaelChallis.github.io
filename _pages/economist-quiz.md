@@ -284,6 +284,10 @@ author_profile: true
 
     function showResult(outcome) {
       const result = quizResults[outcome];
+      const shareUrl = window.location.href.split("#")[0];
+      const shareText = `I got ${result.label} on the What Type of Economist Should I Be? quiz.`;
+      const encodedShareText = encodeURIComponent(shareText);
+      const encodedShareUrl = encodeURIComponent(shareUrl);
 
       resultContainer.innerHTML = `
         <div class="economist-result-card">
@@ -302,42 +306,15 @@ author_profile: true
           <div class="economist-share" aria-label="Share your quiz result">
             <p class="economist-share-title">Share your result</p>
             <div class="economist-share-actions">
-              <button type="button" class="btn economist-share-native">Share result</button>
               <a class="btn economist-share-link" href="https://twitter.com/intent/tweet?text=${encodedShareText}&url=${encodedShareUrl}" target="_blank" rel="noopener">Post on X</a>
               <a class="btn economist-share-link" href="https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}" target="_blank" rel="noopener">Facebook</a>
               <a class="btn economist-share-link" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodedShareUrl}" target="_blank" rel="noopener">LinkedIn</a>
             </div>
-            <p class="economist-share-message" aria-live="polite"></p>
           </div>
           <button type="button" class="btn btn--primary economist-retake">Retake quiz</button>
         </div>
       `;
       resultContainer.hidden = false;
-
-      const shareButton = resultContainer.querySelector(".economist-share-native");
-      const shareMessage = resultContainer.querySelector(".economist-share-message");
-
-      if (!navigator.share) {
-        shareButton.textContent = "Copy result link";
-      }
-
-      shareButton.addEventListener("click", function () {
-        if (navigator.share) {
-          navigator.share({ title: "What Type of Economist Should I Be?", text: shareText, url: shareUrl }).catch(function () {});
-          return;
-        }
-
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(`${shareText} ${shareUrl}`).then(function () {
-            shareMessage.textContent = "Copied your result link.";
-          }, function () {
-            shareMessage.textContent = "Copy this page URL to share your result.";
-          });
-          return;
-        }
-
-        shareMessage.textContent = "Copy this page URL to share your result.";
-      });
 
       resultContainer.querySelector(".economist-retake").addEventListener("click", function () {
         form.reset();
@@ -651,33 +628,30 @@ author_profile: true
     gap: 0.55rem;
   }
 
-  .economist-share-native,
   .economist-share-link {
     border-radius: 999px;
-    border: 1px solid rgba(99, 102, 241, 0.22);
-    background: rgba(255, 255, 255, 0.78);
-    color: var(--quiz-accent-dark);
+    border: 2px solid #4338ca !important;
+    background: #ffffff;
+    background-color: #ffffff;
+    color: #312e81 !important;
     font-size: 0.82rem;
     font-weight: 800;
     text-decoration: none;
-    box-shadow: 0 8px 18px rgba(99, 102, 241, 0.12);
+    box-shadow: 0 8px 18px rgba(67, 56, 202, 0.18);
   }
 
-  .economist-share-native:hover,
-  .economist-share-native:focus,
   .economist-share-link:hover,
   .economist-share-link:focus {
-    border-color: rgba(99, 102, 241, 0.5);
-    color: var(--quiz-accent-dark);
+    border-color: #312e81 !important;
+    background: #4338ca;
+    background-color: #4338ca;
+    color: #ffffff !important;
     transform: translateY(-1px);
   }
 
-  .economist-share-message {
-    min-height: 1.25rem;
-    margin: 0.65rem 0 0;
-    color: #047857;
-    font-size: 0.86rem;
-    font-weight: 700;
+  .economist-share-link:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
   }
 
   @media (max-width: 640px) {
@@ -711,7 +685,6 @@ author_profile: true
 
     .economist-quiz-submit,
     .economist-retake,
-    .economist-share-native,
     .economist-share-link {
       width: 100%;
     }
@@ -747,6 +720,22 @@ author_profile: true
     background: #a5b4fc;
     border-color: #c7d2fe;
     box-shadow: inset 0 0 0 0.25rem rgba(15, 23, 42, 0.96), 0 0 0 0.18rem rgba(129, 140, 248, 0.16);
+  }
+
+  html[data-theme="dark"] .economist-share-link {
+    border-color: #c7d2fe !important;
+    background: #eef2ff;
+    background-color: #eef2ff;
+    color: #1e1b4b !important;
+    box-shadow: 0 10px 24px rgba(165, 180, 252, 0.24);
+  }
+
+  html[data-theme="dark"] .economist-share-link:hover,
+  html[data-theme="dark"] .economist-share-link:focus {
+    border-color: #fde68a !important;
+    background: #fbbf24;
+    background-color: #fbbf24;
+    color: #111827 !important;
   }
 
   html[data-theme="dark"] .economist-quiz-message {
