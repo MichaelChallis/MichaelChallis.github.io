@@ -649,9 +649,18 @@ author_profile: true
     transform: translateY(-1px);
   }
 
+  .economist-share-native:focus-visible,
   .economist-share-link:focus-visible {
     outline: 3px solid #f59e0b;
     outline-offset: 3px;
+  }
+
+  .economist-share-message {
+    min-height: 1.25rem;
+    margin: 0.65rem 0 0;
+    color: #047857;
+    font-size: 0.86rem;
+    font-weight: 700;
   }
 
   @media (max-width: 640px) {
@@ -722,6 +731,7 @@ author_profile: true
     box-shadow: inset 0 0 0 0.25rem rgba(15, 23, 42, 0.96), 0 0 0 0.18rem rgba(129, 140, 248, 0.16);
   }
 
+  html[data-theme="dark"] .economist-share-native,
   html[data-theme="dark"] .economist-share-link {
     border-color: #c7d2fe !important;
     background: #eef2ff;
@@ -730,6 +740,8 @@ author_profile: true
     box-shadow: 0 10px 24px rgba(165, 180, 252, 0.24);
   }
 
+  html[data-theme="dark"] .economist-share-native:hover,
+  html[data-theme="dark"] .economist-share-native:focus,
   html[data-theme="dark"] .economist-share-link:hover,
   html[data-theme="dark"] .economist-share-link:focus {
     border-color: #fde68a !important;
