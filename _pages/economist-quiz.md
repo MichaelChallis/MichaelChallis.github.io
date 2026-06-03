@@ -306,42 +306,15 @@ author_profile: true
           <div class="economist-share" aria-label="Share your quiz result">
             <p class="economist-share-title">Share your result</p>
             <div class="economist-share-actions">
-              <button type="button" class="btn economist-share-native">Share result</button>
               <a class="btn economist-share-link" href="https://twitter.com/intent/tweet?text=${encodedShareText}&url=${encodedShareUrl}" target="_blank" rel="noopener">Post on X</a>
               <a class="btn economist-share-link" href="https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}" target="_blank" rel="noopener">Facebook</a>
               <a class="btn economist-share-link" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodedShareUrl}" target="_blank" rel="noopener">LinkedIn</a>
             </div>
-            <p class="economist-share-message" aria-live="polite"></p>
           </div>
           <button type="button" class="btn btn--primary economist-retake">Retake quiz</button>
         </div>
       `;
       resultContainer.hidden = false;
-
-      const shareButton = resultContainer.querySelector(".economist-share-native");
-      const shareMessage = resultContainer.querySelector(".economist-share-message");
-
-      if (!navigator.share) {
-        shareButton.textContent = "Copy result link";
-      }
-
-      shareButton.addEventListener("click", function () {
-        if (navigator.share) {
-          navigator.share({ title: "What Type of Economist Should I Be?", text: shareText, url: shareUrl }).catch(function () {});
-          return;
-        }
-
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(`${shareText} ${shareUrl}`).then(function () {
-            shareMessage.textContent = "Copied your result link.";
-          }, function () {
-            shareMessage.textContent = "Copy this page URL to share your result.";
-          });
-          return;
-        }
-
-        shareMessage.textContent = "Copy this page URL to share your result.";
-      });
 
       resultContainer.querySelector(".economist-retake").addEventListener("click", function () {
         form.reset();
@@ -655,7 +628,6 @@ author_profile: true
     gap: 0.55rem;
   }
 
-  .economist-share-native,
   .economist-share-link {
     border-radius: 999px;
     border: 2px solid #4338ca !important;
@@ -668,8 +640,6 @@ author_profile: true
     box-shadow: 0 8px 18px rgba(67, 56, 202, 0.18);
   }
 
-  .economist-share-native:hover,
-  .economist-share-native:focus,
   .economist-share-link:hover,
   .economist-share-link:focus {
     border-color: #312e81 !important;
@@ -724,7 +694,6 @@ author_profile: true
 
     .economist-quiz-submit,
     .economist-retake,
-    .economist-share-native,
     .economist-share-link {
       width: 100%;
     }
