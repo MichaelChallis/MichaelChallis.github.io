@@ -658,22 +658,31 @@ author_profile: true
   .economist-share-native,
   .economist-share-link {
     border-radius: 999px;
-    border: 1px solid rgba(99, 102, 241, 0.22);
-    background: rgba(255, 255, 255, 0.78);
-    color: var(--quiz-accent-dark);
+    border: 2px solid #4338ca !important;
+    background: #ffffff;
+    background-color: #ffffff;
+    color: #312e81 !important;
     font-size: 0.82rem;
     font-weight: 800;
     text-decoration: none;
-    box-shadow: 0 8px 18px rgba(99, 102, 241, 0.12);
+    box-shadow: 0 8px 18px rgba(67, 56, 202, 0.18);
   }
 
   .economist-share-native:hover,
   .economist-share-native:focus,
   .economist-share-link:hover,
   .economist-share-link:focus {
-    border-color: rgba(99, 102, 241, 0.5);
-    color: var(--quiz-accent-dark);
+    border-color: #312e81 !important;
+    background: #4338ca;
+    background-color: #4338ca;
+    color: #ffffff !important;
     transform: translateY(-1px);
+  }
+
+  .economist-share-native:focus-visible,
+  .economist-share-link:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
   }
 
   .economist-share-message {
@@ -751,6 +760,25 @@ author_profile: true
     background: #a5b4fc;
     border-color: #c7d2fe;
     box-shadow: inset 0 0 0 0.25rem rgba(15, 23, 42, 0.96), 0 0 0 0.18rem rgba(129, 140, 248, 0.16);
+  }
+
+  html[data-theme="dark"] .economist-share-native,
+  html[data-theme="dark"] .economist-share-link {
+    border-color: #c7d2fe !important;
+    background: #eef2ff;
+    background-color: #eef2ff;
+    color: #1e1b4b !important;
+    box-shadow: 0 10px 24px rgba(165, 180, 252, 0.24);
+  }
+
+  html[data-theme="dark"] .economist-share-native:hover,
+  html[data-theme="dark"] .economist-share-native:focus,
+  html[data-theme="dark"] .economist-share-link:hover,
+  html[data-theme="dark"] .economist-share-link:focus {
+    border-color: #fde68a !important;
+    background: #fbbf24;
+    background-color: #fbbf24;
+    color: #111827 !important;
   }
 
   html[data-theme="dark"] .economist-quiz-message {
