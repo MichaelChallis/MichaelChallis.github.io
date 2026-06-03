@@ -284,10 +284,6 @@ author_profile: true
 
     function showResult(outcome) {
       const result = quizResults[outcome];
-      const shareUrl = window.location.href.split("#")[0];
-      const shareText = `I got ${result.label} on “What Type of Economist Should I Be?”`;
-      const encodedShareText = encodeURIComponent(shareText);
-      const encodedShareUrl = encodeURIComponent(shareUrl);
 
       resultContainer.innerHTML = `
         <div class="economist-result-card">
@@ -734,17 +730,6 @@ author_profile: true
   html[data-theme="dark"] .economist-share {
     border-color: rgba(129, 140, 248, 0.3);
     background: rgba(15, 23, 42, 0.58);
-  }
-
-  html[data-theme="dark"] .economist-share-native,
-  html[data-theme="dark"] .economist-share-link {
-    border-color: rgba(129, 140, 248, 0.3);
-    background: rgba(30, 41, 59, 0.74);
-    color: #c7d2fe;
-  }
-
-  html[data-theme="dark"] .economist-share-message {
-    color: #86efac;
   }
 
   html[data-theme="dark"] .economist-answer-card::after {
