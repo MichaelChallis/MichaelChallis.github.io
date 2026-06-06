@@ -172,29 +172,39 @@ author_profile: true
   }
 
   .presentation-pin-wrap {
-    position: absolute;
-    left: 13px;
-    top: 13px;
-    transform: translate(var(--pin-offset-x, 0), var(--pin-offset-y, 0));
+    position: relative;
+    width: 24px;
+    height: 32px;
     transition: transform 160ms ease, filter 160ms ease;
   }
 
-  .presentation-pin-wrap::before {
+  .presentation-pin-wrap.has-nearby-presentation::before {
     content: '';
     position: absolute;
-    left: 4px;
-    top: 15px;
-    width: 16px;
-    height: 8px;
+    left: -6px;
+    top: -6px;
+    width: 28px;
+    height: 28px;
+    border: 2px solid rgba(234, 179, 8, 0.8);
     border-radius: 50%;
-    background: rgba(15, 23, 42, 0.2);
-    transform: translate(calc(-1 * var(--pin-offset-x, 0px)), calc(-1 * var(--pin-offset-y, 0px))) scale(0.8);
-    filter: blur(1px);
-    pointer-events: none;
+    background: rgba(234, 179, 8, 0.16);
+    animation: shared-location-pulse 1.8s ease-out infinite;
+  }
+
+  @keyframes shared-location-pulse {
+    0% {
+      opacity: 0.85;
+      transform: scale(0.72);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1.45);
+    }
   }
 
   .presentation-pin-wrap:hover {
-    transform: translate(var(--pin-offset-x, 0), var(--pin-offset-y, 0)) translateY(-3px);
+    transform: translateY(-3px);
     filter: drop-shadow(0 5px 8px rgba(15, 23, 42, 0.28));
     z-index: 2;
   }
@@ -219,6 +229,47 @@ author_profile: true
     top: 5px;
     left: 5px;
   }
+
+  .presentation-popup {
+    min-width: 220px;
+  }
+
+  .presentation-popup-heading {
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+  }
+
+  .presentation-popup-list {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .presentation-popup-item {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: 0.45rem;
+    align-items: start;
+  }
+
+  .presentation-popup-item + .presentation-popup-item {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 0.45rem;
+  }
+
+  html[data-theme="dark"] .presentation-popup-item + .presentation-popup-item {
+    border-top-color: #475569;
+  }
+
+  .presentation-popup-pin {
+    width: 12px;
+    height: 12px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 1px solid rgba(17, 24, 39, 0.7);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.25);
+    margin-top: 0.2rem;
+  }
+
 </style>
 
 <h2>Work in Progress</h2>
@@ -322,41 +373,67 @@ author_profile: true
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    var duplicateCounts = {};
+    var categoryPriority = {
+      mine: 1,
+      coauthor: 2,
+      upcoming: 3
+    };
+
+    function escapeHtml(value) {
+      return value.replace(/[&<>"']/g, function (character) {
+        return {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        }[character];
+      });
+    }
+
+    function presentationPopupHtml(group) {
+      var orderedPresentations = group.slice().sort(function (a, b) {
+        return (categoryPriority[a.category] || 99) - (categoryPriority[b.category] || 99);
+      });
+      var heading = orderedPresentations.length > 1 ? '<div class="presentation-popup-heading">Same location, distinct presentations</div>' : '';
+      var items = orderedPresentations.map(function (presentation) {
+        var color = categoryColors[presentation.category] || '#2563eb';
+        return '<div class="presentation-popup-item"><span class="presentation-popup-pin" style="background:' + color + ';"></span><span>' + escapeHtml(presentation.name) + '</span></div>';
+      }).join('');
+
+      return '<div class="presentation-popup">' + heading + '<div class="presentation-popup-list">' + items + '</div></div>';
+    }
+
+    var groupedLocations = {};
     locations.forEach(function (location) {
       var locationKey = location.lat + ',' + location.lng;
-      duplicateCounts[locationKey] = (duplicateCounts[locationKey] || 0) + 1;
+      if (!groupedLocations[locationKey]) {
+        groupedLocations[locationKey] = [];
+      }
+      groupedLocations[locationKey].push(location);
     });
 
-    var duplicateIndexes = {};
     var bounds = L.latLngBounds();
-    locations.forEach(function (location) {
-      var pinColor = categoryColors[location.category] || '#2563eb';
-      var locationKey = location.lat + ',' + location.lng;
-      var duplicateTotal = duplicateCounts[locationKey];
-      var duplicateIndex = duplicateIndexes[locationKey] || 0;
-      duplicateIndexes[locationKey] = duplicateIndex + 1;
-      var offsetX = 0;
-      var offsetY = 0;
-
-      if (duplicateTotal > 1) {
-        var spread = 13;
-        offsetX = (duplicateIndex - (duplicateTotal - 1) / 2) * spread;
-        offsetY = -Math.abs(duplicateIndex - (duplicateTotal - 1) / 2) * 3;
-      }
+    Object.keys(groupedLocations).forEach(function (locationKey) {
+      var group = groupedLocations[locationKey].sort(function (a, b) {
+        return (categoryPriority[a.category] || 99) - (categoryPriority[b.category] || 99);
+      });
+      var visiblePresentation = group[0];
+      var pinColor = categoryColors[visiblePresentation.category] || '#2563eb';
+      var pinClass = group.length > 1 ? 'presentation-pin-wrap has-nearby-presentation' : 'presentation-pin-wrap';
 
       var pinIcon = L.divIcon({
         className: '',
-        html: '<div class="presentation-pin-wrap" style="--pin-offset-x:' + offsetX + 'px; --pin-offset-y:' + offsetY + 'px;"><div class="presentation-pin" style="background:' + pinColor + ';"></div></div>',
-        iconSize: [44, 44],
-        iconAnchor: [22, 31],
+        html: '<div class="' + pinClass + '"><div class="presentation-pin" style="background:' + pinColor + ';"></div></div>',
+        iconSize: [24, 32],
+        iconAnchor: [12, 31],
         popupAnchor: [0, -31]
       });
 
-      L.marker([location.lat, location.lng], { icon: pinIcon, riseOnHover: true })
+      L.marker([visiblePresentation.lat, visiblePresentation.lng], { icon: pinIcon, riseOnHover: true })
         .addTo(map)
-        .bindPopup(location.name);
-      bounds.extend([location.lat, location.lng]);
+        .bindPopup(presentationPopupHtml(group));
+      bounds.extend([visiblePresentation.lat, visiblePresentation.lng]);
     });
 
     map.fitBounds(bounds, { padding: [40, 40] });
