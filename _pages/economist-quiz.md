@@ -140,13 +140,13 @@ author_profile: true
         answers: [
           { label: "A", text: "A consultant", scores: { appliedMicro: 3 } },
           { label: "B", text: "A journalist", scores: { history: 3 } },
-          { label: "C", text: "Recruiter", scores: { labor: 3 } },
+          { label: "C", text: "A Recruiter", scores: { labor: 3 } },
           { label: "D", text: "An investment banker", scores: { finance: 3 } },
           { label: "E", text: "A diplomat", scores: { politicalEconomy: 3 } },
           { label: "F", text: "Another job?!? Who else will pay me to solve puzzles?", scores: { theory: 3 } },
-          { label: "G", text: "Merger and acquisition's lawyer", scores: { io: 3 } },
-          { label: "H", text: "Central banker", scores: { macro: 3 } },
-          { label: "I", text: "Psychological counsler", scores: { behavioral: 3 } },
+          { label: "G", text: "A mergers-and-acquisitions lawyer", scores: { io: 3 } },
+          { label: "H", text: "An central banker", scores: { macro: 3 } },
+          { label: "I", text: "Psychological counselor", scores: { behavioral: 3 } },
           { label: "J", text: "Quantitative researcher", scores: { econometrics: 3 } }
         ]
       },
@@ -159,7 +159,7 @@ author_profile: true
           { label: "C", text: "“Can you microfound that?”", scores: { io: 3 } },
           { label: "D", text: "“What is the welfare implication?”", scores: { macro: 3, finance: 3 } },
           { label: "E", text: "“How is this economics?”", scores: { development: 1, appliedMicro: 1, labor: 2, io: 1, macro: 1, finance: 1 } },
-          { label: "F", text: "\"Do you have a qualitative evidence?\"", scores: { history: 3 } }
+          { label: "F", text: "“Do you have qualitative evidence?”", scores: { history: 3 } }
         ]
       },
       {
