@@ -171,17 +171,12 @@ author_profile: true
     border: 1px solid rgba(0, 0, 0, 0.3);
   }
 
-  .presentation-pin-icon {
-    pointer-events: none;
-  }
-
   .presentation-pin-wrap {
     position: absolute;
     left: 13px;
-    top: 25px;
+    top: 13px;
     transform: translate(var(--pin-offset-x, 0), var(--pin-offset-y, 0));
     transition: transform 160ms ease, filter 160ms ease;
-    pointer-events: auto;
   }
 
   .presentation-pin-wrap::before {
@@ -345,17 +340,17 @@ author_profile: true
       var offsetY = 0;
 
       if (duplicateTotal > 1) {
-        var stackLift = 17;
-        offsetX = 0;
-        offsetY = -duplicateIndex * stackLift;
+        var spread = 13;
+        offsetX = (duplicateIndex - (duplicateTotal - 1) / 2) * spread;
+        offsetY = -Math.abs(duplicateIndex - (duplicateTotal - 1) / 2) * 3;
       }
 
       var pinIcon = L.divIcon({
-        className: 'presentation-pin-icon',
+        className: '',
         html: '<div class="presentation-pin-wrap" style="--pin-offset-x:' + offsetX + 'px; --pin-offset-y:' + offsetY + 'px;"><div class="presentation-pin" style="background:' + pinColor + ';"></div></div>',
-        iconSize: [44, 56],
-        iconAnchor: [22, 43],
-        popupAnchor: [0, -43]
+        iconSize: [44, 44],
+        iconAnchor: [22, 31],
+        popupAnchor: [0, -31]
       });
 
       L.marker([location.lat, location.lng], { icon: pinIcon, riseOnHover: true })
