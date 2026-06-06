@@ -171,6 +171,34 @@ author_profile: true
     border: 1px solid rgba(0, 0, 0, 0.3);
   }
 
+  .presentation-pin-wrap {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    transform: translate(var(--pin-offset-x, 0), var(--pin-offset-y, 0));
+    transition: transform 160ms ease, filter 160ms ease;
+  }
+
+  .presentation-pin-wrap::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 15px;
+    width: 16px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.2);
+    transform: translate(calc(-1 * var(--pin-offset-x, 0px)), calc(-1 * var(--pin-offset-y, 0px))) scale(0.8);
+    filter: blur(1px);
+    pointer-events: none;
+  }
+
+  .presentation-pin-wrap:hover {
+    transform: translate(var(--pin-offset-x, 0), var(--pin-offset-y, 0)) translateY(-3px);
+    filter: drop-shadow(0 5px 8px rgba(15, 23, 42, 0.28));
+    z-index: 2;
+  }
+
   .presentation-pin {
     width: 18px;
     height: 18px;
@@ -276,6 +304,7 @@ author_profile: true
       { name: 'University of Alabama seminar (2025)', lat: 33.214023, lng: -87.539142, category: 'coauthor' },
       { name: 'University of Texas at Dallas seminar (2025)', lat: 32.985178, lng: -96.748267, category: 'coauthor' },
       { name: 'Warwick Workshop in Experimental Economics and Political Economy (2026)', lat: 52.379414, lng: -1.561904, category: 'mine' },
+      { name: '3rd CAGE Workshop on Gender and Inequality (2026)', lat: 52.379414, lng: -1.561904, category: 'upcoming' },
       { name: 'Greater Philadelphia Philosophy Consortium (2023)', lat: 39.905159, lng: -75.354278, category: 'mine' },
       { name: '3rd Verona Early Career Workshop in Economics and Financial Mathematics (2026)', lat: 45.438394, lng: 11.011606, category: 'mine' },
       { name: '4th International Workshop on Game Theory and Economic Applications (2026)', lat: -23.561043, lng: -46.731059, category: 'upcoming' },
@@ -293,18 +322,38 @@ author_profile: true
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
+    var duplicateCounts = {};
+    locations.forEach(function (location) {
+      var locationKey = location.lat + ',' + location.lng;
+      duplicateCounts[locationKey] = (duplicateCounts[locationKey] || 0) + 1;
+    });
+
+    var duplicateIndexes = {};
     var bounds = L.latLngBounds();
     locations.forEach(function (location) {
       var pinColor = categoryColors[location.category] || '#2563eb';
+      var locationKey = location.lat + ',' + location.lng;
+      var duplicateTotal = duplicateCounts[locationKey];
+      var duplicateIndex = duplicateIndexes[locationKey] || 0;
+      duplicateIndexes[locationKey] = duplicateIndex + 1;
+      var offsetX = 0;
+      var offsetY = 0;
+
+      if (duplicateTotal > 1) {
+        var spread = 13;
+        offsetX = (duplicateIndex - (duplicateTotal - 1) / 2) * spread;
+        offsetY = -Math.abs(duplicateIndex - (duplicateTotal - 1) / 2) * 3;
+      }
+
       var pinIcon = L.divIcon({
         className: '',
-        html: '<div class="presentation-pin" style="background:' + pinColor + ';"></div>',
-        iconSize: [18, 18],
-        iconAnchor: [9, 18],
-        popupAnchor: [0, -18]
+        html: '<div class="presentation-pin-wrap" style="--pin-offset-x:' + offsetX + 'px; --pin-offset-y:' + offsetY + 'px;"><div class="presentation-pin" style="background:' + pinColor + ';"></div></div>',
+        iconSize: [44, 44],
+        iconAnchor: [22, 31],
+        popupAnchor: [0, -31]
       });
 
-      L.marker([location.lat, location.lng], { icon: pinIcon })
+      L.marker([location.lat, location.lng], { icon: pinIcon, riseOnHover: true })
         .addTo(map)
         .bindPopup(location.name);
       bounds.extend([location.lat, location.lng]);
