@@ -201,6 +201,8 @@ author_profile: true
       opacity: 0;
       transform: scale(1.45);
     }
+  }
+
   .presentation-pin-wrap.is-stacked::before {
     content: '';
     position: absolute;
@@ -466,42 +468,6 @@ author_profile: true
       });
 
       L.marker([visiblePresentation.lat, visiblePresentation.lng], { icon: pinIcon, riseOnHover: true })
-    locations.forEach(function (location) {
-      var pinColor = categoryColors[location.category] || '#2563eb';
-      var locationKey = location.lat + ',' + location.lng;
-      var duplicateTotal = duplicateCounts[locationKey];
-      var duplicateIndex = duplicateIndexes[locationKey] || 0;
-      duplicateIndexes[locationKey] = duplicateIndex + 1;
-      var pinClass = 'presentation-pin-wrap';
-      var stackStyle = '';
-      var iconAnchor = [12, 31];
-      var popupAnchor = [0, -31];
-      var zIndexOffset = 0;
-
-      if (duplicateTotal > 1) {
-        var stackGap = 24;
-        var centeredIndex = duplicateIndex - (duplicateTotal - 1) / 2;
-        var offsetX = centeredIndex * 7;
-        var offsetY = centeredIndex * -stackGap;
-        var distanceToSharedPoint = Math.sqrt(Math.pow(offsetX, 2) + Math.pow(offsetY, 2));
-        var tetherAngle = Math.atan2(offsetX, 31 + offsetY) * (180 / Math.PI);
-
-        pinClass += ' is-stacked';
-        stackStyle = '--stack-center-x:' + (-offsetX) + 'px; --stack-center-y:' + (-offsetY) + 'px; --stack-tether-length:' + distanceToSharedPoint + 'px; --stack-tether-angle:' + tetherAngle + 'deg;';
-        iconAnchor = [12 - offsetX, 31 - offsetY];
-        popupAnchor = [offsetX, -31 + offsetY];
-        zIndexOffset = duplicateIndex;
-      }
-
-      var pinIcon = L.divIcon({
-        className: '',
-        html: '<div class="' + pinClass + '" style="' + stackStyle + '"><div class="presentation-pin" style="background:' + pinColor + ';"></div></div>',
-        iconSize: [24, 32],
-        iconAnchor: iconAnchor,
-        popupAnchor: popupAnchor
-      });
-
-      L.marker([location.lat, location.lng], { icon: pinIcon, riseOnHover: true, zIndexOffset: zIndexOffset })
         .addTo(map)
         .bindPopup(presentationPopupHtml(group));
       bounds.extend([visiblePresentation.lat, visiblePresentation.lng]);
