@@ -5,13 +5,13 @@ permalink: /fun/
 author_profile: true
 ---
 
-Here are a few miscellaneous things that I made/find interesting/etc. The order the blocks appear in is randomized so when you refresh the page something different may appear first! If you would like to randomize it yourself without having to refresh the page just press this button: <button type="button" id="fun-randomize" class="btn btn--primary fun-page-button fun-page-button--randomize fun-randomize-button">Randomize</button>
+Here are a few miscellaneous things that I have made, find interesting, etc. The order the blocks appear in is randomized so when you refresh the page something different may appear first! If you would like to randomize it yourself without having to refresh the page just press this button: <button type="button" id="fun-randomize" class="btn btn--primary fun-page-button fun-page-button--randomize fun-randomize-button">Randomize</button>
 
 <div id="fun-panels">
   <div id="economist-quiz-panel" class="fun-panel economist-quiz-card">
     <h3>What Type of Economist Should I Be?</h3>
     <p>
-      Many of my non-economist freinds have heard me talk about "applied-micro economists" or "development economists" and asked me: "What type of economist would I be? This (very silly) BuzzFeed-style quiz is the culmination of these conversations.
+      Many of my non-economist friends have heard me talk about "applied-micro economists" or "development economists" and asked me: "What type of economist would I be?" This (very silly) BuzzFeed-style quiz is the culmination of these conversations.
     </p>
     <a class="btn btn--primary fun-page-button" href="/economist-quiz/">Take the quiz</a>
   </div>
