@@ -102,8 +102,9 @@ $(document).ready(function () {
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
 
-  // Open every site link in a new tab while preserving reverse-tabnabbing protection.
-  $("a[href]").each(function () {
+  // Open non-navigation site links in a new tab while preserving reverse-tabnabbing protection.
+  // Keep masthead navigation links in the same tab so primary navigation behaves normally.
+  $("a[href]").not("#site-nav a[href]").each(function () {
     $(this).attr("target", "_blank");
 
     const relValues = ($(this).attr("rel") || "").split(/\s+/).filter(Boolean);
