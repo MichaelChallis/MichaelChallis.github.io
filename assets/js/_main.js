@@ -102,6 +102,19 @@ $(document).ready(function () {
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
 
+  // Open every site link in a new tab while preserving reverse-tabnabbing protection.
+  $("a[href]").each(function () {
+    $(this).attr("target", "_blank");
+
+    const relValues = ($(this).attr("rel") || "").split(/\s+/).filter(Boolean);
+    ["noopener", "noreferrer"].forEach(function (value) {
+      if (!relValues.includes(value)) {
+        relValues.push(value);
+      }
+    });
+    $(this).attr("rel", relValues.join(" "));
+  });
+
   // Enable the sticky footer
   var bumpIt = function () {
     $("body").css("padding-bottom", "0");
