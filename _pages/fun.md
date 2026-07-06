@@ -49,16 +49,13 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
     <h3>My mother, Sue Challis (née Shotton)</h3>
     <p>
       My mother, Sue Challis (née Shotton), was a seriously good trampolinist.
-      Competing for Great Britain as Susan Shotton and later Susan Challis, she won 30
-      medals at World Championships, European Championships, and the World Games, including
-      nine golds across individual, synchro, and team events.
+      AinsworthSports ranks her under her maiden name, Sue Shotton, and her married name,
+      Sue Challis, among the top women’s trampoline athletes of all time.
+      IntersportStats has a more detailed record of her competition results.
     </p>
     <p>
-      Highlights include individual world gold in 1984, individual European golds in 1983
-      and 1993, and individual World Games gold in 1993. She was also part of the inaugural
-      class of the Loughborough Sport Hall of Fame. AinsworthSports ranks her under her
-      maiden name, Sue Shotton, and her married name, Sue Challis, and IntersportStats has
-      a more detailed record of her competition results.
+      She was also part of the inaugural class of the Loughborough Sport Hall of Fame
+      and is listed in the World Acrobatics Society Trampoline / Tumbling Legends Hall of Fame.
     </p>
     <div class="sue-challis-links">
       <a class="btn btn--primary btn--small fun-page-button fun-page-button--secondary"
