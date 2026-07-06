@@ -45,6 +45,34 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
     </div>
   </div>
 
+  <div id="sue-challis-panel" class="fun-panel sue-challis-card">
+    <h3>My mother, Sue Challis (née Shotton)</h3>
+    <p>
+      My mother, Sue Challis (née Shotton), was a seriously good trampolinist.
+      Competing for Great Britain as Susan Shotton and later Susan Challis, she won 30
+      medals at World Championships, European Championships, and the World Games, including
+      nine golds across individual, synchro, and team events.
+    </p>
+    <p>
+      Highlights include individual world gold in 1984, individual European golds in 1983
+      and 1993, and individual World Games gold in 1993. She was also part of the inaugural
+      class of the Loughborough Sport Hall of Fame. AinsworthSports ranks her under her
+      maiden name, Sue Shotton, and her married name, Sue Challis, and IntersportStats has
+      a more detailed record of her competition results.
+    </p>
+    <div class="sue-challis-links">
+      <a class="btn btn--primary btn--small fun-page-button fun-page-button--secondary"
+         href="https://ainsworthsports.com/womens_trampoline_athlete_rankings_all_time_1_to_1000.htm"
+         target="_blank" rel="noopener">AinsworthSports rankings</a>
+      <a class="btn btn--primary btn--small fun-page-button fun-page-button--secondary"
+         href="https://intersportstats.com/athletes/3000420493"
+         target="_blank" rel="noopener">Competition results</a>
+      <a class="btn btn--primary btn--small fun-page-button fun-page-button--secondary"
+         href="https://www.lboro.ac.uk/sport/loughborough-sport/hall-of-fame/"
+         target="_blank" rel="noopener">Loughborough Hall of Fame</a>
+    </div>
+  </div>
+
   <div id="cool-stuff-panel" class="fun-panel fun-pdf-card">
     <div class="fun-pdf-header">
       <a class="btn btn--primary fun-page-button" href="/files/Cool_Stuff.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
@@ -328,6 +356,17 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
 
   .economist-quiz-card h3 {
     margin-top: 0;
+  }
+
+  .sue-challis-card p {
+    margin: 0 0 0.8rem;
+    color: var(--global-text-color);
+  }
+
+  .sue-challis-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   .genealogy-card p {
