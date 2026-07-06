@@ -32,43 +32,42 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
         <h3 id="genealogy-name"></h3>
         <p id="genealogy-bio"></p>
         <div class="genealogy-links">
-          <a id="genealogy-link" class="btn btn--info btn--small fun-page-button fun-page-button--secondary" target="_blank" rel="noopener">Math Genealogy</a>
-          <a id="wiki-link" class="btn btn--primary btn--small fun-page-button fun-page-button--secondary" target="_blank" rel="noopener">Wikipedia</a>
+          <a id="genealogy-link" class="btn btn--primary fun-page-button" target="_blank" rel="noopener">Math Genealogy</a>
+          <a id="wiki-link" class="btn btn--primary fun-page-button" target="_blank" rel="noopener">Wikipedia</a>
         </div>
       </div>
     </div>
 
     <div class="genealogy-controls" aria-label="Genealogy navigation controls">
-      <button type="button" id="genealogy-prev">← Previous</button>
+      <button type="button" id="genealogy-prev" class="btn btn--primary fun-page-button">← Previous</button>
       <span id="genealogy-index"></span>
-      <button type="button" id="genealogy-next">Next →</button>
+      <button type="button" id="genealogy-next" class="btn btn--primary fun-page-button">Next →</button>
     </div>
   </div>
 
   <div id="sue-challis-panel" class="fun-panel sue-challis-card">
     <h3>My mother, Sue Challis (née Shotton)</h3>
     <p>
-      My mother, Sue Challis (née Shotton), was a proffesional trampolinist.
-      Acording to AinsworthSports she had two careers each worthy of being in the top-50 greatest female trampoline athletes of all-time
-      Under maiden name, Sue Shotton, she is ranked as the 14th greatest and under her married name, Sue Challis, she is ranked as the 46th greatest.
+      My mother, Sue Challis (née Shotton), was a professional trampolinist.
+      According to AinsworthSports, she had two careers, each worthy of being in the top 50 greatest female trampoline athletes of all time.
+      Under her maiden name, Sue Shotton, she is ranked as the 14th greatest, and under her married name, Sue Challis, she is ranked as the 46th greatest.
       She was also part of the inaugural class of the Loughborough Sport Hall of Fame
       and is listed in the World Acrobatics Society Trampoline / Tumbling Legends Hall of Fame.
-      Career highlights include:
-      11 times British Ladies Champion,
-      Double European Ladies Champion (1983,1993), and 
-      triple gold medalist at the 1984 Trampoline Gymnastics World Championships (individual, synchro, and team).
     </p>
-    <p>
-      
-    </p>
+    <p>Career highlights include:</p>
+    <ul class="sue-challis-accomplishments">
+      <li>11-time British Ladies Champion.</li>
+      <li>Double European Ladies Champion (1983, 1993).</li>
+      <li>Triple gold medalist at the 1984 Trampoline Gymnastics World Championships (individual, synchro, and team).</li>
+    </ul>
     <div class="sue-challis-links">
-      <a class="btn btn--primary btn--small fun-page-button fun-page-button--secondary"
+      <a class="btn btn--primary fun-page-button"
          href="https://ainsworthsports.com/womens_trampoline_athlete_rankings_all_time_1_to_1000.htm"
          target="_blank" rel="noopener">AinsworthSports rankings</a>
-      <a class="btn btn--primary btn--small fun-page-button fun-page-button--secondary"
+      <a class="btn btn--primary fun-page-button"
          href="https://intersportstats.com/athletes/3000420493"
          target="_blank" rel="noopener">Competition results</a>
-      <a class="btn btn--primary btn--small fun-page-button fun-page-button--secondary"
+      <a class="btn btn--primary fun-page-button"
          href="https://www.lboro.ac.uk/sport/loughborough-sport/hall-of-fame/"
          target="_blank" rel="noopener">Loughborough Hall of Fame</a>
     </div>
@@ -312,20 +311,6 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
     outline-offset: 3px;
   }
 
-  .fun-page-button--secondary {
-    border-color: rgba(79, 70, 229, 0.24) !important;
-    background: linear-gradient(135deg, #ffffff, #eef2ff);
-    background-color: #ffffff;
-    color: #4338ca !important;
-    box-shadow: 0 8px 18px rgba(99, 102, 241, 0.14);
-  }
-
-  .fun-page-button--secondary:hover,
-  .fun-page-button--secondary:focus {
-    background: linear-gradient(135deg, #eef2ff, #fff7ed);
-    background-color: #eef2ff;
-    color: #312e81 !important;
-  }
 
   .fun-randomize-button {
     margin: 0.35rem 0 0.85rem;
@@ -362,6 +347,15 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
   .sue-challis-card p {
     margin: 0 0 0.8rem;
     color: var(--global-text-color);
+  }
+
+  .sue-challis-accomplishments {
+    margin: 0 0 0.8rem 1.25rem;
+    color: var(--global-text-color);
+  }
+
+  .sue-challis-accomplishments li {
+    margin-bottom: 0.3rem;
   }
 
   .sue-challis-links {
@@ -455,26 +449,6 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
     margin-top: 0.65rem;
   }
 
-  .genealogy-controls button {
-    border: 1px solid rgba(79, 70, 229, 0.28);
-    background: linear-gradient(135deg, #ffffff, #eef2ff);
-    border-radius: 999px;
-    padding: 0.42rem 0.85rem;
-    cursor: pointer;
-    font-size: 0.88rem;
-    font-weight: 800;
-    color: #4338ca;
-    box-shadow: 0 8px 18px rgba(99, 102, 241, 0.14);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-  }
-
-  .genealogy-controls button:hover,
-  .genealogy-controls button:focus {
-    transform: translateY(-1px);
-    border-color: rgba(245, 158, 11, 0.65);
-    background: linear-gradient(135deg, #eef2ff, #fff7ed);
-    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.2);
-  }
 
   #genealogy-index {
     min-width: 4rem;
@@ -522,23 +496,6 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
     }
   }
 
-  html[data-theme="dark"] .fun-page-button--secondary,
-  html[data-theme="dark"] .genealogy-controls button {
-    border-color: rgba(129, 140, 248, 0.4) !important;
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.96), rgba(49, 46, 129, 0.78));
-    background-color: #1e293b;
-    color: #e0e7ff !important;
-    box-shadow: 0 10px 22px rgba(2, 6, 23, 0.36);
-  }
-
-  html[data-theme="dark"] .fun-page-button--secondary:hover,
-  html[data-theme="dark"] .fun-page-button--secondary:focus,
-  html[data-theme="dark"] .genealogy-controls button:hover,
-  html[data-theme="dark"] .genealogy-controls button:focus {
-    border-color: rgba(245, 158, 11, 0.62) !important;
-    background: linear-gradient(135deg, rgba(49, 46, 129, 0.95), rgba(15, 118, 110, 0.78));
-    color: #ffffff !important;
-  }
 
   html[data-theme="dark"] .fun-panel {
     border-color: rgba(129, 140, 248, 0.35);
