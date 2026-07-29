@@ -321,6 +321,8 @@ author_profile: true
           <li><strong>2026</strong>
             <ul>
               <li> 4th International Workshop on Game Theory and Economic Applications (São Paulo, Brazil, upcoming)</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </details>
@@ -335,6 +337,8 @@ author_profile: true
           <li><strong>2026</strong>
             <ul>
               <li> Florida State University Seminar (Tallahassee, Florida, upcoming); Mind, Behavior, and Development Unit Workshop at World Bank (Washington D.C., U.S., upcoming); 3rd CAGE Workshop on Gender and Inequality (Coventy, UK, upcoming); Warwick Workshop in Experimental Economics and Political Economy (Coventry, UK); 3rd Verona Early Career Workshop in Economics and Financial Mathematics (Verona, Italy)</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </details>
@@ -378,7 +382,7 @@ author_profile: true
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  function initializePresentationMap() {
     var categoryColors = {
       mine: '#2563eb',
       coauthor: '#dc2626',
@@ -477,5 +481,11 @@ author_profile: true
     });
 
     map.fitBounds(bounds, { padding: [40, 40] });
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializePresentationMap, { once: true });
+  } else {
+    initializePresentationMap();
+  }
 </script>
