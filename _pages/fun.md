@@ -126,7 +126,7 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
         <blockquote class="quote-item">
           <p>“I have never done anything ‘useful’.”</p>
           <footer>— G. H. Hardy, <em>A Mathematician’s Apology</em></footer>
-          <p class="quote-context">Hardy prized mathematics pursued for its own sake, especially number theory. The irony is that areas once seen as purely theoretical later became fundamental to cryptography and secure digital communication.</p>
+          <p class="quote-context">Since then Hardy's work has gone on to be fundamental to cryptography and secure digital communication.</p>
         </blockquote>
         <blockquote class="quote-item">
           <p>“Thank God that number theory is unsullied by any application.”</p>
@@ -140,11 +140,10 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
         <blockquote class="quote-item">
           <p>“The scientist does not study nature because it is useful; he studies it because he delights in it.”</p>
           <footer>— Henri Poincaré</footer>
-          <p class="quote-context">For Poincaré, curiosity, understanding, and intellectual beauty were motivation enough; utility could follow later.</p>
         </blockquote>
         <blockquote class="quote-item">
           <p>“An expert is a person who has made all the mistakes that can be made in a very narrow field.”</p>
-          <footer>— Niels Bohr, commonly attributed</footer>
+          <footer>— Niels Bohr (commonly attributed)</footer>
         </blockquote>
         <blockquote class="quote-item">
           <p>“The formulation of a problem is often more essential than its solution.”</p>
