@@ -73,6 +73,118 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
     </div>
   </div>
 
+  <div id="quotes-panel" class="fun-panel quotes-card">
+    <h3>Ideas worth following</h3>
+    <p class="quotes-intro">
+      A collection about curiosity, play, and interesting questions—and how usefulness sometimes arrives later.
+    </p>
+
+    <section class="quotes-group" aria-labelledby="quotes-interesting-heading">
+      <h4 id="quotes-interesting-heading">Because it seemed interesting</h4>
+      <div class="quotes-grid">
+        <blockquote class="quote-item">
+          <p>“I guess I’ll invent a game.”</p>
+          <footer>— Alfred Butts, inventor of <em>Scrabble</em></footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“Because it is there.”</p>
+          <footer>— famously attributed to George Mallory when asked why he wanted to climb Mount Everest</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“I don’t know. I thought it would be cool.”</p>
+          <footer>— Will Wright, creator of <em>SimCity</em>, on his motivation</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“Mostly because it seemed like a neat idea.”</p>
+          <footer>— Ray Tomlinson, on why he invented email</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“I did not know and I do not know why.”</p>
+          <footer>— J.R.R. Tolkien, recalling the origin of <em>The Hobbit</em></footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“Nothing, I guess.”</p>
+          <footer>— Heinrich Hertz, reportedly, when asked what would come from his work on electromagnetic waves</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“I’m doing a (free) operating system (just a hobby, won’t be big and professional like GNU).”</p>
+          <footer>— Linus Torvalds, announcing the project that became Linux in 1991</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“I was looking for a ‘hobby’ programming project that would keep me occupied during the week around Christmas.”</p>
+          <footer>— Guido van Rossum, on beginning what became Python</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="quotes-group" aria-labelledby="quotes-research-heading">
+      <h4 id="quotes-research-heading">Curiosity, usefulness, and pure research</h4>
+      <div class="quotes-grid">
+        <blockquote class="quote-item">
+          <p>“The best kind of research is curiosity driven research.”</p>
+          <footer>— Barry Marshall, Nobel laureate in medicine</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“I have never done anything ‘useful’.”</p>
+          <footer>— G. H. Hardy, <em>A Mathematician’s Apology</em></footer>
+          <p class="quote-context">Hardy prized mathematics pursued for its own sake, especially number theory. The irony is that areas once seen as purely theoretical later became fundamental to cryptography and secure digital communication.</p>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“Thank God that number theory is unsullied by any application.”</p>
+          <footer>— attributed to Leonard Eugene Dickson</footer>
+          <p class="quote-context">Number theory is now central to public-key cryptography, encryption, digital signatures, and secure communication.</p>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“The sole end of science is the honor of the human mind.”</p>
+          <footer>— Carl Gustav Jacob Jacobi, writing to Legendre in 1830</footer>
+          <p class="quote-context">Jacobi was defending mathematics and science as intellectual ends in themselves, without requiring immediate practical justification.</p>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“The scientist does not study nature because it is useful; he studies it because he delights in it.”</p>
+          <footer>— Henri Poincaré</footer>
+          <p class="quote-context">For Poincaré, curiosity, understanding, and intellectual beauty were motivation enough; utility could follow later.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="quotes-group" aria-labelledby="quotes-discovery-heading">
+      <h4 id="quotes-discovery-heading">Thinking, questions, and discovery</h4>
+      <div class="quotes-grid">
+        <details class="quote-long">
+          <summary>Arthur Schopenhauer on reading and thinking for oneself</summary>
+          <blockquote>
+            <p>“When we read, another person thinks for us: we merely repeat his mental process. It is the same as the pupil, in learning to write, following with his pen the lines that have been pencilled by the teacher. Accordingly, in reading, the work of thinking is, for the greater part, done for us. This is why we are consciously relieved when we turn to reading after being occupied with our own thoughts. But, in reading, our head is, however, really only the arena of some one else’s thoughts. And so it happens that if any one spends almost the whole day in reading, and by way of relaxation devotes the intervals to some thoughtless pastime, he gradually loses the capacity for thinking; just as a man who is always riding at last forgets how to walk. This is the case with very many learned persons: they have read themselves stupid. For to occupy every spare moment in reading, and to do nothing but read, is even more paralyzing to the mind than constant manual labor, which at least allows those engaged in it to follow their own thoughts. A spring never free from the pressure of some foreign body at last loses its elasticity; and so does the mind if other people’s thoughts are constantly forced upon it. Just as you can ruin the stomach and impair the whole body by taking too much nourishment, so you can overfill and choke the mind by feeding it too much. For the more you read, the fewer are the traces left by what you have read: the mind becomes like a tablet crossed over and over with writing. There is no time for rumination; and in no other way can you assimilate what you have read. If you read on and on without setting down your own thoughts, what has been read does not take root, but is for the most part lost. It is, in fact, just the same with mental as with bodily food: hardly the fifth part of what one takes is assimilated. The rest passes off in evaporation, respiration and the like.</p>
+            <p>Reading is thinking with some one else’s head instead of one’s own. To think with one’s own head is always to aim at developing a coherent whole—a system, even though it be not a strictly complete one; and nothing hinders this so much as too strong a current of others’ thoughts, such as comes of continual reading.”</p>
+            <footer>— Arthur Schopenhauer, “On Thinking for Oneself” / writings on reading and independent thought</footer>
+          </blockquote>
+        </details>
+
+        <details class="quote-long">
+          <summary>Donald Knuth on creativity and finding good questions</summary>
+          <blockquote>
+            <p>“And I think we should also try to guess what theorems are coming up; or, at least, to figure out how and why anybody would try to prove such theorems in the first place. We should imagine ourselves in the discoverer’s place. The creative part is really more interesting than the deductive part. Instead of concentrating just on finding good answers to questions, it’s more important to learn how to find good questions!</p>
+            <p>You’ve got something there. I wish our teachers would give us problems like, ‘Find something interesting about x,’ instead of ‘Prove x.’</p>
+            <p>Exactly. But teachers are so conservative, they’d be afraid of scaring off the ‘grind’ type of students who obediently and mechanically do all the homework. Besides, they wouldn’t like the extra work of grading the answers to nondirected questions.</p>
+            <p>The traditional way is to put off all creative aspects until the last part of graduate school. For seventeen or more years, a student is taught examsmanship, then suddenly after passing enough exams in graduate school he’s told to do something original!</p>
+            <p>Right. I doubt if many of the really original students have stuck around that long.</p>
+            <p>Oh, I don’t know, maybe they’re original enough to find a way to enjoy the system. Like putting themselves into the subject, as we were saying. That would make the traditional college courses tolerable, maybe even fun.</p>
+            <p>You always were an optimist. I’m afraid you’re painting too rosy a picture. But look, the rain has stopped, let’s lug this rock back to camp and see what it says.”</p>
+            <footer>— Donald E. Knuth, <em>Surreal Numbers: How Two Ex-Students Turned On to Pure Mathematics and Found Total Happiness</em>, pp. 46–47.</footer>
+          </blockquote>
+        </details>
+
+        <blockquote class="quote-item">
+          <p>“An expert is a person who has made all the mistakes that can be made in a very narrow field.”</p>
+          <footer>— Niels Bohr, commonly attributed</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“The formulation of a problem is often more essential than its solution.”</p>
+          <footer>— Albert Einstein and Leopold Infeld, <em>The Evolution of Physics</em></footer>
+        </blockquote>
+      </div>
+    </section>
+  </div>
+
   <div id="cool-stuff-panel" class="fun-panel fun-pdf-card">
     <div class="fun-pdf-header">
       <a class="btn btn--primary fun-page-button" href="/files/Cool_Stuff.pdf" target="_blank" rel="noopener">Open PDF in New Tab</a>
@@ -364,6 +476,93 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
     gap: 0.5rem;
   }
 
+  .quotes-card .quotes-intro {
+    margin: 0 0 1rem;
+  }
+
+  .quotes-group + .quotes-group {
+    margin-top: 1.4rem;
+  }
+
+  .quotes-group h4 {
+    margin: 0 0 0.65rem;
+    color: var(--global-text-color);
+  }
+
+  .quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .quote-item,
+  .quote-long {
+    margin: 0;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(99, 102, 241, 0.22);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+    color: var(--global-text-color);
+  }
+
+  .quote-item > p:first-child,
+  .quote-long blockquote p {
+    margin: 0 0 0.55rem;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  .quote-item footer,
+  .quote-long footer {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    opacity: 0.82;
+  }
+
+  .quote-context {
+    margin: 0.7rem 0 0;
+    padding-top: 0.65rem;
+    border-top: 1px solid rgba(99, 102, 241, 0.16);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    opacity: 0.78;
+  }
+
+  .quote-long {
+    grid-column: 1 / -1;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .quote-long summary {
+    padding: 0.9rem 2.4rem 0.9rem 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--global-text-color);
+    transition: background-color 0.18s ease, color 0.18s ease;
+  }
+
+  .quote-long summary:hover {
+    background: rgba(99, 102, 241, 0.1);
+  }
+
+  .quote-long summary:focus-visible {
+    outline: 3px solid rgba(245, 158, 11, 0.65);
+    outline-offset: -3px;
+  }
+
+  .quote-long[open] summary {
+    border-bottom: 1px solid rgba(99, 102, 241, 0.18);
+    background: rgba(99, 102, 241, 0.08);
+  }
+
+  .quote-long blockquote {
+    margin: 0;
+    padding: 1rem;
+    border: 0;
+  }
+
   .genealogy-card p {
     margin: 0 0 0.8rem;
     color: var(--global-text-color);
@@ -483,6 +682,10 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
   }
 
   @media (max-width: 767px) {
+    .quotes-grid {
+      grid-template-columns: 1fr;
+    }
+
     .genealogy-rotator {
       grid-template-columns: 1fr;
     }
@@ -507,6 +710,23 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
     border-color: rgba(129, 140, 248, 0.3);
     background: linear-gradient(155deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.95));
     box-shadow: inset 0 1px 0 rgba(148, 163, 184, 0.18), 0 10px 24px rgba(2, 6, 23, 0.42);
+  }
+
+  html[data-theme="dark"] .quote-item,
+  html[data-theme="dark"] .quote-long {
+    border-color: rgba(129, 140, 248, 0.3);
+    background: rgba(15, 23, 42, 0.48);
+    box-shadow: 0 6px 16px rgba(2, 6, 23, 0.24);
+  }
+
+  html[data-theme="dark"] .quote-context,
+  html[data-theme="dark"] .quote-long[open] summary {
+    border-color: rgba(129, 140, 248, 0.24);
+  }
+
+  html[data-theme="dark"] .quote-long summary:hover,
+  html[data-theme="dark"] .quote-long[open] summary {
+    background: rgba(129, 140, 248, 0.14);
   }
 
 </style>
