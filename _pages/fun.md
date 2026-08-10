@@ -1,5 +1,6 @@
 ---
 layout: archive
+
 title: "Miscellaneous"
 permalink: /fun/
 author_profile: true
@@ -135,7 +136,6 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
         <blockquote class="quote-item">
           <p>“The sole end of science is the honor of the human mind.”</p>
           <footer>— Carl Gustav Jacob Jacobi, writing to Legendre in 1830</footer>
-          <p class="quote-context">Jacobi was defending mathematics and science as intellectual ends in themselves, without requiring immediate practical justification.</p>
         </blockquote>
         <blockquote class="quote-item">
           <p>“The scientist does not study nature because it is useful; he studies it because he delights in it.”</p>
