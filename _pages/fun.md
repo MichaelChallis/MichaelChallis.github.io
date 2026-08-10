@@ -74,14 +74,17 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
   </div>
 
   <div id="quotes-panel" class="fun-panel quotes-card">
-    <h3>Ideas worth following</h3>
+    <h3>An assortment of quotes</h3>
     <p class="quotes-intro">
       A collection about curiosity, play, and interesting questions—and how usefulness sometimes arrives later.
     </p>
 
-    <section class="quotes-group" aria-labelledby="quotes-interesting-heading">
-      <h4 id="quotes-interesting-heading">Because it seemed interesting</h4>
-      <div class="quotes-grid">
+    <div class="quotes-controls" aria-label="Quote display controls">
+      <button type="button" id="quotes-show-all" class="btn btn--primary fun-page-button" aria-pressed="false">Show all</button>
+      <button type="button" id="quotes-show-long" class="btn btn--primary fun-page-button" aria-expanded="false" aria-controls="long-quotes">see some longer quotes</button>
+    </div>
+
+    <div id="short-quotes" class="quotes-grid" aria-live="polite">
         <blockquote class="quote-item">
           <p>“I guess I’ll invent a game.”</p>
           <footer>— Alfred Butts, inventor of <em>Scrabble</em></footer>
@@ -114,12 +117,7 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
           <p>“I was looking for a ‘hobby’ programming project that would keep me occupied during the week around Christmas.”</p>
           <footer>— Guido van Rossum, on beginning what became Python</footer>
         </blockquote>
-      </div>
-    </section>
 
-    <section class="quotes-group" aria-labelledby="quotes-research-heading">
-      <h4 id="quotes-research-heading">Curiosity, usefulness, and pure research</h4>
-      <div class="quotes-grid">
         <blockquote class="quote-item">
           <p>“The best kind of research is curiosity driven research.”</p>
           <footer>— Barry Marshall, Nobel laureate in medicine</footer>
@@ -144,12 +142,17 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
           <footer>— Henri Poincaré</footer>
           <p class="quote-context">For Poincaré, curiosity, understanding, and intellectual beauty were motivation enough; utility could follow later.</p>
         </blockquote>
-      </div>
-    </section>
+        <blockquote class="quote-item">
+          <p>“An expert is a person who has made all the mistakes that can be made in a very narrow field.”</p>
+          <footer>— Niels Bohr, commonly attributed</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“The formulation of a problem is often more essential than its solution.”</p>
+          <footer>— Albert Einstein and Leopold Infeld, <em>The Evolution of Physics</em></footer>
+        </blockquote>
+    </div>
 
-    <section class="quotes-group" aria-labelledby="quotes-discovery-heading">
-      <h4 id="quotes-discovery-heading">Thinking, questions, and discovery</h4>
-      <div class="quotes-grid">
+    <div id="long-quotes" class="quotes-grid quotes-long-list" hidden>
         <details class="quote-long">
           <summary>Arthur Schopenhauer on reading and thinking for oneself</summary>
           <blockquote>
@@ -173,16 +176,7 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
           </blockquote>
         </details>
 
-        <blockquote class="quote-item">
-          <p>“An expert is a person who has made all the mistakes that can be made in a very narrow field.”</p>
-          <footer>— Niels Bohr, commonly attributed</footer>
-        </blockquote>
-        <blockquote class="quote-item">
-          <p>“The formulation of a problem is often more essential than its solution.”</p>
-          <footer>— Albert Einstein and Leopold Infeld, <em>The Evolution of Physics</em></footer>
-        </blockquote>
-      </div>
-    </section>
+    </div>
   </div>
 
   <div id="cool-stuff-panel" class="fun-panel fun-pdf-card">
@@ -234,6 +228,66 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
   })();
 </script>
 
+
+<script>
+  (function () {
+    const shortQuotes = document.getElementById("short-quotes");
+    const longQuotes = document.getElementById("long-quotes");
+    const showAllButton = document.getElementById("quotes-show-all");
+    const showLongButton = document.getElementById("quotes-show-long");
+
+    if (!shortQuotes || !longQuotes || !showAllButton || !showLongButton) return;
+
+    const quotes = Array.from(shortQuotes.querySelectorAll(".quote-item"));
+    const ROTATION_INTERVAL_MS = 60000;
+    let currentQuote = 0;
+    let showingAll = false;
+    let showingLongQuotes = false;
+
+    for (let i = quotes.length - 1; i > 0; i--) {
+      const randomIndex = Math.floor(Math.random() * (i + 1));
+      [quotes[i], quotes[randomIndex]] = [quotes[randomIndex], quotes[i]];
+    }
+    quotes.forEach((quote) => shortQuotes.appendChild(quote));
+
+    function renderQuotes() {
+      quotes.forEach((quote, index) => {
+        quote.hidden = !showingAll && index !== currentQuote;
+      });
+    }
+
+    function renderLongQuotes() {
+      const shouldShow = showingAll || showingLongQuotes;
+      longQuotes.hidden = !shouldShow;
+      showLongButton.hidden = showingAll;
+      showLongButton.setAttribute("aria-expanded", String(shouldShow));
+      showLongButton.textContent = showingLongQuotes ? "hide the longer quotes" : "see some longer quotes";
+      longQuotes.querySelectorAll("details").forEach((quote) => {
+        quote.open = shouldShow;
+      });
+    }
+
+    showAllButton.addEventListener("click", function () {
+      showingAll = !showingAll;
+      showAllButton.textContent = showingAll ? "Show one" : "Show all";
+      showAllButton.setAttribute("aria-pressed", String(showingAll));
+      renderQuotes();
+      renderLongQuotes();
+    });
+
+    showLongButton.addEventListener("click", function () {
+      showingLongQuotes = !showingLongQuotes;
+      renderLongQuotes();
+    });
+
+    renderQuotes();
+    renderLongQuotes();
+    setInterval(function () {
+      currentQuote = (currentQuote + 1) % quotes.length;
+      if (!showingAll) renderQuotes();
+    }, ROTATION_INTERVAL_MS);
+  })();
+</script>
 
 
 <script>
@@ -480,13 +534,19 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
     margin: 0 0 1rem;
   }
 
-  .quotes-group + .quotes-group {
-    margin-top: 1.4rem;
+  .quotes-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
   }
 
-  .quotes-group h4 {
-    margin: 0 0 0.65rem;
-    color: var(--global-text-color);
+  .quotes-card [hidden] {
+    display: none;
+  }
+
+  .quotes-long-list {
+    margin-top: 0.75rem;
   }
 
   .quotes-grid {
