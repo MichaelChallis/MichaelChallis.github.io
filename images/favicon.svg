@@ -33,23 +33,16 @@
   </g>
 -->
 
-  <!-- Option: interlocking MC monogram  -->
-  <g id="monogram-interlocking" fill="none" stroke="#17365d" stroke-linecap="round"
-    stroke-linejoin="round" stroke-width="7">
-    <path d="M9 49V16l14 21 14-21v33"/>
-    <path d="M54 20a20 20 0 1 0 0 24"/>
-  </g>
-
 
   <!-- MATHEMATICAL SYMBOL OPTIONS -->
 
-  <!-- Option: integral
+  <!-- Option: integral  -->
   <g id="math-integral">
     <circle cx="32" cy="32" r="30" fill="#17365d"/>
     <text x="32" y="47" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
       font-size="48" font-weight="700" text-anchor="middle">&#x222B;</text>
   </g>
-  -->
+
 
   <!-- Option: uppercase sigma
   <g id="math-sigma">
