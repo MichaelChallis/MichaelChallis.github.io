@@ -1,63 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <title>Michael Challis favicon</title>
-
-  <!--
-    FAVICON OPTIONS
-    Keep exactly one option uncommented. The graduation cap remains active by
-    default; comment it out before uncommenting one of the alternatives below.
-  -->
-
-  <!-- Current option: graduation cap
-  <g id="graduation-cap" fill="#3366cc">
-    <path d="M32 14 4 25l28 11 22-8.64V43h4V25L32 14Z"/>
-    <path d="M14 34.7V45c0 4.42 8.06 8 18 8s18-3.58 18-8V34.7l-18 7.07-18-7.07Z"/>
-    <circle cx="56" cy="46" r="4"/>
-  </g>
-  -->
-
-  <!-- MONOGRAM OPTIONS -->
-
-  <!-- Option: white MC on a dark-blue circle   -->
-  <g id="monogram-blue-circle">
-    <circle cx="32" cy="32" r="30" fill="#17365d"/>
-    <text x="32" y="42" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
-      font-size="29" font-weight="700" text-anchor="middle">MC</text>
-  </g>
-
-
-  <!-- Option: serif M inside a circle 
-  <g id="monogram-serif-m">
-    <circle cx="32" cy="32" r="28" fill="none" stroke="#17365d" stroke-width="5"/>
-    <text x="32" y="45" fill="#17365d" font-family="Georgia, 'Times New Roman', serif"
-      font-size="39" font-weight="700" text-anchor="middle">M</text>
-  </g>
--->
-
-
-  <!-- MATHEMATICAL SYMBOL OPTIONS -->
-
-  <!-- Option: uppercase sigma
-  <g id="math-sigma">
-    <circle cx="32" cy="32" r="30" fill="#17365d"/>
-    <text x="32" y="45" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
-      font-size="42" font-weight="700" text-anchor="middle">&#x03A3;</text>
-  </g>
-  -->
-
-  <!-- Option: uppercase delta 
-  <g id="math-delta">
-    <circle cx="32" cy="32" r="30" fill="#17365d"/>
-    <text x="32" y="45" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
-      font-size="42" font-weight="700" text-anchor="middle">&#x0394;</text>
-  </g>
- -->
-
-  <!-- Option: infinity
-  <g id="math-infinity">
-    <circle cx="32" cy="32" r="30" fill="#17365d"/>
-    <text x="32" y="44" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
-      font-size="41" font-weight="700" text-anchor="middle">&#x221E;</text>
-  </g>
-  -->
-
+  <title>Varphi</title>
+  <circle cx="32" cy="32" r="30" fill="#1769aa"/>
+  <path d="M32 12v40 M32 20c-10-4-18 2-18 11s8 15 18 13c11-2 18-8 18-16 0-7-7-11-18-8z"
+    fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
