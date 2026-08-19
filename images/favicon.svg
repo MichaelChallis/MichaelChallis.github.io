@@ -25,21 +25,13 @@
   </g>
    -->
 
-  <!-- Option: dark-blue MC on a cream background -->
-  <g id="monogram-cream-square">
-    <rect x="2" y="2" width="60" height="60" rx="12" fill="#f6f0df"/>
-    <text x="32" y="42" fill="#17365d" font-family="Georgia, 'Times New Roman', serif"
-      font-size="29" font-weight="700" text-anchor="middle">MC</text>
-  </g>
-
-
-  <!-- Option: serif M inside a circle
+  <!-- Option: serif M inside a circle -->
   <g id="monogram-serif-m">
     <circle cx="32" cy="32" r="28" fill="none" stroke="#17365d" stroke-width="5"/>
     <text x="32" y="45" fill="#17365d" font-family="Georgia, 'Times New Roman', serif"
       font-size="39" font-weight="700" text-anchor="middle">M</text>
   </g>
-  -->
+
 
   <!-- Option: interlocking MC monogram
   <g id="monogram-interlocking" fill="none" stroke="#17365d" stroke-linecap="round"
