@@ -17,13 +17,13 @@
 
   <!-- MONOGRAM OPTIONS -->
 
-  <!-- Option: white MC on a dark-blue circle
+  <!-- Option: white MC on a dark-blue circle   -->
   <g id="monogram-blue-circle">
     <circle cx="32" cy="32" r="30" fill="#17365d"/>
     <text x="32" y="42" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
       font-size="29" font-weight="700" text-anchor="middle">MC</text>
   </g>
-   -->
+
 
   <!-- Option: serif M inside a circle 
   <g id="monogram-serif-m">
@@ -59,15 +59,5 @@
       font-size="41" font-weight="700" text-anchor="middle">&#x221E;</text>
   </g>
   -->
-
-  <!-- Option: coordinate plot with connected points  -->
-  <g id="math-coordinate-plot" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M10 53V10M8 51h47" fill="none" stroke="#17365d" stroke-width="4"/>
-    <path d="m14 44 11-13 10 6 16-23" fill="none" stroke="#3366cc" stroke-width="5"/>
-    <g fill="#17365d" stroke="#fff" stroke-width="2">
-      <circle cx="14" cy="44" r="4"/><circle cx="25" cy="31" r="4"/>
-      <circle cx="35" cy="37" r="4"/><circle cx="51" cy="14" r="4"/>
-    </g>
-  </g>
 
 </svg>
