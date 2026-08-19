@@ -1,11 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <title>Michael Challis monogram</title>
+  <title>Varphi</title>
   <circle cx="32" cy="32" r="30" fill="#1769aa"/>
-  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Hand-drawn letterforms keep the cursive monogram consistent without relying on a font. -->
-    <path d="M14 45 C17 36 18 18 23 17 C29 17 26 38 27 44 C29 36 32 18 37 18 C42 19 38 37 41 43"
-      stroke-width="4.5"/>
-    <path d="M49 23 C46 16 36 18 33 28 C29 41 38 49 48 41 C50 39 51 37 52 35"
-      stroke-width="4.5"/>
-  </g>
+  <!-- Draw the glyph as paths so it remains consistent across browsers and operating systems. -->
+  <path d="M34 10 C32 20 30 30 29 40 C28 47 27 52 27 54"
+    fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M35 20 C24 18 16 24 16 33 C16 42 24 47 33 46 C43 45 49 39 48 31 C47 24 42 21 35 20 Z"
+    fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
