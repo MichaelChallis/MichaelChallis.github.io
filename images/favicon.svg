@@ -52,21 +52,22 @@
   </g>
  -->
 
-  <!-- Option: infinity  -->
+  <!-- Option: infinity
   <g id="math-infinity">
     <circle cx="32" cy="32" r="30" fill="#17365d"/>
     <text x="32" y="44" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
       font-size="41" font-weight="700" text-anchor="middle">&#x221E;</text>
   </g>
+  -->
+  
 
-
-  <!-- Option: minimal equation, y = beta x
+  <!-- Option: minimal equation, y = beta x  -->
   <g id="math-equation">
     <rect x="2" y="2" width="60" height="60" rx="12" fill="#f6f0df"/>
     <text x="32" y="39" fill="#17365d" font-family="Georgia, 'Times New Roman', serif"
       font-size="19" font-style="italic" font-weight="700" text-anchor="middle">y=&#x03B2;x</text>
   </g>
-  -->
+
 
   <!-- Option: function curve and coordinate axes
   <g id="math-function-curve" fill="none" stroke="#17365d" stroke-linecap="round">
