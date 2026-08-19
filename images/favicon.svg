@@ -7,22 +7,23 @@
     default; comment it out before uncommenting one of the alternatives below.
   -->
 
-  <!-- Current option: graduation cap -->
+  <!-- Current option: graduation cap
   <g id="graduation-cap" fill="#3366cc">
     <path d="M32 14 4 25l28 11 22-8.64V43h4V25L32 14Z"/>
     <path d="M14 34.7V45c0 4.42 8.06 8 18 8s18-3.58 18-8V34.7l-18 7.07-18-7.07Z"/>
     <circle cx="56" cy="46" r="4"/>
   </g>
+  -->
 
   <!-- MONOGRAM OPTIONS -->
 
-  <!-- Option: white MC on a dark-blue circle
+  <!-- Option: white MC on a dark-blue circle  -->
   <g id="monogram-blue-circle">
     <circle cx="32" cy="32" r="30" fill="#17365d"/>
     <text x="32" y="42" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
       font-size="29" font-weight="700" text-anchor="middle">MC</text>
   </g>
-  -->
+
 
   <!-- Option: dark-blue MC on a cream background
   <g id="monogram-cream-square">
