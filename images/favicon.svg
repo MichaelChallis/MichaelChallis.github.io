@@ -17,21 +17,21 @@
 
   <!-- MONOGRAM OPTIONS -->
 
-  <!-- Option: white MC on a dark-blue circle  -->
+  <!-- Option: white MC on a dark-blue circle
   <g id="monogram-blue-circle">
     <circle cx="32" cy="32" r="30" fill="#17365d"/>
     <text x="32" y="42" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
       font-size="29" font-weight="700" text-anchor="middle">MC</text>
   </g>
+   -->
 
-
-  <!-- Option: dark-blue MC on a cream background
+  <!-- Option: dark-blue MC on a cream background -->
   <g id="monogram-cream-square">
     <rect x="2" y="2" width="60" height="60" rx="12" fill="#f6f0df"/>
     <text x="32" y="42" fill="#17365d" font-family="Georgia, 'Times New Roman', serif"
       font-size="29" font-weight="700" text-anchor="middle">MC</text>
   </g>
-  -->
+
 
   <!-- Option: serif M inside a circle
   <g id="monogram-serif-m">
