@@ -1,1 +1,118 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 20 20"><title>OOjs_UI_icon_academic-progressive</title><path d="M12.13,14,12,14l-.13,0L7,12.63V16c0,1.1,2.24,2,5,2s5-.9,5-2V12.63Z" fill="#36c"/><path d="M21.13,9.52l-9-2.5a.39.39,0,0,0-.26,0l-9,2.5a.5.5,0,0,0,0,1l9,2.5L12,13l.13,0,9-2.5a.5.5,0,0,0,0-1Z" fill="#36c"/><path d="M19.5,14.5a1,1,0,0,0-.5-.85V10H18v3.65a1,1,0,0,0-.5.85,1,1,0,0,0,.45.81L17.5,18c0,.37.45.67,1,.67s1-.3,1-.67l-.45-2.69A1,1,0,0,0,19.5,14.5Z" fill="#36c"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Michael Challis favicon</title>
+
+  <!--
+    FAVICON OPTIONS
+    Keep exactly one option uncommented. The graduation cap remains active by
+    default; comment it out before uncommenting one of the alternatives below.
+  -->
+
+  <!-- Current option: graduation cap -->
+  <g id="graduation-cap" fill="#3366cc">
+    <path d="M32 14 4 25l28 11 22-8.64V43h4V25L32 14Z"/>
+    <path d="M14 34.7V45c0 4.42 8.06 8 18 8s18-3.58 18-8V34.7l-18 7.07-18-7.07Z"/>
+    <circle cx="56" cy="46" r="4"/>
+  </g>
+
+  <!-- MONOGRAM OPTIONS -->
+
+  <!-- Option: white MC on a dark-blue circle
+  <g id="monogram-blue-circle">
+    <circle cx="32" cy="32" r="30" fill="#17365d"/>
+    <text x="32" y="42" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
+      font-size="29" font-weight="700" text-anchor="middle">MC</text>
+  </g>
+  -->
+
+  <!-- Option: dark-blue MC on a cream background
+  <g id="monogram-cream-square">
+    <rect x="2" y="2" width="60" height="60" rx="12" fill="#f6f0df"/>
+    <text x="32" y="42" fill="#17365d" font-family="Georgia, 'Times New Roman', serif"
+      font-size="29" font-weight="700" text-anchor="middle">MC</text>
+  </g>
+  -->
+
+  <!-- Option: serif M inside a circle
+  <g id="monogram-serif-m">
+    <circle cx="32" cy="32" r="28" fill="none" stroke="#17365d" stroke-width="5"/>
+    <text x="32" y="45" fill="#17365d" font-family="Georgia, 'Times New Roman', serif"
+      font-size="39" font-weight="700" text-anchor="middle">M</text>
+  </g>
+  -->
+
+  <!-- Option: interlocking MC monogram
+  <g id="monogram-interlocking" fill="none" stroke="#17365d" stroke-linecap="round"
+    stroke-linejoin="round" stroke-width="7">
+    <path d="M9 49V16l14 21 14-21v33"/>
+    <path d="M54 20a20 20 0 1 0 0 24"/>
+  </g>
+  -->
+
+  <!-- MATHEMATICAL SYMBOL OPTIONS -->
+
+  <!-- Option: integral
+  <g id="math-integral">
+    <circle cx="32" cy="32" r="30" fill="#17365d"/>
+    <text x="32" y="47" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
+      font-size="48" font-weight="700" text-anchor="middle">&#x222B;</text>
+  </g>
+  -->
+
+  <!-- Option: uppercase sigma
+  <g id="math-sigma">
+    <circle cx="32" cy="32" r="30" fill="#17365d"/>
+    <text x="32" y="45" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
+      font-size="42" font-weight="700" text-anchor="middle">&#x03A3;</text>
+  </g>
+  -->
+
+  <!-- Option: uppercase delta
+  <g id="math-delta">
+    <circle cx="32" cy="32" r="30" fill="#17365d"/>
+    <text x="32" y="45" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
+      font-size="42" font-weight="700" text-anchor="middle">&#x0394;</text>
+  </g>
+  -->
+
+  <!-- Option: infinity
+  <g id="math-infinity">
+    <circle cx="32" cy="32" r="30" fill="#17365d"/>
+    <text x="32" y="44" fill="#fff" font-family="Georgia, 'Times New Roman', serif"
+      font-size="41" font-weight="700" text-anchor="middle">&#x221E;</text>
+  </g>
+  -->
+
+  <!-- Option: minimal equation, y = beta x
+  <g id="math-equation">
+    <rect x="2" y="2" width="60" height="60" rx="12" fill="#f6f0df"/>
+    <text x="32" y="39" fill="#17365d" font-family="Georgia, 'Times New Roman', serif"
+      font-size="19" font-style="italic" font-weight="700" text-anchor="middle">y=&#x03B2;x</text>
+  </g>
+  -->
+
+  <!-- Option: function curve and coordinate axes
+  <g id="math-function-curve" fill="none" stroke="#17365d" stroke-linecap="round">
+    <path d="M10 53V10M8 51h47" stroke-width="4"/>
+    <path d="M13 47C25 47 24 18 53 13" stroke="#3366cc" stroke-width="6"/>
+  </g>
+  -->
+
+  <!-- Option: geometric construction
+  <g id="math-geometric-construction" fill="none" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="27" stroke="#17365d" stroke-width="4"/>
+    <path d="m32 7 23 40H9L32 7Z" stroke="#3366cc" stroke-width="5"/>
+    <circle cx="32" cy="32" r="4" fill="#17365d" stroke="none"/>
+  </g>
+  -->
+
+  <!-- Option: coordinate plot with connected points
+  <g id="math-coordinate-plot" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 53V10M8 51h47" fill="none" stroke="#17365d" stroke-width="4"/>
+    <path d="m14 44 11-13 10 6 16-23" fill="none" stroke="#3366cc" stroke-width="5"/>
+    <g fill="#17365d" stroke="#fff" stroke-width="2">
+      <circle cx="14" cy="44" r="4"/><circle cx="25" cy="31" r="4"/>
+      <circle cx="35" cy="37" r="4"/><circle cx="51" cy="14" r="4"/>
+    </g>
+  </g>
+  -->
+</svg>
