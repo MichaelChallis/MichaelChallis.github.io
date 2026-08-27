@@ -149,6 +149,10 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
           <p>“The formulation of a problem is often more essential than its solution.”</p>
           <footer>— Albert Einstein and Leopold Infeld, <em>The Evolution of Physics</em></footer>
         </blockquote>
+        <blockquote class="quote-item">
+          <p>“To deal with hyper-planes in a 14-dimensional space, visualize a 3-D space and say ‘fourteen’ to yourself very loudly. Everyone does it.”</p>
+          <footer>— Geoffrey Hinton</footer>
+        </blockquote>
     </div>
 
     <div id="long-quotes" class="quotes-grid quotes-long-list" hidden>
