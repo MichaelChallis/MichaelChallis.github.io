@@ -97,27 +97,6 @@ author_profile: true
     margin: 0.04rem 0;
   }
 
-  .presentation-status {
-    display: inline-block;
-    margin-left: 0.35rem;
-    padding: 0.08rem 0.4rem;
-    border-radius: 999px;
-    font-size: 0.74rem;
-    font-weight: 700;
-    line-height: 1.35;
-    vertical-align: 0.08rem;
-  }
-
-  .presentation-status--coauthor {
-    color: #991b1b;
-    background: #fee2e2;
-  }
-
-  .presentation-status--upcoming {
-    color: #854d0e;
-    background: #fef9c3;
-  }
-
   html[data-theme="dark"] .wip-coauthors,
   html[data-theme="dark"] .wip-presentations summary {
     color: #e2e8f0;
@@ -131,16 +110,6 @@ author_profile: true
     background: #1f2937;
     border-left-color: #84adff;
     color: #e2e8f0;
-  }
-
-  html[data-theme="dark"] .presentation-status--coauthor {
-    color: #fecaca;
-    background: #7f1d1d;
-  }
-
-  html[data-theme="dark"] .presentation-status--upcoming {
-    color: #fef08a;
-    background: #713f12;
   }
 
   .presentation-grid {
@@ -367,11 +336,7 @@ author_profile: true
         <ul>
           <li><strong>2026</strong>
             <ul>
-              <li>Florida State University (Tallahassee, Florida) <span class="presentation-status presentation-status--upcoming">Upcoming</span></li>
-              <li>Mind, Behavior, and Development Unit Workshop at World Bank (Washington D.C., U.S.) <span class="presentation-status presentation-status--coauthor">Presented by coauthor</span></li>
-              <li>3rd CAGE Workshop on Gender and Inequality (Coventry, UK) <span class="presentation-status presentation-status--upcoming">Upcoming</span></li>
-              <li>Warwick Workshop in Experimental Economics and Political Economy (Coventry, UK)</li>
-              <li>3rd Verona Early Career Workshop in Economics and Financial Mathematics (Verona, Italy)</li>
+              <li> Florida State University (Tallahassee, Florida, upcoming); Mind, Behavior, and Development Unit Workshop at World Bank (Washington D.C., U.S.); 3rd CAGE Workshop on Gender and Inequality (Coventy, UK, upcoming); Warwick Workshop in Experimental Economics and Political Economy (Coventry, UK); 3rd Verona Early Career Workshop in Economics and Financial Mathematics (Verona, Italy)</li>
             </ul>
           </li>
         </ul>
@@ -422,12 +387,6 @@ author_profile: true
       mine: '#2563eb',
       coauthor: '#dc2626',
       upcoming: '#eab308'
-    };
-
-    var categoryLabels = {
-      mine: 'Presented by me',
-      coauthor: 'Presented by coauthor',
-      upcoming: 'Upcoming'
     };
 
     var locations = [
@@ -483,8 +442,7 @@ author_profile: true
       var heading = orderedPresentations.length > 1 ? '<div class="presentation-popup-heading">Same location, distinct presentations</div>' : '';
       var items = orderedPresentations.map(function (presentation) {
         var color = categoryColors[presentation.category] || '#2563eb';
-        var label = categoryLabels[presentation.category] || categoryLabels.mine;
-        return '<div class="presentation-popup-item"><span class="presentation-popup-pin" style="background:' + color + ';" title="' + label + '"></span><span>' + escapeHtml(presentation.name) + '<br><small>' + label + '</small></span></div>';
+        return '<div class="presentation-popup-item"><span class="presentation-popup-pin" style="background:' + color + ';"></span><span>' + escapeHtml(presentation.name) + '</span></div>';
       }).join('');
 
       return '<div class="presentation-popup">' + heading + '<div class="presentation-popup-list">' + items + '</div></div>';
