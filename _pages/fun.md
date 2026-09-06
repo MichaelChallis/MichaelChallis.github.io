@@ -124,7 +124,7 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
           <footer>— Barry Marshall, Nobel laureate in medicine</footer>
         </blockquote>
         <blockquote class="quote-item">
-          <p>“Elaborate apparatus plays an important part in the science of to-day, but I sometimes wonder if we are not inclined to forget that the most important instrument in research must always be the mind of man.”</p>
+          <p>“Elaborate apparatus plays an important part in the science of today, but I sometimes wonder if we are not inclined to forget that the most important instrument in research must always be the mind of man.”</p>
           <footer>— W. I. B. Beveridge</footer>
         </blockquote>
         <blockquote class="quote-item">
