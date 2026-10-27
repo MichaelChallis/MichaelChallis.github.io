@@ -140,12 +140,12 @@ author_profile: true
         answers: [
           { label: "A", text: "A consultant", scores: { appliedMicro: 3 } },
           { label: "B", text: "A journalist", scores: { history: 3 } },
-          { label: "C", text: "A Recruiter", scores: { labor: 3 } },
+          { label: "C", text: "A recruiter", scores: { labor: 3 } },
           { label: "D", text: "An investment banker", scores: { finance: 3 } },
           { label: "E", text: "A diplomat", scores: { politicalEconomy: 3 } },
           { label: "F", text: "Another job?!? Who else will pay me to solve puzzles?", scores: { theory: 3 } },
           { label: "G", text: "A mergers-and-acquisitions lawyer", scores: { io: 3 } },
-          { label: "H", text: "An central banker", scores: { macro: 3 } },
+          { label: "H", text: "A central banker", scores: { macro: 3 } },
           { label: "I", text: "Psychological counselor", scores: { behavioral: 3 } },
           { label: "J", text: "Quantitative researcher", scores: { econometrics: 3 } }
         ]
