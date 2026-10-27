@@ -6,7 +6,7 @@ permalink: /fun/
 author_profile: true
 ---
 
-Here are a few miscellaneous things that I have made, find interesting, etc. The order the blocks appear in is randomized so when you refresh the page something different may appear first! If you would like to randomize it yourself without having to refresh the page just press this button: <button type="button" id="fun-randomize" class="btn btn--primary fun-page-button fun-page-button--randomize fun-randomize-button">Randomize</button>
+Here are a few miscellaneous things that I have made, find interesting, etc. The order the blocks appear in is randomized, so when you refresh the page, something different may appear first! If you would like to randomize it yourself without having to refresh the page, just press this button: <button type="button" id="fun-randomize" class="btn btn--primary fun-page-button fun-page-button--randomize fun-randomize-button">Randomize</button>
 
 <div id="fun-panels">
   <div id="economist-quiz-panel" class="fun-panel economist-quiz-card">
@@ -21,7 +21,7 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
     <p>
       The <a href="https://www.mathgenealogy.org/" target="_blank" rel="noopener">Mathematics Genealogy Project</a>
       tracks advisor-student relationships in mathematics and related fields, making it possible to trace academic lineages across generations.
-      <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> is my supervisor and through him I have many famous academic ancestors.
+      <a href="https://www.mathgenealogy.org/id.php?id=236370" target="_blank" rel="noopener">Herakles M. Polemarchakis</a> is my supervisor, and through him I have many famous academic ancestors.
     </p>
     <p>
       The rotating panel below highlights some of the people connected to my mathematical genealogy.
@@ -326,7 +326,7 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
         genealogy: "https://www.mathgenealogy.org/id.php?id=17865",
         wiki: "https://en.wikipedia.org/wiki/Sim%C3%A9on_Denis_Poisson",
         image: "/images/Siméon Denis Poisson.jpg",
-        bio: "French mathematician and physicist remembered for Poisson distribution, Poisson brackets, and major work in mechanics."
+        bio: "French mathematician and physicist remembered for the Poisson distribution, Poisson brackets, and major work in mechanics."
       },
       {
         name: "Pierre-Simon Laplace",

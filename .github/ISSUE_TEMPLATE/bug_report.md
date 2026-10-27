@@ -7,7 +7,7 @@ labels: ''
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is, be sure to note if the issue is presenet in the *template* or appeared on *your site*. If the bug appears on your site, please be sure to provide a link to your repository.
+A clear and concise description of what the bug is, be sure to note if the issue is present in the *template* or appeared on *your site*. If the bug appears on your site, please be sure to provide a link to your repository.
 
 **To Reproduce**
 Steps to reproduce the behavior:
