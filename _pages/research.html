@@ -67,13 +67,26 @@ author_profile: true
     margin-bottom: 0.45rem;
   }
 
-  .wip-abstract summary {
-    padding: 0.25rem 0.65rem;
-    border: 1px solid currentColor;
-    border-radius: 4px;
+  .wip-actions {
+    position: relative;
+    margin-top: 0.45rem;
   }
 
-  .wip-abstract summary:focus-visible {
+  .wip-actions > details {
+    margin-top: 0;
+  }
+
+  .wip-actions > details:nth-child(2) > summary {
+    position: absolute;
+    top: 0;
+    left: 6rem;
+  }
+
+  .wip-actions > details:nth-child(2) > .compact-presentations {
+    margin-top: 0.45rem;
+  }
+
+  .wip-presentations summary:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 3px;
   }
@@ -346,24 +359,26 @@ author_profile: true
   <li class="wip-item">
     <div class="wip-title">Wading Through Sludge: Evidence from Title IX Reporting Systems</div>
     <div class="wip-coauthors">with <a href="https://sites.google.com/view/malavikamani/home" target="_blank" rel="noopener noreferrer">Malavika Mani</a></div>
-    <details class="wip-presentations wip-abstract">
-      <summary>Abstract</summary>
-      <div class="compact-presentations">
-        <p>Administrative burdens may discourage disclosure of sexual violence and impede access to institutional remedies. We study how burdens at different stages of university Title IX reporting systems relate to initial reporting and subsequent formalisation. We link archived landing pages and reporting forms to administrative outcomes in New York and Texas during 2018–2024, construct standardised measures of procedural and narrative burden, and estimate models with state or institution fixed effects and year effects. Across institutions, a one-standard-deviation increase in landing-page procedural burden is associated with 0.66 fewer reports per 1,000 students. This association becomes small and statistically insignificant with institution fixed effects. In contrast, greater narrative burden remains associated with lower progression: within institutions, a one-standard-deviation increase corresponds to a 14.7-percentage-point reduction in the formal-complaint share in New York and a 10.6-percentage-point reduction in the processed-case share across available observations (both p &lt; 0.01). These estimates are associational. An incentivised survey of Title IX officers combines belief elicitation, randomised form-choice tasks, and an evidence-versus-control information intervention. Preliminary results indicate that officers recognise reporting costs and disfavour mandatory supporting documents, yet do not consistently reject lengthy required narratives. Information-treatment estimates favour simplification but are imprecise. Together, the findings distinguish barriers associated with entry from burdens associated with continuation, while revealing administrators’ perceived trade-offs between accessibility and information collection. The paper contributes evidence on administrative burden and institutional design in sensitive grievance systems.</p>
-      </div>
-    </details>
-    <details class="wip-presentations">
-      <summary>Presentations</summary>
-      <div class="compact-presentations">
-        <ul>
-          <li><strong>2026</strong>
-            <ul>
-              <li> Economic Science Association India, BREW (Delhi, India, upcoming); ATIXA’s 15th Annual Conference (Baltimore, Maryland); Florida State University Department of Economics (Tallahassee, Florida); Mind, Behavior, and Development Unit Workshop at World Bank (Washington, D.C.); Warwick Workshop in Experimental Economics and Political Economy (Coventry, UK); 3rd Verona Early Career Workshop in Economics and Financial Mathematics (Verona, Italy)</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </details>
+    <div class="wip-actions">
+      <details class="wip-presentations wip-abstract">
+        <summary>Abstract</summary>
+        <div class="compact-presentations">
+          <p>Administrative burdens may discourage disclosure of sexual violence and impede access to institutional remedies. We study how burdens at different stages of university Title IX reporting systems relate to initial reporting and subsequent formalisation. We link archived landing pages and reporting forms to administrative outcomes in New York and Texas during 2018–2024, construct standardised measures of procedural and narrative burden, and estimate models with state or institution fixed effects and year effects. Across institutions, a one-standard-deviation increase in landing-page procedural burden is associated with 0.66 fewer reports per 1,000 students. This association becomes small and statistically insignificant with institution fixed effects. In contrast, greater narrative burden remains associated with lower progression: within institutions, a one-standard-deviation increase corresponds to a 14.7-percentage-point reduction in the formal-complaint share in New York and a 10.6-percentage-point reduction in the processed-case share across available observations (both p &lt; 0.01). These estimates are associational. An incentivised survey of Title IX officers combines belief elicitation, randomised form-choice tasks, and an evidence-versus-control information intervention. Preliminary results indicate that officers recognise reporting costs and disfavour mandatory supporting documents, yet do not consistently reject lengthy required narratives. Information-treatment estimates favour simplification but are imprecise. Together, the findings distinguish barriers associated with entry from burdens associated with continuation, while revealing administrators’ perceived trade-offs between accessibility and information collection. The paper contributes evidence on administrative burden and institutional design in sensitive grievance systems.</p>
+        </div>
+      </details>
+      <details class="wip-presentations">
+        <summary>Presentations</summary>
+        <div class="compact-presentations">
+          <ul>
+            <li><strong>2026</strong>
+              <ul>
+                <li> Economic Science Association India, BREW (Delhi, India, upcoming); ATIXA’s 15th Annual Conference (Baltimore, Maryland); Florida State University Department of Economics (Tallahassee, Florida); Mind, Behavior, and Development Unit Workshop at World Bank (Washington, D.C.); Warwick Workshop in Experimental Economics and Political Economy (Coventry, UK); 3rd Verona Early Career Workshop in Economics and Financial Mathematics (Verona, Italy)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </div>
   </li>
   <li class="wip-item">
     <div class="wip-title">Reporting Mandates and Measured Sexual Violence: Evidence from New York and Texas</div>
