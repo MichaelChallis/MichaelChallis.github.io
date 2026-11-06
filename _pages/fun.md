@@ -157,6 +157,38 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
           <p>“To deal with hyper-planes in a 14-dimensional space, visualize a 3-D space and say ‘fourteen’ to yourself very loudly. Everyone does it.”</p>
           <footer>— Geoffrey Hinton</footer>
         </blockquote>
+        <blockquote class="quote-item">
+          <p>“The imagination of nature is far, far greater than the imagination of man.”</p>
+          <footer>— Richard Feynman</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“We act as though comfort and luxury were the chief requirements of life, when all that we need to make us happy is something to be enthusiastic about.”</p>
+          <footer>— Charles Kingsley</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great.”</p>
+          <footer>— Mark Twain</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die, and a new generation grows up that is familiar with it.”</p>
+          <footer>— Max Planck</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“A complex system that works is invariably found to have evolved from a simple system that worked. The inverse proposition also appears to be true: A complex system designed from scratch never works and cannot be made to work.”</p>
+          <footer>— John Gall</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“I think a life properly lived is just learn, learn, learn all the time.”</p>
+          <footer>— Charlie Munger</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“Lies are often much more plausible, more appealing to reason, than reality, since the liar has the great advantage of knowing beforehand what the audience wishes or expects to hear.”</p>
+          <footer>— Hannah Arendt</footer>
+        </blockquote>
+        <blockquote class="quote-item">
+          <p>“Few people are capable of expressing with equanimity opinions which differ from the prejudices of their social environment. Most people are even incapable of forming such opinions.”</p>
+          <footer>— Einstein</footer>
+        </blockquote>
     </div>
 
     <div id="long-quotes" class="quotes-grid quotes-long-list" hidden>
