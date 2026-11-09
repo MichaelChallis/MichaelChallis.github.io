@@ -195,8 +195,8 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
         <details class="quote-long">
           <summary>Bertrand Russell on efficiency and working hours</summary>
           <blockquote>
-            <p>Suppose the world's pin supply was met by everyone in the pin industry working 8 hours a day, then someone invents a tool that doubles everyone's efficiency. What do we think would happen? “In a sensible world,” Russell writes,</p>
-            <p>“everybody concerned [would work] 4 hours instead of 8, and everything would go on as before. But in the actual world [they] still work 8 hours, there are too many pins, some employers go bankrupt, and half the people previously concerned in making pins are thrown out of work...”</p>
+            <p>“Suppose the world's pin supply was met by everyone in the pin industry working 8 hours a day, then someone invents a tool that doubles everyone's efficiency. What do we think would happen? In a sensible world, everybody concerned [would work] 4 hours instead of 8, and everything would go on as before. But in the actual world [they] still work 8 hours, there are too many pins, some employers go bankrupt, and half the people previously concerned in making pins are thrown out of work...”</p>
+            <footer>— Bertrand Russell, <em>In Praise of Idleness</em></footer>
           </blockquote>
         </details>
 
