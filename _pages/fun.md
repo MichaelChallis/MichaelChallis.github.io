@@ -193,6 +193,22 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
 
     <div id="long-quotes" class="quotes-grid quotes-long-list" hidden>
         <details class="quote-long">
+          <summary>Bertrand Russell on efficiency and working hours</summary>
+          <blockquote>
+            <p>Suppose the world's pin supply was met by everyone in the pin industry working 8 hours a day, then someone invents a tool that doubles everyone's efficiency. What do we think would happen? “In a sensible world,” Russell writes,</p>
+            <p>“everybody concerned [would work] 4 hours instead of 8, and everything would go on as before. But in the actual world [they] still work 8 hours, there are too many pins, some employers go bankrupt, and half the people previously concerned in making pins are thrown out of work...”</p>
+          </blockquote>
+        </details>
+
+        <details class="quote-long">
+          <summary>Karl Marx on saving and alienated life</summary>
+          <blockquote>
+            <p>“The less you eat, drink, buy books, go to the theatre or to balls, or to the pub, and the less you think, love, theorize, sing, paint, fence, etc., the more you will be able to save and the greater will become your treasure which neither moth nor rust will corrupt—your capital. The less you are, the less you express your life, the more you have, the greater is your alienated life and the greater is the saving of your alienated being.”</p>
+            <footer>— Karl Marx, <em>Economic &amp; Philosophic Manuscripts of 1844</em></footer>
+          </blockquote>
+        </details>
+
+        <details class="quote-long">
           <summary>Arthur Schopenhauer on reading and thinking for oneself</summary>
           <blockquote>
             <p>“When we read, another person thinks for us: we merely repeat his mental process. It is the same as the pupil, in learning to write, following with his pen the lines that have been pencilled by the teacher. Accordingly, in reading, the work of thinking is, for the greater part, done for us. This is why we are consciously relieved when we turn to reading after being occupied with our own thoughts. But, in reading, our head is, however, really only the arena of some one else’s thoughts. And so it happens that if any one spends almost the whole day in reading, and by way of relaxation devotes the intervals to some thoughtless pastime, he gradually loses the capacity for thinking; just as a man who is always riding at last forgets how to walk. This is the case with very many learned persons: they have read themselves stupid. For to occupy every spare moment in reading, and to do nothing but read, is even more paralyzing to the mind than constant manual labor, which at least allows those engaged in it to follow their own thoughts. A spring never free from the pressure of some foreign body at last loses its elasticity; and so does the mind if other people’s thoughts are constantly forced upon it. Just as you can ruin the stomach and impair the whole body by taking too much nourishment, so you can overfill and choke the mind by feeding it too much. For the more you read, the fewer are the traces left by what you have read: the mind becomes like a tablet crossed over and over with writing. There is no time for rumination; and in no other way can you assimilate what you have read. If you read on and on without setting down your own thoughts, what has been read does not take root, but is for the most part lost. It is, in fact, just the same with mental as with bodily food: hardly the fifth part of what one takes is assimilated. The rest passes off in evaporation, respiration and the like.</p>
