@@ -193,6 +193,21 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
 
     <div id="long-quotes" class="quotes-grid quotes-long-list" hidden>
         <details class="quote-long">
+          <summary>Paul Dirac and the sign error — an anecdote</summary>
+          <div class="quote-anecdote">
+            <p>The theoretical physicist Paul Dirac was famous for his extraordinary mathematical precision and dry sense of humour.</p>
+            <p>According to a well-known anecdote, Dirac was attending a lecture when the speaker, working through a lengthy derivation on the blackboard, noticed that the final expression had the wrong sign.</p>
+            <p>“I seem to have made a sign error,” the lecturer remarked.</p>
+            <p>Dirac, who had been sitting quietly with his eyes closed, opened one eye and replied:</p>
+            <blockquote>
+              <p><strong>“Or an odd number of them.”</strong></p>
+              <footer>— Paul Dirac, as the anecdote is told</footer>
+            </blockquote>
+            <p class="quote-context">Dirac's observation was mathematically exact: two sign reversals cancel one another, whereas an odd number leaves the sign reversed. The lecturer's mistake could therefore have arisen from one sign error, three, five, or any other odd number.</p>
+          </div>
+        </details>
+
+        <details class="quote-long">
           <summary>Bertrand Russell on efficiency and working hours</summary>
           <blockquote>
             <p>“Suppose the world's pin supply was met by everyone in the pin industry working 8 hours a day, then someone invents a tool that doubles everyone's efficiency. What do we think would happen? In a sensible world, everybody concerned [would work] 4 hours instead of 8, and everything would go on as before. But in the actual world [they] still work 8 hours, there are too many pins, some employers go bankrupt, and half the people previously concerned in making pins are thrown out of work...”</p>
@@ -648,6 +663,10 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
     grid-column: 1 / -1;
     padding: 0;
     overflow: hidden;
+  }
+
+  .quote-anecdote {
+    padding: 0 1rem 1rem;
   }
 
   .quote-long summary {
