@@ -195,15 +195,12 @@ Here are a few miscellaneous things that I have made, find interesting, etc. The
         <details class="quote-long">
           <summary>Paul Dirac and the sign error — an anecdote</summary>
           <div class="quote-anecdote">
-            <p>The theoretical physicist Paul Dirac was famous for his extraordinary mathematical precision and dry sense of humour.</p>
-            <p>According to a well-known anecdote, Dirac was attending a lecture when the speaker, working through a lengthy derivation on the blackboard, noticed that the final expression had the wrong sign.</p>
+          <p>According to a well-known anecdote, Dirac was attending a lecture when the speaker, working through a lengthy derivation on the blackboard, noticed that the final expression had the wrong sign.</p>
             <p>“I seem to have made a sign error,” the lecturer remarked.</p>
             <p>Dirac, who had been sitting quietly with his eyes closed, opened one eye and replied:</p>
             <blockquote>
               <p><strong>“Or an odd number of them.”</strong></p>
-              <footer>— Paul Dirac, as the anecdote is told</footer>
             </blockquote>
-            <p class="quote-context">Dirac's observation was mathematically exact: two sign reversals cancel one another, whereas an odd number leaves the sign reversed. The lecturer's mistake could therefore have arisen from one sign error, three, five, or any other odd number.</p>
           </div>
         </details>
 
